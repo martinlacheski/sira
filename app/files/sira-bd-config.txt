@@ -1,0 +1,5 @@
+CONFIGURACION BD
+
+
+Schema PUBLIC
+Base de Datos: sira
