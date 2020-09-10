@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master'" />
+    <list default="true" id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="Commit Paises 1.1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,10 +56,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -167,7 +167,7 @@
       <workItem from="1599648646257" duration="12354000" />
       <workItem from="1599694746700" duration="101000" />
       <workItem from="1599694864149" duration="26000" />
-      <workItem from="1599735379028" duration="4939000" />
+      <workItem from="1599735379028" duration="5245000" />
     </task>
     <task id="LOCAL-00001" summary="Commit CRUD Paises">
       <created>1599742261593</created>
@@ -190,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599742385296</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit Paises 1.1">
+      <created>1599742557779</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599742557779</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +220,8 @@
     <MESSAGE value="Commit CRUD Paises" />
     <MESSAGE value="Commit CRUD Paises 1" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="Commit Paises 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Paises 1.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599579934674">
@@ -228,10 +236,10 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="454" y="251" width="519" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/72.29.1294.739@72.29.1294.739" timestamp="1599513617876" />
-    <state x="497" y="160" width="424" height="491" key="FileChooserDialogImpl" timestamp="1599480694936">
+    <state x="497" y="160" width="424" height="491" key="FileChooserDialogImpl" timestamp="1599742709950">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state x="497" y="160" width="424" height="491" key="FileChooserDialogImpl/72.29.1294.739@72.29.1294.739" timestamp="1599480694936" />
+    <state x="497" y="160" width="424" height="491" key="FileChooserDialogImpl/72.29.1294.739@72.29.1294.739" timestamp="1599742709950" />
     <state width="1248" height="126" key="GridCell.Tab.0.bottom" timestamp="1599735870392">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
@@ -264,10 +272,10 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state width="1248" height="214" key="GridCell.Tab.1.right/72.29.1294.739@72.29.1294.739" timestamp="1599517856870" />
-    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1599579868388">
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1599742713589">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.29.1294.739@72.29.1294.739" timestamp="1599579868388" />
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.29.1294.739@72.29.1294.739" timestamp="1599742713589" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599742277332">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
