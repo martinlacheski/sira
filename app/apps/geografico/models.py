@@ -7,7 +7,9 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
-#   Clase Paises
+from django.forms import model_to_dict
+
+
 class Paises(models.Model):
     id_pais = models.AutoField(primary_key=True)
     nombre = models.TextField(verbose_name='Nombre', unique=True)
@@ -20,11 +22,12 @@ class Paises(models.Model):
         return item
 
     class Meta:
-        #managed = False
-        #db_table = 'paises'
-        verbose_name = 'País'
+        managed = False
+        db_table = 'paises'
+        verbose_name = 'Pais'
         verbose_name_plural = 'Paises'
         ordering = ['nombre']
+
 
 #   Clase Provincias
 class Provincias(models.Model):
@@ -35,12 +38,17 @@ class Provincias(models.Model):
     def __str__(self):
         return self.nombre
 
+    def toJSON(self):
+        item = model_to_dict(self)
+        return item
+
     class Meta:
         managed = False
         db_table = 'provincias'
         verbose_name = 'Provincia'
-        verbose_name_plural = 'Provincias'
+        verbose_name_plural = 'Provincia'
         ordering = ['nombre']
+
 
 #   Clase Localidades
 class Localidades(models.Model):
@@ -51,6 +59,10 @@ class Localidades(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    def toJSON(self):
+        item = model_to_dict(self)
+        return item
 
     class Meta:
         managed = False
