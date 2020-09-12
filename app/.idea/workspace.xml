@@ -19,7 +19,44 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="Commit Paises 1.1" />
+    <list default="true" id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="Commit Paises 1.1">
+      <change afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/dashboard/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/login/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/user.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/user.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-confirm-v3.3.4/jquery-confirm.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/jquery-confirm-v3.3.4/jquery-confirm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/views/paises/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/views/paises/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/templates.zip" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,9 +68,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -56,20 +93,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/lib" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/img" />
       <recent name="$PROJECT_DIR$/static/lib" />
-      <recent name="$PROJECT_DIR$/apps/geografico/templates/paises" />
+      <recent name="$PROJECT_DIR$/apps/dashboard" />
       <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/img" />
+      <recent name="$PROJECT_DIR$/apps/geografico/templates/paises" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
@@ -150,6 +188,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="" />
@@ -167,7 +208,9 @@
       <workItem from="1599648646257" duration="12354000" />
       <workItem from="1599694746700" duration="101000" />
       <workItem from="1599694864149" duration="26000" />
-      <workItem from="1599735379028" duration="5245000" />
+      <workItem from="1599735379028" duration="6748000" />
+      <workItem from="1599777335556" duration="5694000" />
+      <workItem from="1599858846003" duration="9184000" />
     </task>
     <task id="LOCAL-00001" summary="Commit CRUD Paises">
       <created>1599742261593</created>
@@ -197,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599742557779</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit Paises 1.1">
+      <created>1599742821298</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599742821298</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,22 +290,22 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="497" y="160" width="424" height="491" key="FileChooserDialogImpl/72.29.1294.739@72.29.1294.739" timestamp="1599742709950" />
-    <state width="1248" height="126" key="GridCell.Tab.0.bottom" timestamp="1599735870392">
+    <state width="1248" height="126" key="GridCell.Tab.0.bottom" timestamp="1599871109201">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1599735870392" />
-    <state width="1248" height="126" key="GridCell.Tab.0.center" timestamp="1599735870392">
+    <state width="1248" height="126" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1599871109201" />
+    <state width="1248" height="126" key="GridCell.Tab.0.center" timestamp="1599871109200">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1599735870392" />
-    <state width="1248" height="126" key="GridCell.Tab.0.left" timestamp="1599735870392">
+    <state width="1248" height="126" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1599871109200" />
+    <state width="1248" height="126" key="GridCell.Tab.0.left" timestamp="1599871109200">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1599735870392" />
-    <state width="1248" height="126" key="GridCell.Tab.0.right" timestamp="1599735870392">
+    <state width="1248" height="126" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1599871109200" />
+    <state width="1248" height="126" key="GridCell.Tab.0.right" timestamp="1599871109200">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1599735870392" />
+    <state width="1248" height="126" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1599871109200" />
     <state width="1248" height="214" key="GridCell.Tab.1.bottom" timestamp="1599517856870">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
@@ -276,14 +326,14 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.29.1294.739@72.29.1294.739" timestamp="1599742713589" />
-    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599742277332">
+    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599742836249">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1599742277332" />
-    <state x="577" y="115" width="274" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1599742236393">
+    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1599742836249" />
+    <state x="577" y="115" width="274" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1599742800254">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state x="577" y="115" width="274" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/72.29.1294.739@72.29.1294.739" timestamp="1599742236393" />
+    <state x="577" y="115" width="274" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/72.29.1294.739@72.29.1294.739" timestamp="1599742800254" />
     <state x="545" y="29" width="620" height="739" key="find.popup" timestamp="1599514640650">
       <screen x="72" y="29" width="1294" height="739" />
     </state>

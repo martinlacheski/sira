@@ -1,8 +1,8 @@
-# rom django.contrib.auth.decorators import login_required
-from django.http import JsonResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.decorators.csrf import csrf_protect, csrf_exempt
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
@@ -23,6 +23,7 @@ class PaisesListView(ListView):
     template_name = 'paises/list.html'
 
     @method_decorator(csrf_exempt)
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -55,6 +56,10 @@ class PaisesCreateView(CreateView):
     template_name = 'paises/create.html'
     success_url = reverse_lazy('geografico:paises_list')
 
+    @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
     def post(self, request, *args, **kwargs):
         data = {}
         try:
@@ -83,6 +88,7 @@ class PaisesUpdateView(UpdateView):
     template_name = 'paises/create.html'
     success_url = reverse_lazy('geografico:paises_list')
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -113,7 +119,7 @@ class PaisesDeleteView(DeleteView):
     template_name = 'paises/delete.html'
     success_url = reverse_lazy('geografico:paises_list')
 
-    #@method_decorator(csrf_exempt)
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
