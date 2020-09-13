@@ -19,25 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="Commit Login, Logout, Login required, jquery confirm">
-      <change afterPath="$PROJECT_DIR$/apps/geografico/static/provincias/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/views/provincias/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/clock-white.png" afterDir="false" />
+    <list default="true" id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="Commit CRUD Provincias">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/logo_size_invert.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +178,8 @@
       <workItem from="1599777335556" duration="5694000" />
       <workItem from="1599858846003" duration="9436000" />
       <workItem from="1599942839363" duration="11789000" />
+      <workItem from="1599956709214" duration="378000" />
+      <workItem from="1600026184614" duration="2394000" />
     </task>
     <task id="LOCAL-00001" summary="Commit CRUD Paises">
       <created>1599742261593</created>
@@ -237,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599871524955</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit CRUD Provincias">
+      <created>1599956733663</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599956733663</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +255,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Commit Paises 1.1" />
     <MESSAGE value="Commit Login, Logout, Login required, jquery confirm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Login, Logout, Login required, jquery confirm" />
+    <MESSAGE value="Commit CRUD Provincias" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit CRUD Provincias" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599579934674">
@@ -281,22 +275,22 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="497" y="160" width="424" height="491" key="FileChooserDialogImpl/72.29.1294.739@72.29.1294.739" timestamp="1599742709950" />
-    <state width="1248" height="126" key="GridCell.Tab.0.bottom" timestamp="1599956537103">
+    <state width="1248" height="126" key="GridCell.Tab.0.bottom" timestamp="1600033982626">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1599956537103" />
-    <state width="1248" height="126" key="GridCell.Tab.0.center" timestamp="1599956537102">
+    <state width="1248" height="126" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600033982626" />
+    <state width="1248" height="126" key="GridCell.Tab.0.center" timestamp="1600033982625">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1599956537102" />
-    <state width="1248" height="126" key="GridCell.Tab.0.left" timestamp="1599956537102">
+    <state width="1248" height="126" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600033982625" />
+    <state width="1248" height="126" key="GridCell.Tab.0.left" timestamp="1600033982625">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1599956537102" />
-    <state width="1248" height="126" key="GridCell.Tab.0.right" timestamp="1599956537102">
+    <state width="1248" height="126" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600033982625" />
+    <state width="1248" height="126" key="GridCell.Tab.0.right" timestamp="1600033982625">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1599956537102" />
+    <state width="1248" height="126" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600033982625" />
     <state width="1248" height="214" key="GridCell.Tab.1.bottom" timestamp="1599517856870">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
@@ -317,10 +311,10 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.29.1294.739@72.29.1294.739" timestamp="1599742713589" />
-    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599871552457">
+    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1599956739530">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1599871552457" />
+    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1599956739530" />
     <state x="577" y="115" width="274" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1599742800254">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
