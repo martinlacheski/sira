@@ -32,6 +32,7 @@ class Paises(models.Model):
 #   Clase Provincias
 class Provincias(models.Model):
     id_provincia = models.AutoField(primary_key=True)
+    #pais = models.ForeignKey(Paises, on_delete=models.DO_NOTHING, verbose_name='Pais')
     id_pais = models.ForeignKey(Paises, models.DO_NOTHING, db_column='id_pais')
     nombre = models.TextField()
 
@@ -48,6 +49,7 @@ class Provincias(models.Model):
         verbose_name = 'Provincia'
         verbose_name_plural = 'Provincia'
         ordering = ['nombre']
+        #default_related_name = 'nombre'
 
 
 #   Clase Localidades
