@@ -32,8 +32,7 @@ class Paises(models.Model):
 #   Clase Provincias
 class Provincias(models.Model):
     id_provincia = models.AutoField(primary_key=True)
-    #pais = models.ForeignKey(Paises, on_delete=models.DO_NOTHING, verbose_name='Pais')
-    id_pais = models.ForeignKey(Paises, models.DO_NOTHING, db_column='id_pais')
+    id_pais = models.ForeignKey(Paises, models.DO_NOTHING, db_column='id_pais', verbose_name='Pais')
     nombre = models.TextField()
 
     def __str__(self):
@@ -49,13 +48,12 @@ class Provincias(models.Model):
         verbose_name = 'Provincia'
         verbose_name_plural = 'Provincia'
         ordering = ['nombre']
-        #default_related_name = 'nombre'
 
 
 #   Clase Localidades
 class Localidades(models.Model):
     id_localidad = models.AutoField(primary_key=True)
-    id_provincia = models.ForeignKey(Provincias, models.DO_NOTHING, db_column='id_provincia')
+    id_provincia = models.ForeignKey(Provincias, models.DO_NOTHING, db_column='id_provincia', verbose_name='Provincia')
     nombre = models.TextField()
     codigo_postal = models.IntegerField()
 
