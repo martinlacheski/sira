@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     # Libs
     'widget_tweaks',
     # APPS
-    'apps.geografico',
+    'apps.geo',
     'apps.login',
     'apps.dashboard',
 ]
