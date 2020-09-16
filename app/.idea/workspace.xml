@@ -20,17 +20,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dd8a12b-4304-466d-9d2b-374f0911670e" name="Default Changelist" comment="Commit CRUD Provincias">
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/list.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/list.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/geografico/views/localidades/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0002_auto_20200914_1630.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0003_auto_20200914_1634.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0004_localidades_pais.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0005_auto_20200914_1744.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0006_auto_20200914_1754.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0007_auto_20200914_1757.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0008_auto_20200914_1816.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0009_auto_20200914_1818.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/0010_auto_20200914_1818.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/static/localidades/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/static/paises/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/static/provincias/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/provincias_dropdown_list_options.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/paises/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/paises/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/paises/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/provincias/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/provincias/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/templates/provincias/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/views/localidades/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/views/localidades/views2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/views/paises/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/views/provincias/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/.~lock.ayuda en Python#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/sira-bd-14-09-2020.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/sira.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/provincias/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/static/paises/js/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/static/provincias/js/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/localidades/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/localidades/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/localidades/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/paises/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/paises/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/paises/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/provincias/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/provincias/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/templates/provincias/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/views/localidades/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/views/paises/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/views/provincias/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/datatable.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/sira-script-bd-create.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/urls.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,22 +134,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/geografico/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/geo/templates/localidades" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/geografico/templates" />
-      <recent name="$PROJECT_DIR$/apps/geografico/views" />
-      <recent name="$PROJECT_DIR$/apps/geografico/static" />
-      <recent name="$PROJECT_DIR$/static/lib" />
-      <recent name="$PROJECT_DIR$/apps/dashboard" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/geo/templates/localidades" />
+      <recent name="$PROJECT_DIR$/apps/geo/views/localidades" />
+      <recent name="$PROJECT_DIR$/apps/geo/static/localidades" />
+      <recent name="$PROJECT_DIR$/apps/geo" />
+      <recent name="$PROJECT_DIR$/apps/geografico/templates" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.app">
@@ -190,6 +255,10 @@
       <workItem from="1599942839363" duration="11789000" />
       <workItem from="1599956709214" duration="378000" />
       <workItem from="1600026184614" duration="7021000" />
+      <workItem from="1600092554107" duration="2569000" />
+      <workItem from="1600102857206" duration="1475000" />
+      <workItem from="1600108226453" duration="10016000" />
+      <workItem from="1600287400411" duration="11603000" />
     </task>
     <task id="LOCAL-00001" summary="Commit CRUD Paises">
       <created>1599742261593</created>
@@ -281,10 +350,10 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="177" y="56" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.29.1294.739@72.29.1294.739" timestamp="1599579934674" />
-    <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599611220539">
+    <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600109384718">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1599611220539" />
+    <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1600109384718" />
     <state x="454" y="251" width="519" height="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1599513617876">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
@@ -293,22 +362,22 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="497" y="160" width="424" height="491" key="FileChooserDialogImpl/72.29.1294.739@72.29.1294.739" timestamp="1599742709950" />
-    <state width="1248" height="126" key="GridCell.Tab.0.bottom" timestamp="1600038698975">
+    <state width="1248" height="126" key="GridCell.Tab.0.bottom" timestamp="1600299638795">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600038698975" />
-    <state width="1248" height="126" key="GridCell.Tab.0.center" timestamp="1600038698975">
+    <state width="1248" height="126" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600299638795" />
+    <state width="1248" height="126" key="GridCell.Tab.0.center" timestamp="1600299638793">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600038698975" />
-    <state width="1248" height="126" key="GridCell.Tab.0.left" timestamp="1600038698974">
+    <state width="1248" height="126" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600299638793" />
+    <state width="1248" height="126" key="GridCell.Tab.0.left" timestamp="1600299638792">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600038698974" />
-    <state width="1248" height="126" key="GridCell.Tab.0.right" timestamp="1600038698975">
+    <state width="1248" height="126" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600299638792" />
+    <state width="1248" height="126" key="GridCell.Tab.0.right" timestamp="1600299638794">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
-    <state width="1248" height="126" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600038698975" />
+    <state width="1248" height="126" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600299638794" />
     <state width="1248" height="214" key="GridCell.Tab.1.bottom" timestamp="1599517856870">
       <screen x="72" y="29" width="1294" height="739" />
     </state>

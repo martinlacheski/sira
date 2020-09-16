@@ -1,8 +1,9 @@
 {% extends 'body.html' %}
 {% load widget_tweaks %}
+{% load static %}
 {% block content %}
-    <form method="post" action=".">
-        <div class="card card-default">
+    <form method="post" action="." id="localidadesForm" data-provincias-url="{% url 'geo:ajax_load_provincias' %}">
+       <div class="card card-default">
             <div class="card-header">
                 <h3 class="card-title">
                     {% if action == 'add' %}
@@ -36,6 +37,7 @@
                         {{ field|add_class:'form-control'|attr:'autocomplete:off' }}
                     </div>
                 {% endfor %}
+
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary btn-flat">
@@ -47,6 +49,27 @@
             </div>
         </div>
     </form>
+
+    <script src="{% static 'lib/jquery-3.3.1.min/jquery-3.3.1.min.js' %}"></script>
+
+    <script>
+        $("#id_pais").change(function () {
+            const url = $("#localidadesForm").attr("data-provincias-url");  // get the url of the `load_provincias` view
+            const paisId = $(this).val();  // get the selected country ID from the HTML input
+            $.ajax({                       // initialize an AJAX request
+                url: url,                    // set the url of the request (= /localidades/ajax/load-provincias/ )
+                data: {
+                    'pais_id': paisId       // add the id pais to the GET parameters
+                },
+                success: function (data) {   // `data` is the return of the `load_provincias` view function
+                    $("#id_provincia").html(data);  // replace the contents of the provincias input with the data that came from the server
+
+                }
+            });
+
+        });
+    </script>
+
     <script>
         {% if form.errors %}
             var errors = '';
@@ -61,16 +84,5 @@
                 icon: 'error'
             });
         {% endif %}
-
-        $('form').on('submit', function (e) {
-            e.preventDefault();
-            var parameters = $(this).serializeArray();
-            //var dataString = $(this).serialize();
-            //alert('Datos serializados: '+dataString);
-            submit_with_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
-                location.href = '{{ list_url }}';
-            });
-        });
-
     </script>
 {% endblock %}
