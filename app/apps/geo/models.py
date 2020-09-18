@@ -1,8 +1,8 @@
 from django.db import models
 
-from django.forms import model_to_dict, TextInput
+from django.forms import model_to_dict
 
-
+#   Clase Pais
 class Paises(models.Model):
     nombre = models.TextField(verbose_name='Nombre', unique=True)
 

@@ -44,9 +44,10 @@ INSTALLED_APPS = [
     # Libs
     'widget_tweaks',
     # APPS
-    'apps.geo',
-    'apps.login',
-    'apps.dashboard',
+    'apps.inst',    #Institucional (Universidad, Facultad, Sedes)
+    'apps.geo',     #Geografico (Paises, Provincias, Localidades)
+    'apps.login',   #App para login
+    'apps.dashboard',   #App para el template base
 ]
 
 MIDDLEWARE = [

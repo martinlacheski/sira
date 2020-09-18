@@ -20,6 +20,31 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-header">Sistema</li>
                 <li class="nav-item">
+                    <a href="{% url 'inst:universidad_list' %}" class="nav-link">
+                        <i class="nav-icon fas fa-university"></i>
+                        <p>
+                            Universidad
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'inst:facultad_list' %}" class="nav-link">
+                        <i class="nav-icon fas fa-university"></i>
+                        <p>
+                            Facultad
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'inst:sedes_list' %}" class="nav-link">
+                        <i class="nav-icon fas fa-university"></i>
+                        <p>
+                            Sedes
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-header">Geográfico</li>
+                <li class="nav-item">
                     <a href="{% url 'geo:paises_list' %}" class="nav-link">
                         <i class="nav-icon fas fa-globe-americas"></i>
                         <p>

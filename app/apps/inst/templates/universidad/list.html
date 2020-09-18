@@ -1,0 +1,26 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'universidad/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <!--<th scope="col" style="width: 5%;">Código</th>-->
+        <th scope="col" style="width: 25%;">Universidad</th>
+        <th scope="col" style="width: 15%;">Localidad</th>
+        <th scope="col" style="width: 35%;">Direccion</th>
+        <th scope="col" style="width: 15%;">Teléfonos</th>
+        <!--<th scope="col" style="width: 15%;">Web</th>-->
+        <!--<th scope="col" style="width: 10%;">Logo</th>   NO FUNCIONA CON JS-->
+        <th scope="col" style="width: 10%;">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

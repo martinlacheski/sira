@@ -1,4 +1,5 @@
 {% extends 'home.html' %}
+{% load static %}
 {% block body %}
     <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -9,10 +10,17 @@
         <!-- Content -->
         <div class="content-wrapper">
             <div class="content-header">
+                <style>
+                    body {
+                        background-image: url('/static/img/fondo-template.jpg');
+                        background-attachment: fixed;
+                        background-size: 100% 100%;
+                    }
+                </style>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark"> Bienvenido <small> <!-- Example 3.0 --></small></h1>
+                            <h1 class="m-0 text-dark"> <!-- Example 3.0 --> <small> <!-- Example 3.0 --></small></h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
