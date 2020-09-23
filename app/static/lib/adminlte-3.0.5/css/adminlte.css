@@ -31219,3 +31219,7 @@ a.text-muted:hover {
   color: #ffffff;
 }
 /*# sourceMappingURL=adminlte.css.map */
+
+/*# CSS Agregado */
+
+.content-wrapper{background-image: url("/static/img/fondo-template.jpg")}

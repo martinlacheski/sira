@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -18,12 +18,12 @@ def paises_list(request):
     return render(request, 'paises/list.html', data)
 
 
-class PaisesListView(ListView):
+class PaisesListView(LoginRequiredMixin, ListView):
     model = Paises
     template_name = 'paises/list.html'
 
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -50,13 +50,13 @@ class PaisesListView(ListView):
         return context
 
 
-class PaisesCreateView(CreateView):
+class PaisesCreateView(LoginRequiredMixin, CreateView):
     model = Paises
     form_class = PaisesForm
     template_name = 'paises/create.html'
     success_url = reverse_lazy('geo:paises_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -82,13 +82,13 @@ class PaisesCreateView(CreateView):
         return context
 
 
-class PaisesUpdateView(UpdateView):
+class PaisesUpdateView(LoginRequiredMixin, UpdateView):
     model = Paises
     form_class = PaisesForm
     template_name = 'paises/create.html'
     success_url = reverse_lazy('geo:paises_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -114,12 +114,12 @@ class PaisesUpdateView(UpdateView):
         context['action'] = 'edit'
         return context
 
-class PaisesDeleteView(DeleteView):
+class PaisesDeleteView(LoginRequiredMixin, DeleteView):
     model = Paises
     template_name = 'paises/delete.html'
     success_url = reverse_lazy('geo:paises_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

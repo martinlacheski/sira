@@ -1,4 +1,5 @@
-from django.contrib.auth.decorators import login_required
+
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -18,12 +19,12 @@ def universidad_list(request):
     return render(request, 'universidad/list.html', data)
 
 
-class UniversidadListView(ListView):
+class UniversidadListView(LoginRequiredMixin, ListView):
     model = Universidad
     template_name = 'universidad/list.html'
 
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -50,13 +51,13 @@ class UniversidadListView(ListView):
         return context
 
 
-class UniversidadCreateView(CreateView):
+class UniversidadCreateView(LoginRequiredMixin, CreateView):
     model = Universidad
     form_class = UniversidadForm
     template_name = 'universidad/create.html'
     success_url = reverse_lazy('inst:universidad_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -82,13 +83,13 @@ class UniversidadCreateView(CreateView):
         return context
 
 
-class UniversidadUpdateView(UpdateView):
+class UniversidadUpdateView(LoginRequiredMixin, UpdateView):
     model = Universidad
     form_class = UniversidadForm
     template_name = 'universidad/create.html'
     success_url = reverse_lazy('inst:universidad_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -114,12 +115,12 @@ class UniversidadUpdateView(UpdateView):
         context['action'] = 'edit'
         return context
 
-class UniversidadDeleteView(DeleteView):
+class UniversidadDeleteView(LoginRequiredMixin, DeleteView):
     model = Universidad
     template_name = 'universidad/delete.html'
     success_url = reverse_lazy('inst:universidad_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

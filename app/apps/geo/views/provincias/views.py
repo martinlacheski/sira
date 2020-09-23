@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -18,12 +18,12 @@ def provincias_list(request):
     return render(request, 'provincias/list.html', data)
 
 
-class ProvinciasListView(ListView):
+class ProvinciasListView(LoginRequiredMixin, ListView):
     model = Provincias
     template_name = 'provincias/list.html'
 
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -50,13 +50,13 @@ class ProvinciasListView(ListView):
         return context
 
 
-class ProvinciasCreateView(CreateView):
+class ProvinciasCreateView(LoginRequiredMixin, CreateView):
     model = Provincias
     form_class = ProvinciasForm
     template_name = 'provincias/create.html'
     success_url = reverse_lazy('geo:provincias_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -82,13 +82,13 @@ class ProvinciasCreateView(CreateView):
         return context
 
 
-class ProvinciasUpdateView(UpdateView):
+class ProvinciasUpdateView(LoginRequiredMixin, UpdateView):
     model = Provincias
     form_class = ProvinciasForm
     template_name = 'provincias/create.html'
     success_url = reverse_lazy('geo:provincias_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -114,12 +114,12 @@ class ProvinciasUpdateView(UpdateView):
         context['action'] = 'edit'
         return context
 
-class ProvinciasDeleteView(DeleteView):
+class ProvinciasDeleteView(LoginRequiredMixin, DeleteView):
     model = Provincias
     template_name = 'provincias/delete.html'
     success_url = reverse_lazy('geo:provincias_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

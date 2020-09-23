@@ -3,7 +3,7 @@
 {% load static %}
 {% block content %}
     <form method="post" action="." id="localidadesForm" data-provincias-url="{% url 'geo:ajax_load_provincias' %}">
-       <div class="card card-default">
+        <div class="card card-default">
             <div class="card-header">
                 <h3 class="card-title">
                     {% if action == 'add' %}
@@ -85,7 +85,14 @@
             });
         {% endif %}
 
-
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            var parameters = $(this).serializeArray();
+            console.log(parameters)
+            submit_with_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
+                location.href = '{{ list_url }}';
+            });
+        });
 
     </script>
 {% endblock %}

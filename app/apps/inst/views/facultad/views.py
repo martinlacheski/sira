@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -18,12 +18,12 @@ def facultad_list(request):
     return render(request, 'facultad/list.html', data)
 
 
-class FacultadListView(ListView):
+class FacultadListView(LoginRequiredMixin, ListView):
     model = Facultad
     template_name = 'facultad/list.html'
 
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -50,13 +50,13 @@ class FacultadListView(ListView):
         return context
 
 
-class FacultadCreateView(CreateView):
+class FacultadCreateView(LoginRequiredMixin, CreateView):
     model = Facultad
     form_class = FacultadForm
     template_name = 'facultad/create.html'
     success_url = reverse_lazy('inst:facultad_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -82,13 +82,13 @@ class FacultadCreateView(CreateView):
         return context
 
 
-class FacultadUpdateView(UpdateView):
+class FacultadUpdateView(LoginRequiredMixin, UpdateView):
     model = Facultad
     form_class = FacultadForm
     template_name = 'facultad/create.html'
     success_url = reverse_lazy('inst:facultad_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -114,12 +114,12 @@ class FacultadUpdateView(UpdateView):
         context['action'] = 'edit'
         return context
 
-class FacultadDeleteView(DeleteView):
+class FacultadDeleteView(LoginRequiredMixin, DeleteView):
     model = Facultad
     template_name = 'facultad/delete.html'
     success_url = reverse_lazy('inst:facultad_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -18,12 +18,12 @@ def sedes_list(request):
     return render(request, 'sedes/list.html', data)
 
 
-class SedesListView(ListView):
+class SedesListView(LoginRequiredMixin, ListView):
     model = Sedes
     template_name = 'sedes/list.html'
 
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -50,13 +50,13 @@ class SedesListView(ListView):
         return context
 
 
-class SedesCreateView(CreateView):
+class SedesCreateView(LoginRequiredMixin, CreateView):
     model = Sedes
     form_class = SedesForm
     template_name = 'sedes/create.html'
     success_url = reverse_lazy('inst:sedes_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -82,13 +82,13 @@ class SedesCreateView(CreateView):
         return context
 
 
-class SedesUpdateView(UpdateView):
+class SedesUpdateView(LoginRequiredMixin, UpdateView):
     model = Sedes
     form_class = SedesForm
     template_name = 'sedes/create.html'
     success_url = reverse_lazy('inst:sedes_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -114,12 +114,12 @@ class SedesUpdateView(UpdateView):
         context['action'] = 'edit'
         return context
 
-class SedesDeleteView(DeleteView):
+class SedesDeleteView(LoginRequiredMixin, DeleteView):
     model = Sedes
     template_name = 'sedes/delete.html'
     success_url = reverse_lazy('inst:sedes_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

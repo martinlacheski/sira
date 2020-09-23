@@ -1,9 +1,9 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView, TemplateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
 from apps.geo.forms import LocalidadesForm, LocalidadesCreateForm
@@ -18,12 +18,12 @@ def localidades_list(request):
     return render(request, 'localidades/list.html', data)
 
 
-class LocalidadesListView(ListView):
+class LocalidadesListView(LoginRequiredMixin, ListView):
     model = Localidades
     template_name = 'localidades/list.html'
 
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -52,20 +52,19 @@ class LocalidadesListView(ListView):
 
 # AJAX
 def load_provincias(request):
-
     pais_id = request.GET.get('pais_id')
     provincias = Provincias.objects.filter(pais_id=pais_id).all()
     return render(request, 'localidades/provincias_dropdown_list_options.html', {'provincias': provincias})
-    # return JsonResponse(list(cities.values('id', 'name')), safe=False)
 
-class LocalidadesCreateView(CreateView):
+
+class LocalidadesCreateView(LoginRequiredMixin, CreateView):
     model = Localidades
     form_class = LocalidadesCreateForm
     template_name = 'localidades/create.html'
     success_url = reverse_lazy('geo:localidades_list')
 
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -98,13 +97,13 @@ class LocalidadesCreateView(CreateView):
         return context
 
 
-class LocalidadesUpdateView(UpdateView):
+class LocalidadesUpdateView(LoginRequiredMixin, UpdateView):
     model = Localidades
     form_class = LocalidadesForm
     template_name = 'localidades/update.html'
     success_url = reverse_lazy('geo:localidades_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -131,12 +130,12 @@ class LocalidadesUpdateView(UpdateView):
         return context
 
 
-class LocalidadesDeleteView(DeleteView):
+class LocalidadesDeleteView(LoginRequiredMixin, DeleteView):
     model = Localidades
     template_name = 'localidades/delete.html'
     success_url = reverse_lazy('geo:localidades_list')
 
-    @method_decorator(login_required)
+    #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
