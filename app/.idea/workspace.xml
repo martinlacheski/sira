@@ -20,30 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/apps/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/fondo-template (footer).jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dashboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/geo/templates/localidades/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geo/templates/localidades/create2.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/create2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geo/views/localidades/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/views/localidades/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geo/views/localidades/views2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geo/views/paises/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/views/paises/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geo/views/provincias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/views/provincias/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/inst/templates/facultad/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/inst/templates/facultad/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/inst/views/facultad/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/inst/views/facultad/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/inst/views/sedes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/inst/views/sedes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/inst/views/universidad/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/inst/views/universidad/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/.~lock.ayuda en Python#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/fondo-template.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/fondo-template.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/lib/bootstrap-4.5.2-dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/bootstrap-4.5.2-dist/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,9 +141,18 @@
       <workItem from="1600723294743" duration="6523000" />
       <workItem from="1600780903613" duration="886000" />
       <workItem from="1600790650099" duration="2176000" />
-      <workItem from="1600897549182" duration="3423000" />
+      <workItem from="1600897549182" duration="3517000" />
+      <workItem from="1600901918278" duration="30000" />
+      <workItem from="1600944906927" duration="2140000" />
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
+      <created>1600901794423</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600901794423</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +174,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit" />
     <MESSAGE value="commit CRUD Universidad - Facultad - Sedes" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit CRUD Universidad - Facultad - Sedes" />
+    <MESSAGE value="Commit mejoras en el template y login con Mixins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit mejoras en el template y login con Mixins" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600373082209">
@@ -196,29 +186,30 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1600381311116" />
-    <state width="1248" height="172" key="GridCell.Tab.0.bottom" timestamp="1600899414019">
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom" timestamp="1600901947364">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600899414019" />
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600901947364" />
     <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="172" key="GridCell.Tab.0.center" timestamp="1600899414018">
+    <state width="1248" height="172" key="GridCell.Tab.0.center" timestamp="1600901947364">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600899414018" />
+    <state width="1248" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600901947364" />
     <state width="1248" height="172" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="172" key="GridCell.Tab.0.left" timestamp="1600899414018">
+    <state width="1248" height="172" key="GridCell.Tab.0.left" timestamp="1600901947363">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600899414018" />
+    <state width="1248" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600901947363" />
     <state width="1248" height="172" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="172" key="GridCell.Tab.0.right" timestamp="1600899414018">
+    <state width="1248" height="172" key="GridCell.Tab.0.right" timestamp="1600901947364">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600899414018" />
+    <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600901947364" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600387967018">
-      <screen x="72" y="29" width="1294" height="739" />
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600901797447">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
+    <state x="314" y="132" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1600901797447" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1600387967018" />
     <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600791000093">
       <screen x="72" y="27" width="1294" height="741" />
