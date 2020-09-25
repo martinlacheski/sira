@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Libs
     'widget_tweaks',
+    # APP usuarios
+    'apps.usuarios',
     # APPS
     'apps.inst',    #Institucional (Universidad, Facultad, Sedes)
     'apps.geo',     #Geografico (Paises, Provincias, Localidades)
@@ -134,6 +136,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+AUTH_USER_MODEL = 'usuarios.Usuarios'
 
 LOGIN_REDIRECT_URL = '/dashboard/'
 

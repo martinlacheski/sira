@@ -20,10 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/static/img/fondo-template (footer).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0002_remove_usuarios_facultad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0003_auto_20200924_2002.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/BD/backup-24-09-2020.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/eliminar BD.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geo/templates/localidades/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,16 +68,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/inst" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/usuarios/templates/usuarios" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/inst" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/usuarios/templates/usuarios" />
+      <recent name="$PROJECT_DIR$/apps/usuarios" />
+      <recent name="$PROJECT_DIR$/apps/inst" />
     </key>
   </component>
   <component name="RunManager">
@@ -143,7 +159,9 @@
       <workItem from="1600790650099" duration="2176000" />
       <workItem from="1600897549182" duration="3517000" />
       <workItem from="1600901918278" duration="30000" />
-      <workItem from="1600944906927" duration="2140000" />
+      <workItem from="1600944906927" duration="3763000" />
+      <workItem from="1600976128754" duration="10915000" />
+      <workItem from="1601032920387" duration="1351000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -152,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600901794423</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit 24-09-2020">
+      <created>1600948464467</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600948464467</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +200,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="commit CRUD Universidad - Facultad - Sedes" />
     <MESSAGE value="Commit mejoras en el template y login con Mixins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit mejoras en el template y login con Mixins" />
+    <MESSAGE value="commit 24-09-2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 24-09-2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600373082209">
@@ -186,30 +212,30 @@
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1600381311116" />
-    <state width="1248" height="172" key="GridCell.Tab.0.bottom" timestamp="1600901947364">
+    <state width="1248" height="96" key="GridCell.Tab.0.bottom" timestamp="1600988576891">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600901947364" />
+    <state width="1248" height="96" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600988576891" />
     <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="172" key="GridCell.Tab.0.center" timestamp="1600901947364">
+    <state width="1248" height="96" key="GridCell.Tab.0.center" timestamp="1600988576890">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600901947364" />
+    <state width="1248" height="96" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600988576890" />
     <state width="1248" height="172" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="172" key="GridCell.Tab.0.left" timestamp="1600901947363">
+    <state width="1248" height="96" key="GridCell.Tab.0.left" timestamp="1600988576890">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600901947363" />
+    <state width="1248" height="96" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600988576890" />
     <state width="1248" height="172" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="172" key="GridCell.Tab.0.right" timestamp="1600901947364">
+    <state width="1248" height="96" key="GridCell.Tab.0.right" timestamp="1600988576890">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600901947364" />
+    <state width="1248" height="96" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600988576890" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600901797447">
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600948468852">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="314" y="132" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1600901797447" />
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1600948468852" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1600387967018" />
     <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600791000093">
       <screen x="72" y="27" width="1294" height="741" />

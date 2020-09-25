@@ -23,4 +23,5 @@ urlpatterns = [
     path('geo/', include('apps.geo.urls')),
     path('', include('apps.login.urls')),
     path('', include('apps.dashboard.urls')),
+    path('', include('apps.usuarios.urls')),
 ]
