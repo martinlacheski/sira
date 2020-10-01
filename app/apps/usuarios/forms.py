@@ -1,22 +1,23 @@
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, PasswordInput, SelectMultiple
 from apps.usuarios.models import *
 
 
 class UsuariosForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs['autofocus'] = True
+        self.fields['first_name'].widget.attrs['autofocus'] = True
 
     class Meta:
         model = Usuarios
-        fields = '__all__'
+        #fields = '__all__'
+        fields = 'first_name', 'last_name', 'username', 'password', 'dni', 'legajo', 'email', 'telefono', 'groups'
         widgets = {
             'username': TextInput(
                 attrs={
-                    'placeholder': 'Ingrese un nombre',
+                    'placeholder': 'Ingrese un nombre de Usuario',
                 }
             ),
-            'password': TextInput(
+            'password': PasswordInput(render_value=True,
                 attrs={
                     'placeholder': 'Ingrese una contraseña',
                     'style': 'width: 100%'
@@ -24,13 +25,13 @@ class UsuariosForm(ModelForm):
             ),
             'first_name': TextInput(
                 attrs={
-                    'placeholder': 'Ingrese un nombre',
+                    'placeholder': 'Ingrese los nombres',
                     'style': 'width: 100%'
                 }
             ),
             'last_name': TextInput(
                 attrs={
-                    'placeholder': 'Ingrese un apellido',
+                    'placeholder': 'Ingrese el apellido',
                     'style': 'width: 100%'
                 }
             ),
@@ -47,7 +48,7 @@ class UsuariosForm(ModelForm):
             ),
             'email': TextInput(
                 attrs={
-                    'placeholder': 'Ingrese un número correo electrónico',
+                    'placeholder': 'Ingrese un correo electrónico válido',
                     'style': 'width: 100%'
                 }
             ),
@@ -57,14 +58,35 @@ class UsuariosForm(ModelForm):
                     'style': 'width: 100%'
                 }
             ),
+            'groups': SelectMultiple(attrs={
+                'class': 'form-control select2',
+                'style': 'width: 100%',
+                'multiple': 'multiple'
+            })
         }
+        exclude = ['user_permissions', 'last_login', 'date_joined', 'is_superuser', 'is_active', 'is_staff']
 
     def save(self, commit=True):
         data = {}
         form = super()
         try:
             if form.is_valid():
-                form.save()
+                pwd = self.cleaned_data['password']
+                u = form.save(commit=False)
+                if u.pk is None:
+                    u.set_password(pwd)
+                else:
+                    user = Usuarios.objects.get(pk=u.pk)
+                    if user.password != pwd:
+                        u.set_password(pwd)
+                u.save()
+
+                #limpiar los grupos que tiene el usuario
+                u.groups.clear()
+
+                #cargar los grupos que tiene el usuario
+                for g in self.cleaned_data['groups']:
+                    u.groups.add(g)
             else:
                 data['error'] = form.errors
         except Exception as e:

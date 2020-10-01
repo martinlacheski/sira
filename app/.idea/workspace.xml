@@ -20,23 +20,159 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0002_remove_usuarios_facultad.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0003_auto_20200924_2002.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/BD/backup-24-09-2020.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/eliminar BD.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/carreras/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/carreras/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/carreras/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/carreras/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/carreras/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/carreras/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/carreras/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geo/static/localidades/js/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/static/localidades/js/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/static/localidades/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/static/paises/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/static/provincias/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/localidades/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/paises/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/paises/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/paises/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/templates/provincias/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/views/localidades/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/views/paises/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/geografico/views/provincias/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/inst.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/migrations/0002_auto_20200930_2010.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/migrations/0003_auto_20200930_2101.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/migrations/0004_auto_20200930_2102.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/static/facultad/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/static/sedes/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/static/universidad/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/facultad/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/facultad/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/facultad/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/sedes/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/sedes/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/sedes/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/universidad/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/universidad/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/templates/universidad/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/views/facultad/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/views/sedes/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/institucional/views/universidad/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/static/motivos/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/static/tipos/js/list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/motivos/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/motivos/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/motivos/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/tipos/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/tipos/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/tipos/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/views/motivos/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/views/tipos/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/mystyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/fondo_template.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/videoconference.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/static/localidades/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/static/localidades/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/static/paises/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/static/paises/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/static/provincias/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/static/provincias/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/templates/localidades/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/templates/localidades/create2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/templates/localidades/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/templates/localidades/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/templates/localidades/provincias_dropdown_list_options.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/templates/paises/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/templates/paises/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/templates/provincias/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/templates/provincias/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/views/localidades/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/views/localidades/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/views/paises/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/views/paises/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geo/views/provincias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geo/views/provincias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/migrations/0002_auto_20200917_2033.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/static/facultad/js/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/static/sedes/js/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/static/universidad/js/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/facultad/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/facultad/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/facultad/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/sedes/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/sedes/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/sedes/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/universidad/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/universidad/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/templates/universidad/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/views/facultad/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/views/sedes/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/inst/views/universidad/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0002_remove_usuarios_facultad.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/migrations/0003_auto_20200924_2002.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/usuarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/fondo-template (footer).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/fondo-template (footer).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +185,7 @@
       <list>
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -68,18 +205,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/usuarios/templates/usuarios" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/solicitud_reserva" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/solicitud_reserva" />
+      <recent name="$PROJECT_DIR$/apps/geo/static/localidades/js" />
+      <recent name="$PROJECT_DIR$/apps/geo" />
+      <recent name="$PROJECT_DIR$/apps/geo/templates/localidades" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/usuarios/templates/usuarios" />
-      <recent name="$PROJECT_DIR$/apps/usuarios" />
-      <recent name="$PROJECT_DIR$/apps/inst" />
     </key>
   </component>
   <component name="RunManager">
@@ -161,7 +300,17 @@
       <workItem from="1600901918278" duration="30000" />
       <workItem from="1600944906927" duration="3763000" />
       <workItem from="1600976128754" duration="10915000" />
-      <workItem from="1601032920387" duration="1351000" />
+      <workItem from="1601032920387" duration="10249000" />
+      <workItem from="1601056237458" duration="2811000" />
+      <workItem from="1601068072273" duration="909000" />
+      <workItem from="1601133251572" duration="15000" />
+      <workItem from="1601295094191" duration="7915000" />
+      <workItem from="1601317529976" duration="18449000" />
+      <workItem from="1601377684011" duration="10106000" />
+      <workItem from="1601408904073" duration="6948000" />
+      <workItem from="1601419973638" duration="2245000" />
+      <workItem from="1601492710821" duration="18319000" />
+      <workItem from="1601556696095" duration="626000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -177,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600948464467</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit con usuarios_List">
+      <created>1601035765332</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601035765332</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,41 +357,63 @@
     <MESSAGE value="commit CRUD Universidad - Facultad - Sedes" />
     <MESSAGE value="Commit mejoras en el template y login con Mixins" />
     <MESSAGE value="commit 24-09-2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 24-09-2020" />
+    <MESSAGE value="Commit con usuarios_List" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit con usuarios_List" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600373082209">
       <screen x="72" y="29" width="1294" height="739" />
     </state>
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.29.1294.739@72.29.1294.739" timestamp="1600373082209" />
-    <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600381311116">
-      <screen x="72" y="29" width="1294" height="739" />
+    <state x="452" y="145" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601334237500">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
+    <state x="452" y="145" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1601334237500" />
     <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1600381311116" />
-    <state width="1248" height="96" key="GridCell.Tab.0.bottom" timestamp="1600988576891">
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom" timestamp="1601557359605">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="96" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1600988576891" />
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1601557359605" />
     <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="96" key="GridCell.Tab.0.center" timestamp="1600988576890">
+    <state width="1248" height="172" key="GridCell.Tab.0.center" timestamp="1601557359605">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="96" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1600988576890" />
+    <state width="1248" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1601557359605" />
     <state width="1248" height="172" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="96" key="GridCell.Tab.0.left" timestamp="1600988576890">
+    <state width="1248" height="172" key="GridCell.Tab.0.left" timestamp="1601557359605">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="96" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1600988576890" />
+    <state width="1248" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1601557359605" />
     <state width="1248" height="172" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="96" key="GridCell.Tab.0.right" timestamp="1600988576890">
+    <state width="1248" height="172" key="GridCell.Tab.0.right" timestamp="1601557359605">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="96" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1600988576890" />
+    <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1601557359605" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1600948468852">
+    <state width="1248" height="260" key="GridCell.Tab.1.bottom" timestamp="1601422218873">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1600948468852" />
+    <state width="1248" height="260" key="GridCell.Tab.1.bottom/72.27.1294.741@72.27.1294.741" timestamp="1601422218873" />
+    <state width="1248" height="260" key="GridCell.Tab.1.center" timestamp="1601422218873">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="260" key="GridCell.Tab.1.center/72.27.1294.741@72.27.1294.741" timestamp="1601422218873" />
+    <state width="1248" height="260" key="GridCell.Tab.1.left" timestamp="1601422218873">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="260" key="GridCell.Tab.1.left/72.27.1294.741@72.27.1294.741" timestamp="1601422218873" />
+    <state width="1248" height="260" key="GridCell.Tab.1.right" timestamp="1601422218873">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="260" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1601422218873" />
+    <state width="500" height="446" key="SwitcherDM" timestamp="1601059227074">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="500" height="446" key="SwitcherDM/72.27.1294.741@72.27.1294.741" timestamp="1601059227074" />
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601035767622">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1601035767622" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1600387967018" />
     <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600791000093">
       <screen x="72" y="27" width="1294" height="741" />

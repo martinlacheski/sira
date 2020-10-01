@@ -19,8 +19,9 @@ from apps.login.views import LoginFormView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inst/', include('apps.inst.urls')),
-    path('geo/', include('apps.geo.urls')),
+    path('institucional/', include('apps.institucional.urls')),
+    path('geografico/', include('apps.geografico.urls')),
+    path('solicitudes/', include('apps.solicitudes.urls')),
     path('', include('apps.login.urls')),
     path('', include('apps.dashboard.urls')),
     path('', include('apps.usuarios.urls')),

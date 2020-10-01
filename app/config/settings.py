@@ -45,11 +45,14 @@ INSTALLED_APPS = [
     'widget_tweaks',
     # APP usuarios
     'apps.usuarios',
-    # APPS
-    'apps.inst',    #Institucional (Universidad, Facultad, Sedes)
-    'apps.geo',     #Geografico (Paises, Provincias, Localidades)
-    'apps.login',   #App para login
-    'apps.dashboard',   #App para el template base
+    # APPS para el template y usuarios
+    'apps.login',  # App para login
+    'apps.dashboard',  # App para el template base
+    # APPS Modulos
+    'apps.institucional',    #Institucional (Universidad, Facultad, Sedes)
+    'apps.geografico',     #Geografico (Paises, Provincias, Localidades)
+    'apps.solicitudes',     #Solicitudes de Reservas (Tipo y Solicitud)
+
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,10 @@
 {% extends 'body.html' %}
 {% load widget_tweaks %}
+{% block head %}
+    {% block head_form %}
+
+    {% endblock %}
+{% endblock %}
 {% block content %}
     <form method="post" action=".">
         <div class="card card-default">
@@ -67,6 +72,7 @@
             var parameters = $(this).serializeArray();
             //var dataString = $(this).serialize();
             //alert('Datos serializados: '+dataString);
+            console.log(parameters);
             submit_with_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
                 location.href = '{{ list_url }}';
             });

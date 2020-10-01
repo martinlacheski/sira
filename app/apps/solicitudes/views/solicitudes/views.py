@@ -1,0 +1,165 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.utils.decorators import method_decorator
+
+from apps.geo.forms import LocalidadesForm, LocalidadesCreateForm
+from apps.geo.models import Localidades, Provincias
+from apps.mixins import ValidatePermissionRequiredMixin
+
+
+def localidades_list(request):
+    data = {
+        'title': 'Listado de Localidades',
+        'localidades': Localidades.objects.all()
+    }
+    return render(request, 'localidades/list.html', data)
+
+
+class LocalidadesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
+    model = Localidades
+    template_name = 'localidades/list.html'
+    permission_required = 'geo.view_localidades'
+
+    @method_decorator(csrf_exempt)
+    # @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'searchdata':
+                data = []
+                for i in Localidades.objects.all():
+                    data.append(i.toJSON())
+            else:
+                data['error'] = 'Ha ocurrido un error'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data, safe=False)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Listado de Localidades'
+        context['create_url'] = reverse_lazy('geo:localidades_create')
+        context['list_url'] = reverse_lazy('geo:localidades_list')
+        context['entity'] = 'Localidades'
+        return context
+
+
+class LocalidadesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, CreateView):
+    model = Localidades
+    form_class = LocalidadesForm
+    # form_class = LocalidadesCreateForm
+    template_name = 'localidades/create.html'
+    success_url = reverse_lazy('geo:localidades_list')
+    permission_required = 'geo.add_localidades'
+    url_redirect = success_url
+
+    @method_decorator(csrf_exempt)
+    # @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'search_provincia_id':
+                data = [{'id': '', 'text': '---------'}]
+                for i in Provincias.objects.filter(pais_id=request.POST['id']):
+                    data.append({'id': i.id, 'text': i.nombre})
+            elif action == 'add':
+                form = LocalidadesForm(request.POST)
+                #form = self.get_form()
+                #loc = Localidades()
+                #loc.pais_id = form['pais']
+                #loc.provincia_id = form['provincia']
+                #loc.nombre = form['nombre']
+                #loc.codigo_postal = form['codigo_postal']
+                #loc.save()
+                if form.is_valid():
+                    form = self.get_form()
+                    data = form.save()
+                return redirect('geo:localidades_list')
+            else:
+                data['error'] = 'Ha ocurrido un error'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data, safe=False)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Crear una Localidad'
+        context['entity'] = 'Localidades'
+        context['list_url'] = reverse_lazy('geo:localidades_list')
+        context['action'] = 'add'
+        return context
+
+
+class LocalidadesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
+    model = Localidades
+    form_class = LocalidadesForm
+    template_name = 'localidades/update.html'
+    success_url = reverse_lazy('geo:localidades_list')
+    permission_required = 'geo.change_localidades'
+    url_redirect = success_url
+
+    # @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'edit':
+                form = self.get_form()
+                data = form.save()
+            else:
+                data['error'] = 'No ha ingresado ninguna opción'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Editar Localidad'
+        context['entity'] = 'Localidades'
+        context['list_url'] = reverse_lazy('geo:localidades_list')
+        context['action'] = 'edit'
+        return context
+
+
+class LocalidadesDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, DeleteView):
+    model = Localidades
+    template_name = 'localidades/delete.html'
+    success_url = reverse_lazy('geo:localidades_list')
+    permission_required = 'geo.delete_localidades'
+    url_redirect = success_url
+
+    # @method_decorator(login_required)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            self.object.delete()
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Eliminar Localidad'
+        context['entity'] = 'Localidades'
+        context['list_url'] = reverse_lazy('geo:localidades_list')
+        return context

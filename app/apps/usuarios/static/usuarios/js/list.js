@@ -13,11 +13,12 @@ $(function () {
             dataSrc: ""
         },
                 columns: [
-            {"data": "id"},
+            //{"data": "id"},
+            {"data": "full_name"},
             {"data": "username"},
             //{"data": "password"},
-            {"data": "first_name"},
-            {"data": "last_name"},
+            //{"data": "first_name"},
+            //{"data": "last_name"},
             //{"data": "dni"},
             //{"data": "legajo"},
             {"data": "email"},

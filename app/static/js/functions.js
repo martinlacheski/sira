@@ -45,7 +45,7 @@ function submit_with_ajax(url, title, content, parameters, callback) {
                         }
                         message_error(data.error);
                     }).fail(function (jqXHR, textStatus, errorThrown) {
-                        alert(textStatus + ': ' + errorThrown);
+                         alert(textStatus + ': ' + errorThrown);
                     }).always(function (data) {
 
                     });

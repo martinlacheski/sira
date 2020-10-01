@@ -6,12 +6,14 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
+from apps.mixins import ValidatePermissionRequiredMixin
 from apps.usuarios.forms import UsuariosForm
 from apps.usuarios.models import Usuarios
 
-class UsuariosListView(LoginRequiredMixin, ListView):
+class UsuariosListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
     model = Usuarios
     template_name = 'usuarios/list.html'
+    permission_required = 'usuarios.view_usuarios'
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -40,11 +42,13 @@ class UsuariosListView(LoginRequiredMixin, ListView):
         return context
 
 
-class UsuariosCreateView(LoginRequiredMixin, CreateView):
+class UsuariosCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, CreateView):
     model = Usuarios
     form_class = UsuariosForm
     template_name = 'usuarios/create.html'
     success_url = reverse_lazy('usuarios:usuarios_list')
+    permission_required = 'usuarios.add_usuarios'
+    url_redirect = success_url
 
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
@@ -71,11 +75,13 @@ class UsuariosCreateView(LoginRequiredMixin, CreateView):
         return context
 
 
-class UsuariosUpdateView(LoginRequiredMixin, UpdateView):
+class UsuariosUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
     model = Usuarios
     form_class = UsuariosForm
     template_name = 'usuarios/create.html'
     success_url = reverse_lazy('usuarios:usuarios_list')
+    permission_required = 'usuarios.change_usuarios'
+    url_redirect = success_url
 
     #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
@@ -103,10 +109,12 @@ class UsuariosUpdateView(LoginRequiredMixin, UpdateView):
         context['action'] = 'edit'
         return context
 
-class UsuariosDeleteView(LoginRequiredMixin, DeleteView):
+class UsuariosDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, DeleteView):
     model = Usuarios
     template_name = 'usuarios/delete.html'
     success_url = reverse_lazy('usuarios:usuarios_list')
+    permission_required = 'usuarios.delete_usuarios'
+    url_redirect = success_url
 
     #@method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):

@@ -12,7 +12,11 @@ class Usuarios(AbstractUser):
     telefono = models.TextField(null=True, blank=True)
 
     def toJSON(self):
-        item = model_to_dict(self, exclude=['password', 'groups', 'user_permissions', 'last_login', 'date_joined'])
+        item = model_to_dict(self, exclude=['password', 'user_permissions', 'last_login', 'date_joined'])
+        item['full_name'] = self.get_full_name()
+        item['groups'] = [{'id': g.id, 'name': g.name} for g in self.groups.all()]
         return item
+
+
 
 
