@@ -6,26 +6,25 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
-from apps.solicitudes.forms import TipoSolicitudForm
-from apps.solicitudes.models import TipoSolicitud
+from apps.carreras.forms import PeriodoCursadoForm
+from apps.carreras.models import PeriodoCursado
 from apps.mixins import ValidatePermissionRequiredMixin
 
 
-def tipo_solicitud_list(request):
+def tipos_list(request):
     data = {
-        'title': 'Listado de Tipos de Reservas',
-        'tipo_solicitud': TipoSolicitud.objects.all()
+        'title': 'Listado de Periodos de Cursado',
+        'periodo': PeriodoCursado.objects.all()
     }
-    return render(request, 'tipo_solicitud/list.html', data)
+    return render(request, 'periodos/list.html', data)
 
 
-class TipoSolicitudListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
-    model = TipoSolicitud
-    template_name = 'tipo_solicitud/list.html'
-    permission_required = 'solicitud_reserva.view_tipo_solicitud'
+class PeriodoListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
+    model = PeriodoCursado
+    template_name = 'periodos/list.html'
+    permission_required = 'carreras.view_periodocursado'
 
     @method_decorator(csrf_exempt)
-
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -35,7 +34,7 @@ class TipoSolicitudListView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
             action = request.POST['action']
             if action == 'searchdata':
                 data = []
-                for i in TipoSolicitud.objects.all():
+                for i in PeriodoCursado.objects.all():
                     data.append(i.toJSON())
             else:
                 data['error'] = 'Ha ocurrido un error'
@@ -45,19 +44,19 @@ class TipoSolicitudListView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Listado de Tipos de Reservas'
-        context['create_url'] = reverse_lazy('solicitudes:tipo_solicitud_create')
-        context['list_url'] = reverse_lazy('solicitudes:tipo_solicitud_list')
-        context['entity'] = 'Tipos de Reservas'
+        context['title'] = 'Listado de Periodos de Cursado'
+        context['create_url'] = reverse_lazy('carreras:periodos_create')
+        context['list_url'] = reverse_lazy('carreras:periodos_list')
+        context['entity'] = 'Periodo'
         return context
 
 
-class TipoSolicitudCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, CreateView):
-    model = TipoSolicitud
-    form_class = TipoSolicitudForm
-    template_name = 'tipo_solicitud/create.html'
-    success_url = reverse_lazy('solicitudes:tipo_solicitud_list')
-    permission_required = 'solicitudes.add_tipo_solicitud'
+class PeriodoCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, CreateView):
+    model = PeriodoCursado
+    form_class = PeriodoCursadoForm
+    template_name = 'periodos/create.html'
+    success_url = reverse_lazy('carreras:periodos_list')
+    permission_required = 'carreras.add_periodocursado'
     url_redirect = success_url
 
     def dispatch(self, request, *args, **kwargs):
@@ -78,19 +77,19 @@ class TipoSolicitudCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixi
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Crear un Tipo de Reserva'
-        context['entity'] = 'Tipos de Reservas'
-        context['list_url'] = reverse_lazy('solicitudes:tipo_solicitud_list')
+        context['title'] = 'Crear un Periodo de Cursado'
+        context['entity'] = 'Periodo'
+        context['list_url'] = reverse_lazy('carreras:periodos_list')
         context['action'] = 'add'
         return context
 
 
-class TipoSolicitudUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
-    model = TipoSolicitud
-    form_class = TipoSolicitudForm
-    template_name = 'tipo_solicitud/create.html'
-    success_url = reverse_lazy('solicitudes:tipo_solicitud_list')
-    permission_required = 'solicitudes.change_tipo_solicitud'
+class PeriodoUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
+    model = PeriodoCursado
+    form_class = PeriodoCursadoForm
+    template_name = 'periodos/create.html'
+    success_url = reverse_lazy('carreras:periodos_list')
+    permission_required = 'carreras.change_periodocursado'
     url_redirect = success_url
 
     def dispatch(self, request, *args, **kwargs):
@@ -112,17 +111,17 @@ class TipoSolicitudUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixi
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Editar un Tipo de Reserva'
-        context['entity'] = 'Tipos de Reservas'
-        context['list_url'] = reverse_lazy('solicitudes:tipo_solicitud_list')
+        context['title'] = 'Editar Periodo de Cursado'
+        context['entity'] = 'Periodo'
+        context['list_url'] = reverse_lazy('carreras:periodos_list')
         context['action'] = 'edit'
         return context
 
-class TipoSolicitudDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, DeleteView):
-    model = TipoSolicitud
-    template_name = 'tipo_solicitud/delete.html'
-    success_url = reverse_lazy('solicitudes:tipo_solicitud_list')
-    permission_required = 'solicitudes.delete_tipo_solicitud'
+class PeriodoDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, DeleteView):
+    model = PeriodoCursado
+    template_name = 'periodos/delete.html'
+    success_url = reverse_lazy('carreras:periodos_list')
+    permission_required = 'carreras.delete_periodocursado'
     url_redirect = success_url
 
     def dispatch(self, request, *args, **kwargs):
@@ -139,7 +138,7 @@ class TipoSolicitudDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixi
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Eliminar Tipo de Reserva'
-        context['entity'] = 'Tipos de Reservas'
-        context['list_url'] = reverse_lazy('solicitudes:tipo_solicitud_list')
+        context['title'] = 'Eliminar Periodo de Cursado'
+        context['entity'] = 'Periodo'
+        context['list_url'] = reverse_lazy('carreras:periodos_list')
         return context

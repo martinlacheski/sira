@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'apps.login',  # App para login
     'apps.dashboard',  # App para el template base
     # APPS Modulos
+    'apps.carreras',     #Carreras, Tipos, Materias, Planes de Estudios
     'apps.institucional',    #Institucional (Universidad, Facultad, Sedes)
     'apps.geografico',     #Geografico (Paises, Provincias, Localidades)
     'apps.solicitudes',     #Solicitudes de Reservas (Tipo y Solicitud)

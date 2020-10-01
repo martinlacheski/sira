@@ -7,10 +7,10 @@ app_name = 'solicitudes'
 
 urlpatterns = [
     #Tipos de Reservas
-    path('tipos/list/', TipoSolicitudListView.as_view(), name='tipos_list'),
-    path('tipos/add/', TipoSolicitudCreateView.as_view(), name='tipos_create'),
-    path('tipos/update/<int:pk>/', TipoSolicitudUpdateView.as_view(), name='tipos_update'),
-    path('tipos/delete/<int:pk>/', TipoSolicitudDeleteView.as_view(), name='tipos_delete'),
+    path('tipo_solicitud/list/', TipoSolicitudListView.as_view(), name='tipo_solicitud_list'),
+    path('tipo_solicitud/add/', TipoSolicitudCreateView.as_view(), name='tipo_solicitud_create'),
+    path('tipo_solicitud/update/<int:pk>/', TipoSolicitudUpdateView.as_view(), name='tipo_solicitud_update'),
+    path('tipo_solicitud/delete/<int:pk>/', TipoSolicitudDeleteView.as_view(), name='tipo_solicitud_delete'),
 
     #Motivos de Reservas
     path('motivos/list/', MotivoSolicitudListView.as_view(), name='motivos_list'),

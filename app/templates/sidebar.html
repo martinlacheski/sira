@@ -27,15 +27,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'solicitudes:tipos_list' %}" class="nav-link">
+                            <a href="{% url 'solicitudes:tipo_solicitud_list' %}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Tipos</p>
+                                <p>Tipos de Reservas</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url 'solicitudes:motivos_list' %}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Motivos</p>
+                                <p>Motivos de Reservas</p>
                             </a>
                         </li>
                     </ul>
@@ -153,15 +153,21 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{% url 'carreras:carreras_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Carreras</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{% url 'carreras:tipo_carrera_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Tipos de Carreras</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'carreras:planes_list' %}" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Planes de Estudios</p>
                                     </a>
                                 </li>
                             </ul>
@@ -179,7 +185,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{% url 'carreras:materias_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Materias</p>
                                     </a>
@@ -211,13 +217,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{% url 'carreras:periodos_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Periodos de Cursado</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{% url 'carreras:anios_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Años de Cursado</p>
                                     </a>
