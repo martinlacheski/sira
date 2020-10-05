@@ -37,6 +37,8 @@ function submit_with_ajax(url, title, content, parameters, callback) {
                         type: 'POST',
                         data: parameters,
                         dataType: 'json',
+                        //processData: false,
+                        //contentType: false,
                     }).done(function (data) {
                         console.log(data);
                         if (!data.hasOwnProperty('error')) {
@@ -45,7 +47,7 @@ function submit_with_ajax(url, title, content, parameters, callback) {
                         }
                         message_error(data.error);
                     }).fail(function (jqXHR, textStatus, errorThrown) {
-                         alert(textStatus + ': ' + errorThrown);
+                        alert(textStatus + ': ' + errorThrown);
                     }).always(function (data) {
 
                     });
@@ -84,6 +86,8 @@ function submit_without_ajax(url, title, content, parameters, callback) {
                         type: 'POST',
                         data: parameters,
                         dataType: 'json',
+                        //processData: false,
+                        //contentType: false,
                     }).done(function (data) {
                         console.log(data);
                         if (!data.hasOwnProperty('error')) {
@@ -92,7 +96,7 @@ function submit_without_ajax(url, title, content, parameters, callback) {
                         }
                         message_error(data.error);
                     }).fail(function (jqXHR, textStatus, errorThrown) {
-                         //alert(textStatus + ': ' + errorThrown);
+                        //alert(textStatus + ': ' + errorThrown);
                         callback();
                         return false;
                     }).always(function (data) {

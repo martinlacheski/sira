@@ -14,7 +14,6 @@ $(function () {
         },
         columns: [
             //{"data": "id"},
-            {"data": "carrera"},
             {"data": "nombre"},
             {"data": "tipo.nombre"},
             {"data": "duracion"},

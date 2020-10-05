@@ -5,7 +5,6 @@ from apps.carreras.views.periodos.views import *
 from apps.carreras.views.materias.views import *
 from apps.carreras.views.tipos.views import *
 from apps.carreras.views.carreras.views import *
-from apps.carreras.views.planes.views import *
 
 app_name = 'carreras'
 
@@ -20,11 +19,6 @@ urlpatterns = [
     path('add/', CarrerasCreateView.as_view(), name='carreras_create'),
     path('update/<int:pk>/', CarrerasUpdateView.as_view(), name='carreras_update'),
     path('delete/<int:pk>/', CarrerasDeleteView.as_view(), name='carreras_delete'),
-    #Planes de Estudios
-    path('planes/list/', PlanesListView.as_view(), name='planes_list'),
-    path('planes/add/', PlanesCreateView.as_view(), name='planes_create'),
-    path('planes/update/<int:pk>/', PlanesUpdateView.as_view(), name='planes_update'),
-    path('planes/delete/<int:pk>/', PlanesDeleteView.as_view(), name='planes_delete'),
     #Años de Cursado
     path('cursado/list/', AniosListView.as_view(), name='anios_list'),
     path('cursado/add/', AniosCreateView.as_view(), name='anios_create'),

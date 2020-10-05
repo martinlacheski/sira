@@ -22,10 +22,10 @@ class TiposCarreras(models.Model):
 
 #   Clase Carreras
 class Carreras(models.Model):
-    facultad = models.ForeignKey(Facultad, models.DO_NOTHING, verbose_name='Facultad')
-    carrera = models.CharField(max_length=5, verbose_name='Carrera', unique=True)
+    #facultad = models.ForeignKey(Facultad, models.DO_NOTHING, verbose_name='Facultad')
     nombre_corto = models.CharField(max_length=30, verbose_name='Nombre Corto', unique=True)
     nombre = models.TextField(verbose_name='Nombre')
+    plan = models.CharField(max_length=20, verbose_name='Plan de Estudios', null=True, blank=True)
     tipo = models.ForeignKey(TiposCarreras, models.DO_NOTHING, verbose_name='Tipo')
     duracion = models.IntegerField(verbose_name='Duración')
 
@@ -34,7 +34,7 @@ class Carreras(models.Model):
 
     def toJSON(self):
         item = model_to_dict(self)
-        item['facultad'] = self.facultad.toJSON()
+        #item['facultad'] = self.facultad.toJSON()
         item['tipo'] = self.tipo.toJSON()
         return item
 
@@ -44,32 +44,12 @@ class Carreras(models.Model):
         db_table = 'carreras'
         ordering = ['id']
 
-#   Clase Planes de Estudios
-class PlanesEstudios(models.Model):
-    carrera = models.ForeignKey(Carreras, models.DO_NOTHING, verbose_name='Carrera')
-    nombre = models.CharField(max_length=5, verbose_name='Nombre')
-
-    def __str__(self):
-        return self.nombre
-
-    def toJSON(self):
-        item = model_to_dict(self)
-        item['carrera'] = self.carrera.toJSON()
-        return item
-
-    class Meta:
-        verbose_name = 'Plan de Estudio'
-        verbose_name_plural = 'Planes de Estudios'
-        db_table = 'carreras_planes'
-        ordering = ['id']
-
-
 #   Clase Año de Cursado
 class AnioCursado(models.Model):
     nombre = models.IntegerField(verbose_name='Año', unique=True)
 
     def __str__(self):
-        return self.nombre
+        return str(self.nombre)
 
     def toJSON(self):
         item = model_to_dict(self)
@@ -98,17 +78,22 @@ class PeriodoCursado(models.Model):
         db_table = 'carreras_periodos_cursado'
         ordering = ['id']
 
-#   Clase Materias
+#   Clase Materias de la Carrera
 class Materias(models.Model):
-    materia = models.CharField(max_length=5, verbose_name='Materia', unique=True)
-    nombre_corto = models.CharField(max_length=30, verbose_name='Nombre Corto', unique=True)
+    carrera = models.ForeignKey(Carreras, models.DO_NOTHING, verbose_name='Carrera')
     nombre = models.TextField(verbose_name='Nombre')
+    nombre_corto = models.CharField(max_length=30, verbose_name='Nombre Corto')
+    anio = models.ForeignKey(AnioCursado, models.DO_NOTHING, verbose_name='Año')
+    periodo = models.ForeignKey(PeriodoCursado, models.DO_NOTHING, verbose_name='Periodo')
 
     def __str__(self):
         return self.nombre
 
     def toJSON(self):
         item = model_to_dict(self)
+        item['carrera'] = self.carrera.toJSON()
+        item['anio'] = self.anio.toJSON()
+        item['periodo'] = self.periodo.toJSON()
         return item
 
     class Meta:

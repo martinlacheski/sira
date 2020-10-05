@@ -14,8 +14,10 @@ $(function () {
         },
         columns: [
             //{"data": "id"},
-            {"data": "materia"},
             {"data": "nombre"},
+            {"data": "carrera.nombre"},
+            {"data": "anio.nombre"},
+            {"data": "periodo.nombre"},
             {"data": "nombre"},
         ],
         columnDefs: [
@@ -24,8 +26,8 @@ $(function () {
                 class: 'text-center',
                 orderable: false,
                 render: function (data, type, row) {
-                    var buttons = '<a href="/materias/update/' + row.id + '/" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
-                    buttons += '<a href="/materias/delete/' + row.id + '/" type="button" class="btn btn-danger btn-xs btn-flat"><i class="fas fa-trash-alt"></i></a>';
+                    var buttons = '<a href="/carreras/materias/update/' + row.id + '/" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
+                    buttons += '<a href="/carreras/materias/delete/' + row.id + '/" type="button" class="btn btn-danger btn-xs btn-flat"><i class="fas fa-trash-alt"></i></a>';
                     return buttons;
                 }
             },

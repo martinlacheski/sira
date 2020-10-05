@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
-from apps.geografico.forms import LocalidadesForm, LocalidadesCreateForm
+from apps.geografico.forms import LocalidadesForm
 from apps.geografico.models import Localidades, Provincias
 from apps.mixins import ValidatePermissionRequiredMixin
 
@@ -55,7 +55,6 @@ class LocalidadesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, L
 class LocalidadesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, CreateView):
     model = Localidades
     form_class = LocalidadesForm
-    # form_class = LocalidadesCreateForm
     template_name = 'localidades/create.html'
     success_url = reverse_lazy('geografico:localidades_list')
     permission_required = 'geografico.add_localidades'
@@ -76,13 +75,6 @@ class LocalidadesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                     data.append({'id': i.id, 'text': i.nombre})
             elif action == 'add':
                 form = LocalidadesForm(request.POST)
-                #form = self.get_form()
-                #loc = Localidades()
-                #loc.pais_id = form['pais']
-                #loc.provincia_id = form['provincia']
-                #loc.nombre = form['nombre']
-                #loc.codigo_postal = form['codigo_postal']
-                #loc.save()
                 if form.is_valid():
                     form = self.get_form()
                     data = form.save()

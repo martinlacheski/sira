@@ -76,7 +76,7 @@
         $('form').on('submit', function (e) {
             e.preventDefault();
             var parameters = $(this).serializeArray();
-            console.log(parameters);
+            //var parameters = new FormData(this);
             //para el select anidado hasta que encuentre como resolver eso
             submit_without_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
                 location.href = '{{ list_url }}';

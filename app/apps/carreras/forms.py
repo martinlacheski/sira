@@ -7,7 +7,6 @@ class TiposCarrerasForm(ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['nombre'].widget.attrs['autofocus'] = True
 
-
     class Meta:
         model = TiposCarreras
         fields = '__all__'
@@ -35,7 +34,7 @@ class TiposCarrerasForm(ModelForm):
 class CarrerasForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['carrera'].widget.attrs['autofocus'] = True
+        self.fields['nombre'].widget.attrs['autofocus'] = True
 
     class Meta:
         model = Carreras
@@ -54,6 +53,11 @@ class CarrerasForm(ModelForm):
             'nombre': TextInput(
                 attrs={
                     'placeholder': 'Ingrese el nombre de la Carrera',
+                }
+            ),
+            'plan': TextInput(
+                attrs={
+                    'placeholder': 'Ingrese el nombre del Plan de Estudios',
                 }
             ),
             'duracion': TextInput(
@@ -76,45 +80,16 @@ class CarrerasForm(ModelForm):
         return data
 
 
-class PlanesForm(ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['carrera'].widget.attrs['autofocus'] = True
-
-    class Meta:
-        model = PlanesEstudios
-        fields = '__all__'
-        widgets = {
-            'nombre': TextInput(
-                attrs={
-                    'placeholder': 'Ingrese el nombre del Plan (Año)',
-                }
-            ),
-        }
-
-    def save(self, commit=True):
-        data = {}
-        form = super()
-        try:
-            if form.is_valid():
-                form.save()
-            else:
-                data['error'] = form.errors
-        except Exception as e:
-            data['error'] = str(e)
-        return data
-
-
 class AnioCursadoForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['anio'].widget.attrs['autofocus'] = True
+        self.fields['nombre'].widget.attrs['autofocus'] = True
 
     class Meta:
         model = AnioCursado
         fields = '__all__'
         widgets = {
-            'anio': TextInput(
+            'nombre': TextInput(
                 attrs={
                     'placeholder': 'Ingrese el año de cursado',
                 }
@@ -137,13 +112,13 @@ class AnioCursadoForm(ModelForm):
 class PeriodoCursadoForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['periodo'].widget.attrs['autofocus'] = True
+        self.fields['nombre'].widget.attrs['autofocus'] = True
 
     class Meta:
         model = PeriodoCursado
         fields = '__all__'
         widgets = {
-            'periodo': TextInput(
+            'nombre': TextInput(
                 attrs={
                     'placeholder': 'Ingrese el periodo de cursado',
                 }
@@ -166,25 +141,20 @@ class PeriodoCursadoForm(ModelForm):
 class MateriasForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['materia'].widget.attrs['autofocus'] = True
+
 
     class Meta:
         model = Materias
         fields = '__all__'
         widgets = {
-            'materia': TextInput(
+            'nombre': TextInput(
                 attrs={
-                    'placeholder': 'Ingrese el código de la materia (5 caracteres máximo)',
+                    'placeholder': 'Ingrese el nombre de la Materia',
                 }
             ),
             'nombre_corto': TextInput(
                 attrs={
                     'placeholder': 'Ingrese el nombre corto de la Materia (30 caracteres máximo)',
-                }
-            ),
-            'nombre': TextInput(
-                attrs={
-                    'placeholder': 'Ingrese el nombre de la Materia',
                 }
             ),
         }
