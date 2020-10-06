@@ -101,3 +101,20 @@ class Materias(models.Model):
         verbose_name_plural = 'Materias'
         db_table = 'materias'
         ordering = ['id']
+
+#   Clase Tipos de Comisiones
+class TiposComisiones(models.Model):
+    nombre = models.TextField(verbose_name='Nombre', unique=True)
+
+    def __str__(self):
+        return self.nombre
+
+    def toJSON(self):
+        item = model_to_dict(self)
+        return item
+
+    class Meta:
+        verbose_name = 'Tipo'
+        verbose_name_plural = 'Tipos'
+        db_table = 'materias_tipos_comisiones'
+        ordering = ['id']

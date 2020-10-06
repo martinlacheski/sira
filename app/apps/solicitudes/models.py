@@ -1,8 +1,10 @@
 from datetime import datetime
 
 from django.db import models
-
 from django.forms import model_to_dict
+
+from apps.carreras.models import Carreras, Materias, TiposComisiones
+from apps.institucional.models import Sedes
 
 #   Clase tipo_solicitud
 class TipoSolicitud(models.Model):
@@ -38,4 +40,41 @@ class Motivos(models.Model):
         db_table = 'solicitudes_motivos'
         ordering = ['id']
 
+#   Clase Solicitudes de Reservas
+class Solicitudes(models.Model):
+    nombre = models.DateField(default=datetime.now, verbose_name='Fecha de Solicitud')
+    tipo = models.ForeignKey(TipoSolicitud, models.DO_NOTHING, verbose_name='Tipo de Reserva')
+    motivo = models.ForeignKey(Motivos, models.DO_NOTHING, verbose_name='Motivo')
+    dni = models.PositiveIntegerField(verbose_name='DNI')
+    nombres = models.TextField(verbose_name='Nombres')
+    apellido = models.TextField(verbose_name='Apellido')
+    email = models.EmailField(verbose_name='Correo Electrónico')
+    #telefono = models.TextField(verbose_name='Teléfono', null=True, blank=True)
+    sede = models.ForeignKey(Sedes, models.DO_NOTHING, verbose_name='Sede')
+    carrera = models.ForeignKey(Carreras, models.DO_NOTHING, verbose_name='Carrera')
+    materia = models.ForeignKey(Materias, models.DO_NOTHING, verbose_name='Materia')
+    comision = models.ForeignKey(TiposComisiones, models.DO_NOTHING, verbose_name='Tipo de Comisión')
+    fecha_reserva = models.DateField(default=datetime.now, verbose_name='Fecha de Reserva')
+    inicio_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Inicio')
+    fin_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Fin')
+    repeticion = models.BooleanField(default=False)
+    fin_repeticion = models.DateField(default=datetime.now, verbose_name='Fin de la Repetición')
 
+    def __str__(self):
+        return self.nombre
+
+    def toJSON(self):
+        item = model_to_dict(self)
+        item['tipo'] = self.tipo.toJSON()
+        item['motivo'] = self.motivo.toJSON()
+        item['sede'] = self.sede.toJSON()
+        item['carrera'] = self.carrera.toJSON()
+        item['materia'] = self.materia.toJSON()
+        item['comision'] = self.comision.toJSON()
+        return item
+
+    class Meta:
+        verbose_name = 'Solicitud'
+        verbose_name_plural = 'Solicitudes'
+        db_table = 'solicitudes'
+        ordering = ['id']

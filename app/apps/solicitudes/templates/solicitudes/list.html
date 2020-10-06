@@ -1,15 +1,18 @@
 {% extends 'list.html' %}
 {% load static %}
 {% block head_list %}
-    <script src="{% static 'localidades/js/list.js' %}"></script>
+    <script src="{% static 'solicitudes/js/list.js' %}"></script>
 {% endblock %}
 
 {% block columns %}
     <tr>
         <!-- <th scope="col" style="width: 10%;">Código</th> -->
-        <th scope="col" style="width: 30%;">Localidad</th>
-        <th scope="col" style="width: 30%;">Provincia</th>
-        <th scope="col" style="width: 30%;">Pais</th>
+        <th scope="col" style="width: 5%;">Fecha</th>
+        <th scope="col" style="width: 10%;">Apellido</th>
+        <th scope="col" style="width: 15%;">Nombres</th>
+        <th scope="col" style="width: 25%;">Carrera</th>
+        <th scope="col" style="width: 25%;">Materia</th>
+        <th scope="col" style="width: 10%;">Comisión</th>
         <th scope="col" style="width: 10%;">Opciones</th>
     </tr>
 {% endblock %}

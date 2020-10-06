@@ -13,13 +13,9 @@ $(function () {
             dataSrc: ""
         },
         columns: [
-            //{"data": "id"},
-            {"data": "nombre"},
             {"data": "apellido"},
-            {"data": "nombres"},
-            {"data": "carrera.nombre"},
-            {"data": "materia.nombre"},
-            {"data": "comision.nombre"},
+            {"data": "nombre"},
+            {"data": "email"},
             {"data": "nombre"},
         ],
         columnDefs: [
@@ -28,8 +24,8 @@ $(function () {
                 class: 'text-center',
                 orderable: false,
                 render: function (data, type, row) {
-                    var buttons = '<a href="/solicitudes/update/' + row.id + '/" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
-                    buttons += '<a href="/solicitudes/delete/' + row.id + '/" type="button" class="btn btn-danger btn-xs btn-flat"><i class="fas fa-trash-alt"></i></a>';
+                    var buttons = '<a href="/docentes/update/' + row.id + '/" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
+                    buttons += '<a href="/docentes/delete/' + row.id + '/" type="button" class="btn btn-danger btn-xs btn-flat"><i class="fas fa-trash-alt"></i></a>';
                     return buttons;
                 }
             },

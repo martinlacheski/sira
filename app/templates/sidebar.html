@@ -21,7 +21,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{% url 'solicitudes:solicitudes_list' %}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Solicitudes de Reservas</p>
                             </a>
@@ -166,15 +166,8 @@
                                         <p>Materias</p>
                                     </a>
                                 </li>
-
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Comisiones</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{% url 'carreras:tipo_comision_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Tipos de Comisiones</p>
                                     </a>
@@ -295,6 +288,12 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{% url 'usuarios:docentes_list' %}" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Docentes</p>
+                                    </a>
+                                </li>
                                 <li class="nav-item">
                                     <a href="{% url 'usuarios:usuarios_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>

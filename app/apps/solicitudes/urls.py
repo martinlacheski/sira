@@ -2,6 +2,7 @@ from django.urls import path
 
 from apps.solicitudes.views.motivos.views import *
 from apps.solicitudes.views.tipos.views import *
+from apps.solicitudes.views.solicitudes.views import *
 
 app_name = 'solicitudes'
 
@@ -17,4 +18,10 @@ urlpatterns = [
     path('motivos/add/', MotivoSolicitudCreateView.as_view(), name='motivos_create'),
     path('motivos/update/<int:pk>/', MotivoSolicitudUpdateView.as_view(), name='motivos_update'),
     path('motivos/delete/<int:pk>/', MotivoSolicitudDeleteView.as_view(), name='motivos_delete'),
+
+    #Solicitudes de Reservas
+    path('list/', SolicitudesListView.as_view(), name='solicitudes_list'),
+    path('add/', SolicitudesCreateView.as_view(), name='solicitudes_create'),
+    path('update/<int:pk>/', SolicitudesUpdateView.as_view(), name='solicitudes_update'),
+    path('delete/<int:pk>/', SolicitudesDeleteView.as_view(), name='solicitudes_delete'),
 ]

@@ -12,7 +12,7 @@ $(function () {
             },
             dataSrc: ""
         },
-                columns: [
+        columns: [
             //{"data": "id"},
             {"data": "full_name"},
             {"data": "username"},

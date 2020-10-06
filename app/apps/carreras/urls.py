@@ -5,6 +5,7 @@ from apps.carreras.views.periodos.views import *
 from apps.carreras.views.materias.views import *
 from apps.carreras.views.tipos.views import *
 from apps.carreras.views.carreras.views import *
+from apps.carreras.views.tipos_comisiones.views import *
 
 app_name = 'carreras'
 
@@ -34,4 +35,9 @@ urlpatterns = [
     path('materias/add/', MateriasCreateView.as_view(), name='materias_create'),
     path('materias/update/<int:pk>/', MateriasUpdateView.as_view(), name='materias_update'),
     path('materias/delete/<int:pk>/', MateriasDeleteView.as_view(), name='materias_delete'),
+    #Tipos de Comisiones
+    path('tipo_comision/list/', TipoComisionListView.as_view(), name='tipo_comision_list'),
+    path('tipo_comision/add/', TipoComisionCreateView.as_view(), name='tipo_comision_create'),
+    path('tipo_comision/update/<int:pk>/', TipoComisionUpdateView.as_view(), name='tipo_comision_update'),
+    path('tipo_comision/delete/<int:pk>/', TipoComisionDeleteView.as_view(), name='tipo_comision_delete'),
 ]
