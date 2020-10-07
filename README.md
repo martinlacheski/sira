@@ -1,5 +1,5 @@
 # sira
-Sistema Integral de Reservas Académicas
+Sistema de Reservas Académicas
 
 Python 3.8.2
 Django 3.1.1
