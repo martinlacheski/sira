@@ -27,6 +27,7 @@
       <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0006_auto_20201008_1731.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0007_auto_20201008_1739.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0008_auto_20201008_1800.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/BD/backup-09-10-2020.backup" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.css.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.min.css" afterDir="false" />
@@ -152,6 +153,8 @@
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/BD/backup-05-10-2020.backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/BD/backup-05-10-2020.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/bootstrap-touchspin-4.3.0/jquery.bootstrap-touchspin.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/bootstrap-touchspin-4.3.0/jquery.bootstrap-touchspin.js" beforeDir="false" />
     </list>
@@ -309,7 +312,7 @@
       <workItem from="1602186265191" duration="11671000" />
       <workItem from="1602199044113" duration="589000" />
       <workItem from="1602251618658" duration="9062000" />
-      <workItem from="1602274606384" duration="11289000" />
+      <workItem from="1602274606384" duration="11684000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -374,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602026742829</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Commit con Solicitudes de Reservas con controles, falta pulir algunos detalles pero funciona todo ok.&#10;Se agrego la Libreria tempus_dominus al entorno virtual, porque generaba conflictos con otra libreria de datepicker.">
+      <created>1602286290138</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602286290138</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +414,8 @@
     <MESSAGE value="Commit con carreras, tipos de carreras, materias, planes de estudio, periodos de cursado, años de cursado" />
     <MESSAGE value="Commit con CRUD Academico (Hasta Materias, resta comisiones y tipos de comisiones)" />
     <MESSAGE value="Commit con CRUD de Solicitudes, Faltan Validaciones de fechas, select anidado de carreras y materias, autocompletar los campos si el DNI esta registrado y revisar el tema fecha YYYY/MM/DD a DD/MM/YYYY" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit con CRUD de Solicitudes, Faltan Validaciones de fechas, select anidado de carreras y materias, autocompletar los campos si el DNI esta registrado y revisar el tema fecha YYYY/MM/DD a DD/MM/YYYY" />
+    <MESSAGE value="Commit con Solicitudes de Reservas con controles, falta pulir algunos detalles pero funciona todo ok.&#10;Se agrego la Libreria tempus_dominus al entorno virtual, porque generaba conflictos con otra libreria de datepicker." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit con Solicitudes de Reservas con controles, falta pulir algunos detalles pero funciona todo ok.&#10;Se agrego la Libreria tempus_dominus al entorno virtual, porque generaba conflictos con otra libreria de datepicker." />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600373082209">
@@ -456,10 +467,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="500" height="446" key="SwitcherDM/72.27.1294.741@72.27.1294.741" timestamp="1601680124856" />
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602026748973">
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602286293510">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1602026748973" />
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1602286293510" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1600387967018" />
     <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601589216827">
       <screen x="72" y="27" width="1294" height="741" />
