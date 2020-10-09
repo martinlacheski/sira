@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Libs
     'widget_tweaks',
+    'tempus_dominus',
     # APP usuarios
     'apps.usuarios',
     # APPS para el template y usuarios
@@ -125,6 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'es-ar'
 
 TIME_ZONE = 'America/Buenos_Aires'
+#TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

@@ -23,66 +23,145 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/apps/carreras/migrations/0003_tiposcomisiones.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/carreras/static/tipo_comision/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/carreras/templates/tipo_comision/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/carreras/templates/tipo_comision/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/carreras/templates/tipo_comision/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0002_solicitudes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0003_auto_20201006_1522.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0004_auto_20201006_1821.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0005_auto_20201006_1848.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0002_docentes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0003_auto_20201006_0937.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0004_auto_20201006_1009.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0005_auto_20201006_1014.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0006_auto_20201006_1049.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0007_usuarios_sedes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0008_auto_20201006_1525.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0009_remove_docentes_telefono.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/static/docentes/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/docentes/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/docentes/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/templates/docentes/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/views/docentes/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/views/usuarios/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/BD/Modelo Completo.architect" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-touchspin-4.3.0/jquery.bootstrap-touchspin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-touchspin-4.3.0/jquery.bootstrap-touchspin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/moment-2.25.3/moment-with-locales.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/moment-2.25.3/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/lib/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0006_auto_20201008_1731.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0007_auto_20201008_1739.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0008_auto_20201008_1800.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker3.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker3.standalone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker3.standalone.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker3.standalone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker-en-CA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ar-tn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.az.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.bg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.bm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.bn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.br.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.bs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ca.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.cs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.cy.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.da.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.de.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.el.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.en-AU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.en-CA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.en-GB.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.en-IE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.en-NZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.en-ZA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.eo.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.es.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.et.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.eu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.fa.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.fi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.fo.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.fr-CH.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.fr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.gl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.he.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.hi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.hr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.hu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.hy.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.id.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.is.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.it-CH.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.it.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ja.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ka.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.kh.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.kk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.km.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ko.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.kr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.lt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.lv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.me.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.mk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.mn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ms.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.nl-BE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.nl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.no.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.oc.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.pl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.pt-BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.pt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ro.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.rs-latin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.rs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ru.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.si.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.sk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.sl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.sq.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.sr-latin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.sr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.sv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.sw.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.ta.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.tg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.th.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.tk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.tr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.uk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.uz-cyrl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.uz-latn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.vi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.zh-CN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.zh-TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/lib/moment-2.25.3/moment.2.18.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tempus_dominus/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tempus_dominus/templates/tempus_dominus/widget.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tempus_dominus/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/test_forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/test_widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/carreras/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/carreras/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/carreras/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/carreras/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/carreras/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/carreras/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/geografico/views/provincias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/views/provincias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/geografico/views/localidades/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/geografico/views/localidades/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/static/usuarios/js/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/templates/usuarios/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/carreras/views/tipos_comisiones/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/BD/backup-01-10-2020.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/BD/modelo de datos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/files/BD/modelo de datos.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/bootstrap-touchspin-4.3.0/jquery.bootstrap-touchspin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/bootstrap-touchspin-4.3.0/jquery.bootstrap-touchspin.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -108,8 +187,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -118,11 +198,11 @@
       <recent name="$PROJECT_DIR$/apps" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js" />
+      <recent name="$PROJECT_DIR$/static/lib" />
       <recent name="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
       <recent name="$PROJECT_DIR$/apps/usuarios/views/usuarios" />
       <recent name="$PROJECT_DIR$/apps/usuarios/views/docentes" />
-      <recent name="$PROJECT_DIR$/apps/carreras/static" />
-      <recent name="$PROJECT_DIR$/apps/carreras/templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,7 +302,14 @@
       <workItem from="1601680475291" duration="2944000" />
       <workItem from="1601919122717" duration="3908000" />
       <workItem from="1601984456045" duration="6959000" />
-      <workItem from="1602006142996" duration="18683000" />
+      <workItem from="1602006142996" duration="18794000" />
+      <workItem from="1602028354097" duration="599000" />
+      <workItem from="1602093054496" duration="9748000" />
+      <workItem from="1602153655664" duration="8278000" />
+      <workItem from="1602186265191" duration="11671000" />
+      <workItem from="1602199044113" duration="589000" />
+      <workItem from="1602251618658" duration="9062000" />
+      <workItem from="1602274606384" duration="11289000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -280,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601937656076</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Commit con CRUD de Solicitudes, Faltan Validaciones de fechas, select anidado de carreras y materias, autocompletar los campos si el DNI esta registrado y revisar el tema fecha YYYY/MM/DD a DD/MM/YYYY">
+      <created>1602026742829</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602026742829</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +403,8 @@
     <MESSAGE value="Commit 01-10-2020 Cambios en el template, usuarios, y con las solicitudes (tipos y motivos) - parche para localidades con una funcion js submit_whitout_ajax" />
     <MESSAGE value="Commit con carreras, tipos de carreras, materias, planes de estudio, periodos de cursado, años de cursado" />
     <MESSAGE value="Commit con CRUD Academico (Hasta Materias, resta comisiones y tipos de comisiones)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit con CRUD Academico (Hasta Materias, resta comisiones y tipos de comisiones)" />
+    <MESSAGE value="Commit con CRUD de Solicitudes, Faltan Validaciones de fechas, select anidado de carreras y materias, autocompletar los campos si el DNI esta registrado y revisar el tema fecha YYYY/MM/DD a DD/MM/YYYY" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit con CRUD de Solicitudes, Faltan Validaciones de fechas, select anidado de carreras y materias, autocompletar los campos si el DNI esta registrado y revisar el tema fecha YYYY/MM/DD a DD/MM/YYYY" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600373082209">
@@ -321,50 +416,50 @@
     </state>
     <state x="452" y="145" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1601992504349" />
     <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1600381311116" />
-    <state width="1248" height="104" key="GridCell.Tab.0.bottom" timestamp="1602025524592">
+    <state width="1248" height="133" key="GridCell.Tab.0.bottom" timestamp="1602284744339">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="104" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1602025524592" />
+    <state width="1248" height="133" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1602284744339" />
     <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="104" key="GridCell.Tab.0.center" timestamp="1602025524592">
+    <state width="1248" height="133" key="GridCell.Tab.0.center" timestamp="1602284744339">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="104" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1602025524592" />
+    <state width="1248" height="133" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1602284744339" />
     <state width="1248" height="172" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="104" key="GridCell.Tab.0.left" timestamp="1602025524591">
+    <state width="1248" height="133" key="GridCell.Tab.0.left" timestamp="1602284744339">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="104" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1602025524591" />
+    <state width="1248" height="133" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1602284744339" />
     <state width="1248" height="172" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="104" key="GridCell.Tab.0.right" timestamp="1602025524592">
+    <state width="1248" height="133" key="GridCell.Tab.0.right" timestamp="1602284744339">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="104" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1602025524592" />
+    <state width="1248" height="133" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1602284744339" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="260" key="GridCell.Tab.1.bottom" timestamp="1602025307451">
+    <state width="1248" height="260" key="GridCell.Tab.1.bottom" timestamp="1602026770220">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="260" key="GridCell.Tab.1.bottom/72.27.1294.741@72.27.1294.741" timestamp="1602025307451" />
-    <state width="1248" height="260" key="GridCell.Tab.1.center" timestamp="1602025307451">
+    <state width="1248" height="260" key="GridCell.Tab.1.bottom/72.27.1294.741@72.27.1294.741" timestamp="1602026770220" />
+    <state width="1248" height="260" key="GridCell.Tab.1.center" timestamp="1602026770219">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="260" key="GridCell.Tab.1.center/72.27.1294.741@72.27.1294.741" timestamp="1602025307451" />
-    <state width="1248" height="260" key="GridCell.Tab.1.left" timestamp="1602025307450">
+    <state width="1248" height="260" key="GridCell.Tab.1.center/72.27.1294.741@72.27.1294.741" timestamp="1602026770219" />
+    <state width="1248" height="260" key="GridCell.Tab.1.left" timestamp="1602026770219">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="260" key="GridCell.Tab.1.left/72.27.1294.741@72.27.1294.741" timestamp="1602025307450" />
-    <state width="1248" height="260" key="GridCell.Tab.1.right" timestamp="1602025307451">
+    <state width="1248" height="260" key="GridCell.Tab.1.left/72.27.1294.741@72.27.1294.741" timestamp="1602026770219" />
+    <state width="1248" height="260" key="GridCell.Tab.1.right" timestamp="1602026770219">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="260" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1602025307451" />
+    <state width="1248" height="260" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1602026770219" />
     <state width="500" height="446" key="SwitcherDM" timestamp="1601680124856">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="500" height="446" key="SwitcherDM/72.27.1294.741@72.27.1294.741" timestamp="1601680124856" />
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1601937672691">
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602026748973">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1601937672691" />
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1602026748973" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1600387967018" />
     <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601589216827">
       <screen x="72" y="27" width="1294" height="741" />

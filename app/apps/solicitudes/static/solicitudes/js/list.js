@@ -1,5 +1,7 @@
 $(function () {
+
     $('#data').DataTable({
+
         responsive: true,
         autoWidth: false,
         destroy: true,
@@ -13,13 +15,14 @@ $(function () {
             dataSrc: ""
         },
         columns: [
-            //{"data": "id"},
+            {"data": "id"},
             {"data": "nombre"},
             {"data": "apellido"},
             {"data": "nombres"},
             {"data": "carrera.nombre"},
             {"data": "materia.nombre"},
             {"data": "comision.nombre"},
+            {"data": "observaciones"},
             {"data": "nombre"},
         ],
         columnDefs: [
@@ -34,8 +37,10 @@ $(function () {
                 }
             },
         ],
+
         initComplete: function (settings, json) {
 
         }
+
     });
 });

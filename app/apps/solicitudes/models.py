@@ -43,22 +43,22 @@ class Motivos(models.Model):
 #   Clase Solicitudes de Reservas
 class Solicitudes(models.Model):
     nombre = models.DateField(default=datetime.now, verbose_name='Fecha de Solicitud')
-    tipo = models.ForeignKey(TipoSolicitud, models.DO_NOTHING, verbose_name='Tipo de Reserva')
-    motivo = models.ForeignKey(Motivos, models.DO_NOTHING, verbose_name='Motivo')
     dni = models.PositiveIntegerField(verbose_name='DNI')
     nombres = models.TextField(verbose_name='Nombres')
     apellido = models.TextField(verbose_name='Apellido')
     email = models.EmailField(verbose_name='Correo Electrónico')
-    #telefono = models.TextField(verbose_name='Teléfono', null=True, blank=True)
     sede = models.ForeignKey(Sedes, models.DO_NOTHING, verbose_name='Sede')
+    tipo = models.ForeignKey(TipoSolicitud, models.DO_NOTHING, verbose_name='Tipo de Reserva')
+    motivo = models.ForeignKey(Motivos, models.DO_NOTHING, verbose_name='Motivo')
+    observaciones = models.TextField(verbose_name='Observaciones', null=True, blank=True)
     carrera = models.ForeignKey(Carreras, models.DO_NOTHING, verbose_name='Carrera')
     materia = models.ForeignKey(Materias, models.DO_NOTHING, verbose_name='Materia')
     comision = models.ForeignKey(TiposComisiones, models.DO_NOTHING, verbose_name='Tipo de Comisión')
-    fecha_reserva = models.DateField(default=datetime.now, verbose_name='Fecha de Reserva')
+    fecha_reserva = models.DateField(verbose_name='Fecha de Reserva')
     inicio_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Inicio')
     fin_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Fin')
     repeticion = models.BooleanField(default=False)
-    fin_repeticion = models.DateField(default=datetime.now, verbose_name='Fin de la Repetición')
+    fin_repeticion = models.DateField(verbose_name='Fin de la Repetición', null=True, blank=True)
 
     def __str__(self):
         return self.nombre

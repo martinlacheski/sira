@@ -1,6 +1,6 @@
-from django.forms import ModelForm, TextInput, Select, DateInput, TimeInput, CheckboxInput, forms, DateField
+from django.forms import ModelForm, TextInput, Select, DateInput, TimeInput, CheckboxInput
+from tempus_dominus.widgets import TimePicker
 from apps.solicitudes.models import *
-from config import settings
 
 
 class TipoSolicitudForm(ModelForm):
@@ -69,25 +69,13 @@ class SolicitudesForm(ModelForm):
 
     class Meta:
         model = Solicitudes
+        ordering = ['-id']
         fields = '__all__'
         widgets = {
             'nombre': DateInput(
-                format='%Y-%m-%d',
                 attrs={
                     'readonly': True,
                     'class': 'form-control',
-                }
-            ),
-            'tipo': Select(
-                attrs={
-                    'class': 'form-control select2',
-                    'style': 'width: 100%'
-                }
-            ),
-            'motivo': Select(
-                attrs={
-                    'class': 'form-control select2',
-                    'style': 'width: 100%'
                 }
             ),
             'dni': TextInput(
@@ -118,9 +106,21 @@ class SolicitudesForm(ModelForm):
                     'style': 'width: 100%'
                 }
             ),
-            'telefono': TextInput(
+            'tipo': Select(
                 attrs={
-                    'placeholder': 'Ingrese su teléfono de contacto',
+                    'class': 'form-control select2',
+                    'style': 'width: 100%'
+                }
+            ),
+            'motivo': Select(
+                attrs={
+                    'class': 'form-control select2',
+                    'style': 'width: 100%'
+                }
+            ),
+            'observaciones': TextInput(
+                attrs={
+                    'placeholder': 'En caso de DICTADO DE CURSOS, ingrese una descripción del mismo',
                     'class': 'form-control',
                     'style': 'width: 100%'
                 }
@@ -131,16 +131,14 @@ class SolicitudesForm(ModelForm):
                     'style': 'width: 100%'
                 }
             ),
-            'carrera': Select(
-                attrs={
-                    'class': 'form-control select2',
-                    'style': 'width: 100%'
+            'carrera': Select(attrs={
+                'class': 'form-control select2',
+                'style': 'width: 100%'
                 }
             ),
-            'materia': Select(
-                attrs={
-                    'class': 'form-control select2',
-                    'style': 'width: 100%'
+            'materia': Select(attrs={
+                'class': 'form-control select2',
+                'style': 'width: 100%'
                 }
             ),
             'comision': Select(
@@ -150,21 +148,18 @@ class SolicitudesForm(ModelForm):
                 }
             ),
             'fecha_reserva': DateInput(
-                format='%Y-%m-%d',
                 attrs={
                     'placeholder': 'Seleccione la fecha de reserva',
-                    #'value': datetime.now().strftime('%Y-%m-%d'),
-                    'autocomplete': 'off',
-                    'class': 'form-control datetimepicker-input',
+                    #'autocomplete': 'off',
+                    'class': 'form-control datepicker-input',
                     'id': 'fecha_reserva',
                     'data-target': '#fecha_reserva',
-                    'data-toggle': 'datetimepicker'
+                    'data-toggle': 'datepicker'
                 }
             ),
             'inicio_hs': TimeInput(
+                #format='%Y-%m-%d',
                 attrs={
-                    'placeholder': 'Seleccione el horario de Inicio',
-                    #'value': datetime.now().strftime('%Y-%m-%d'),
                     'autocomplete': 'off',
                     'class': 'form-control datetimepicker-input',
                     'id': 'inicio_hs',
@@ -174,8 +169,6 @@ class SolicitudesForm(ModelForm):
             ),
             'fin_hs': TimeInput(
                 attrs={
-                    'placeholder': 'Seleccione el horario de Fin',
-                    #'value': datetime.now().strftime('%Y-%m-%d'),
                     'autocomplete': 'off',
                     'class': 'form-control datetimepicker-input',
                     'id': 'fin_hs',
@@ -190,24 +183,22 @@ class SolicitudesForm(ModelForm):
                 }
             ),
             'fin_repeticion': DateInput(
-                format='%Y-%m-%d',
                 attrs={
                     'placeholder': 'Seleccione la fecha de finalización',
-                    #'value': datetime.now().strftime('%Y-%m-%d'),
-                    'autocomplete': 'off',
-                    'class': 'form-control datetimepicker-input',
+                    #'autocomplete': 'off',
+                    'class': 'form-control datepicker-input',
                     'id': 'fin_repeticion',
                     'data-target': '#fin_repeticion',
-                    'data-toggle': 'datetimepicker'
+                    'data-toggle': 'datepicker'
                 }
             ),
         }
-        #exclude = ['initial-nombre', 'initial-fecha_reserva', 'initial-inicio_hs', 'initial-fin_hs', 'initial-fin_repeticion']
 
     def save(self, commit=True):
         data = {}
         form = super()
         try:
+
             if form.is_valid():
                 form.save()
             else:

@@ -25,7 +25,6 @@ class LocalidadesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, L
     permission_required = 'geografico.view_localidades'
 
     @method_decorator(csrf_exempt)
-    # @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -61,7 +60,6 @@ class LocalidadesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     url_redirect = success_url
 
     @method_decorator(csrf_exempt)
-    # @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -102,7 +100,6 @@ class LocalidadesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     permission_required = 'geografico.change_localidades'
     url_redirect = success_url
 
-    # @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)

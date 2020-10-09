@@ -1,14 +1,15 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
-from apps.solicitudes.forms import SolicitudesForm
+from apps.solicitudes.forms import SolicitudesForm, Materias
 from apps.solicitudes.models import Solicitudes
 from apps.mixins import ValidatePermissionRequiredMixin
+from apps.usuarios.models import Docentes
 
 
 def solicitudes_list(request):
@@ -59,7 +60,7 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     permission_required = 'solicitudes.add_solicitudes'
     url_redirect = success_url
 
-    #@method_decorator(csrf_exempt)
+    @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -67,16 +68,27 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         data = {}
         try:
             action = request.POST['action']
-            if action == 'add':
+            if action == 'search_materias_id':
+                data = [{'id': '', 'text': '---------'}]
+                for i in Materias.objects.filter(carrera_id=request.POST['id']):
+                    data.append({'id': i.id, 'text': i.nombre})
+            elif action == 'autocomplete':
+                data = []
+                for i in Docentes.objects.filter(dni=request.POST['term']):
+                    item = i.toJSON()
+                    item['value'] = i.dni
+                    data.append(item)
+            elif action == 'add':
                 form = SolicitudesForm(request.POST)
-
-                form = self.get_form()
-                data = form.save()
+                if form.is_valid():
+                    form = self.get_form()
+                    data = form.save()
+                return redirect('solicitudes:solicitudes_list')
             else:
-                data['error'] = 'No ha ingresado ninguna opción'
+                data['error'] = 'Ha ocurrido un error'
         except Exception as e:
             data['error'] = str(e)
-        return JsonResponse(data)
+        return JsonResponse(data, safe=False)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -95,6 +107,7 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     permission_required = 'solicitudes.change_solicitudes'
     url_redirect = success_url
 
+    @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -103,14 +116,24 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         data = {}
         try:
             action = request.POST['action']
-            if action == 'edit':
+            if action == 'search_materias_id':
+                data = [{'id': '', 'text': '---------'}]
+                for i in Materias.objects.filter(carrera_id=request.POST['id']):
+                    data.append({'id': i.id, 'text': i.nombre})
+            elif action == 'autocomplete':
+                data = []
+                for i in Docentes.objects.filter(dni=request.POST['term']):
+                    item = i.toJSON()
+                    item['value'] = i.dni
+                    data.append(item)
+            elif action == 'edit':
                 form = self.get_form()
                 data = form.save()
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
             data['error'] = str(e)
-        return JsonResponse(data)
+        return JsonResponse(data, safe=False)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
