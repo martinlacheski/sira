@@ -1,5 +1,5 @@
 from django.forms import ModelForm, TextInput, Select, DateInput, TimeInput, CheckboxInput
-from tempus_dominus.widgets import TimePicker
+
 from apps.solicitudes.models import *
 
 
@@ -161,19 +161,21 @@ class SolicitudesForm(ModelForm):
                 #format='%Y-%m-%d',
                 attrs={
                     'autocomplete': 'off',
-                    'class': 'form-control datetimepicker-input',
-                    'id': 'inicio_hs',
-                    'data-target': '#inicio_hs',
-                    'data-toggle': 'datetimepicker'
+                    'class': 'form-control',
+                    #'class': 'form-control datetimepicker-input',
+                    #'id': 'inicio_hs',
+                    #'data-target': '#inicio_hs',
+                    #'data-toggle': 'datetimepicker'
                 }
             ),
             'fin_hs': TimeInput(
                 attrs={
                     'autocomplete': 'off',
-                    'class': 'form-control datetimepicker-input',
-                    'id': 'fin_hs',
-                    'data-target': '#fin_hs',
-                    'data-toggle': 'datetimepicker'
+                    'class': 'form-control',
+                    #'class': 'form-control datetimepicker-input',
+                    #'id': 'fin_hs',
+                    #'data-target': '#fin_hs',
+                    #'data-toggle': 'datetimepicker'
                 }
             ),
             'repeticion': CheckboxInput(

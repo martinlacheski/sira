@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Libs
     'widget_tweaks',
-    'tempus_dominus',
     # APP usuarios
     'apps.usuarios',
     # APPS para el template y usuarios

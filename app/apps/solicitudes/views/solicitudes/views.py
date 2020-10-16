@@ -6,6 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
+from apps.solicitudes.create_meeting import crearReunion
 from apps.solicitudes.forms import SolicitudesForm, Materias
 from apps.solicitudes.models import Solicitudes
 from apps.mixins import ValidatePermissionRequiredMixin
@@ -80,6 +81,10 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                     data.append(item)
             elif action == 'add':
                 form = SolicitudesForm(request.POST)
+                #Crear REUNION en WEBEX
+
+                #crearReunion(form)
+                
                 if form.is_valid():
                     form = self.get_form()
                     data = form.save()

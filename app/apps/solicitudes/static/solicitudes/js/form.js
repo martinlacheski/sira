@@ -13,13 +13,13 @@ $(function () {
         format: "dd/mm/yyyy",
         todayHigligth: true
     });
-    $('#inicio_hs').datetimepicker({
-        format: 'HH:mm'
-    });
-    $('#fin_hs').datetimepicker({
-        format: 'HH:mm'
+    //$('#inicio_hs').datetimepicker({
+    //    format: 'HH:mm'
+    //});
+    //$('#fin_hs').datetimepicker({
+    //    format: 'HH:mm'
+    //});
 
-    });
     $('#fin_repeticion').datepicker({
         language: "es",
         todayBtn: "linked",
@@ -105,16 +105,7 @@ $(function () {
             $('input[name="email"]').val(email);
             console.log(ui.item);
         },
-        onblur: function (event, ui) {
-            //Autocompletar campos del DOCENTE
-            var nombre = $(ui.item).attr('nombre');
-            var apellido = $(ui.item).attr('apellido');
-            var email = $(ui.item).attr('email');
-            $('input[name="nombres"]').val(nombre);
-            $('input[name="apellido"]').val(apellido);
-            $('input[name="email"]').val(email);
-            console.log(ui.item);
-        }
+
     });
 
     //para comparar horario de inicio y de fin
