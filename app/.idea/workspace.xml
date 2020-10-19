@@ -23,171 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/create_meeting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi/cacert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/DESCRIPTION.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/big5freq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/big5prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/chardistribution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/charsetgroupprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/charsetprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/cli/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/cli/chardetect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/codingstatemachine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/cp949prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/enums.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/escprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/escsm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/eucjpprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/euckrfreq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/euckrprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/euctwfreq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/euctwprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/gb2312freq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/gb2312prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/hebrewprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/jisfreq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/jpcntx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/langbulgarianmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/langcyrillicmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/langgreekmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/langhebrewmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/langhungarianmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/langthaimodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/langturkishmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/latin1prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/mbcharsetprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/mbcsgroupprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/mbcssm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/sbcharsetprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/sbcsgroupprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/sjisprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/universaldetector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/utf8prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/LICENSE.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/codec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/idnadata.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/intranges.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/package_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna/uts46data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/DESCRIPTION.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/__version__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/_internal_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/adapters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/certs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/cookies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/help.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/hooks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/packages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/sessions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/status_codes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/structures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/_collections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/_version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/connectionpool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/_appengine_environ.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/_securetransport/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/_securetransport/bindings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/_securetransport/low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/appengine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/ntlmpool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/pyopenssl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/securetransport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/contrib/socks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/filepost.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/packages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/packages/backports/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/packages/backports/makefile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/packages/six.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/poolmanager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/queue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/retry.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/ssl_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/timeout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3/util/wait.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/create_meeting.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/forms.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/horarios_choices.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/create_meeting.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/create_meeting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django_tempus_dominus-5.1.2.13.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tempus_dominus/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tempus_dominus/templates/tempus_dominus/widget.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tempus_dominus/widgets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/test_forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/tests/test_widgets.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,15 +69,15 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/solicitudes" />
       <recent name="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js" />
       <recent name="$PROJECT_DIR$/static/lib" />
       <recent name="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
       <recent name="$PROJECT_DIR$/apps/usuarios/views/usuarios" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps" />
     </key>
   </component>
   <component name="RunManager">
@@ -348,6 +189,11 @@
       <workItem from="1602708999596" duration="313000" />
       <workItem from="1602764070528" duration="4813000" />
       <workItem from="1602768900803" duration="130000" />
+      <workItem from="1602865746203" duration="821000" />
+      <workItem from="1602875563192" duration="4617000" />
+      <workItem from="1602880198081" duration="187000" />
+      <workItem from="1602880550799" duration="23000" />
+      <workItem from="1603118660629" duration="1775000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -426,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602286340788</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Commit modificacion campos Solicitudes">
+      <created>1602865884779</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602865884779</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +310,8 @@
     <MESSAGE value="Commit con CRUD Academico (Hasta Materias, resta comisiones y tipos de comisiones)" />
     <MESSAGE value="Commit con CRUD de Solicitudes, Faltan Validaciones de fechas, select anidado de carreras y materias, autocompletar los campos si el DNI esta registrado y revisar el tema fecha YYYY/MM/DD a DD/MM/YYYY" />
     <MESSAGE value="Commit con Solicitudes de Reservas con controles, falta pulir algunos detalles pero funciona todo ok.&#10;Se agrego la Libreria tempus_dominus al entorno virtual, porque generaba conflictos con otra libreria de datepicker." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit con Solicitudes de Reservas con controles, falta pulir algunos detalles pero funciona todo ok.&#10;Se agrego la Libreria tempus_dominus al entorno virtual, porque generaba conflictos con otra libreria de datepicker." />
+    <MESSAGE value="Commit modificacion campos Solicitudes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit modificacion campos Solicitudes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600373082209">
@@ -469,25 +323,25 @@
     </state>
     <state x="452" y="145" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1601992504349" />
     <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1600381311116" />
-    <state width="1248" height="185" key="GridCell.Tab.0.bottom" timestamp="1602769030695">
+    <state width="1248" height="129" key="GridCell.Tab.0.bottom" timestamp="1603121042395">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="185" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1602769030695" />
+    <state width="1248" height="129" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1603121042395" />
     <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="185" key="GridCell.Tab.0.center" timestamp="1602769030694">
+    <state width="1248" height="129" key="GridCell.Tab.0.center" timestamp="1603121042395">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="185" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1602769030694" />
+    <state width="1248" height="129" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1603121042395" />
     <state width="1248" height="172" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="185" key="GridCell.Tab.0.left" timestamp="1602769030694">
+    <state width="1248" height="129" key="GridCell.Tab.0.left" timestamp="1603121042395">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="185" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1602769030694" />
+    <state width="1248" height="129" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1603121042395" />
     <state width="1248" height="172" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="185" key="GridCell.Tab.0.right" timestamp="1602769030694">
+    <state width="1248" height="129" key="GridCell.Tab.0.right" timestamp="1603121042395">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="185" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1602769030694" />
+    <state width="1248" height="129" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1603121042395" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
     <state width="1248" height="260" key="GridCell.Tab.1.bottom" timestamp="1602026770220">
       <screen x="72" y="27" width="1294" height="741" />
@@ -509,19 +363,23 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="500" height="446" key="SwitcherDM/72.27.1294.741@72.27.1294.741" timestamp="1601680124856" />
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602286345546">
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602865888858">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1602286345546" />
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1602865888858" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1600387967018" />
-    <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601589216827">
+    <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602877999318">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741@72.27.1294.741" timestamp="1601589216827" />
+    <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741@72.27.1294.741" timestamp="1602877999318" />
     <state x="500" y="312" width="427" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601639582047">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="500" y="312" width="427" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1294.741@72.27.1294.741" timestamp="1601639582047" />
+    <state x="409" y="136" width="620" height="522" key="find.popup" timestamp="1603118739435">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="409" y="136" width="620" height="522" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1603118739435" />
     <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1602021488427">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
