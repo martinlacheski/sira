@@ -4,6 +4,7 @@ $(function () {
         todayBtn: "linked",
         clearBtn: true,
         format: "dd/mm/yyyy",
+        autoclose: true,
         todayHigligth: true
     });
     $('#fecha_reserva').datepicker({
@@ -11,20 +12,16 @@ $(function () {
         todayBtn: "linked",
         clearBtn: true,
         format: "dd/mm/yyyy",
+        autoclose: true,
         todayHigligth: true
     });
-    //$('#inicio_hs').datetimepicker({
-    //    format: 'HH:mm'
-    //});
-    //$('#fin_hs').datetimepicker({
-    //    format: 'HH:mm'
-    //});
 
     $('#fin_repeticion').datepicker({
         language: "es",
         todayBtn: "linked",
         clearBtn: true,
         format: "dd/mm/yyyy",
+        autoclose: true,
         todayHigligth: true
     });
 
@@ -109,9 +106,9 @@ $(function () {
     });
 
     //para comparar horario de inicio y de fin
-    $('input[name="fin_hs"]').on('blur', function () {
-         if (($('input[name="inicio_hs"]').val()) > ($('input[name="fin_hs"]').val())) {
-                message_error("La hora de finalización es menor que la de inicio, por favor verifique");
-            }
-    });
+    //$('input[name="fin_hs"]').on('blur', function () {
+    //     if (($('input[name="inicio_hs"]').val()) > ($('input[name="fin_hs"]').val())) {
+    //            message_error("La hora de finalización es menor que la de inicio, por favor verifique");
+    //        }
+    //});
 });

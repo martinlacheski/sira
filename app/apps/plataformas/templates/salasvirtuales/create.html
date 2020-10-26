@@ -3,24 +3,14 @@
 {% load static %}
 {% block head %}
     {% block head_form %}
-        <!-- Para Select2 Carreras y Materias -->
+        <!-- Para Select2 Plataformas y Sedes -->
         <link href="{% static 'lib/select2-4.0.13/css/select2.min.css' %}" rel="stylesheet"/>
         <link href="{% static 'lib/select2-4.0.13/css/select2-bootstrap4.min.css' %}" rel="stylesheet"/>
         <script src="{% static 'lib/select2-4.0.13/js/select2.min.js' %}"></script>
         <script src="{% static 'lib/select2-4.0.13/js/i18n/es.js' %}"></script>
 
-        <!-- Para manejo de autocomplete DNI -->
-        <link href="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.css' %}" rel="stylesheet"/>
-        <script src="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.js' %}"></script>
-
-        <!-- Para manejo de fechas -->
-        <link rel="stylesheet"
-              href="{% static 'lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.css' %}">
-        <script src="{% static 'lib/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js' %}"></script>
-        <script src="{% static 'lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.es.min.js' %}"></script>
-
         <!-- bloque form.js -->
-        <script src="{% static 'solicitudes/js/form.js' %}"></script>
+        <script src="{% static 'salasvirtuales/js/form.js' %}"></script>
 
     {% endblock %}
 {% endblock %}
@@ -87,19 +77,12 @@
         {% endif %}
 
         $('form').on('submit', function (e) {
-            if (($('input[name="inicio_hs"]').val()) > ($('input[name="fin_hs"]').val())) {
-                message_error("La hora de finalización es menor que la de inicio, por favor verifique");
-                return false;
-            } else {
                 e.preventDefault();
                 var parameters = $(this).serializeArray();
                 console.log(parameters);
-                //para el select anidado hasta que encuentre como resolver eso
-                submit_without_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
+                submit_with_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
                     location.href = '{{ list_url }}';
                 });
-            }
-
         });
 
     </script>

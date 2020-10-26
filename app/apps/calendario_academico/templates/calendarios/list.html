@@ -1,0 +1,27 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'calendarios/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <!--<th scope="col" style="width: 5%;">Código</th>-->
+        <th scope="col" style="width: 11%;">Año</th>
+        <th scope="col" style="width: 12%;">Inicio</th>
+        <th scope="col" style="width: 12%;">Fin</th>
+        <th scope="col" style="width: 15%;">1 Cuat. Inicio</th>
+        <th scope="col" style="width: 15%;">1 Cuat. Fin</th>
+        <th scope="col" style="width: 15%;">2 Cuat. Inicio</th>
+        <th scope="col" style="width: 15%;">2 Cuat. Fin</th>
+        <th scope="col" style="width: 10%;">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

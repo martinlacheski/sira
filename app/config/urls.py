@@ -23,6 +23,8 @@ urlpatterns = [
     path('institucional/', include('apps.institucional.urls')),
     path('geografico/', include('apps.geografico.urls')),
     path('solicitudes/', include('apps.solicitudes.urls')),
+    path('calendarios/', include('apps.calendario_academico.urls')),
+    path('plataformas/', include('apps.plataformas.urls')),
     path('', include('apps.login.urls')),
     path('', include('apps.dashboard.urls')),
     path('', include('apps.usuarios.urls')),

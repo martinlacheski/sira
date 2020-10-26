@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'apps.institucional',    #Institucional (Universidad, Facultad, Sedes)
     'apps.geografico',     #Geografico (Paises, Provincias, Localidades)
     'apps.solicitudes',     #Solicitudes de Reservas (Tipo y Solicitud)
-
+    'apps.calendario_academico',     #Calendario Academico (Datos de cuatrimestres y Turnos de Examen)
+    'apps.plataformas',     #Plataformas (Plataformas Virtuales y sus Salas Virtuales)
 ]
 
 MIDDLEWARE = [
