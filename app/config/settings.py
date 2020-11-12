@@ -30,7 +30,10 @@ SECRET_KEY = 'lq6d5aibzxrj8)8#ql%2j7h^jwizpp%)^z-8=+lm+%5%p83b!q'
 # DEBUG = True
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+#Se agrega el host que me genera el servidor NGROK
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '97c719a142bd.ngrok.io']
 
 # Application definition
 

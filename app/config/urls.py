@@ -19,6 +19,8 @@ from apps.login.views import LoginFormView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #se utiliza esta URL porque se requiere una vista accesible desde la web para que WEBEX autorice la integracion
+    path('api', include('apps.api.urls')), 
     path('carreras/', include('apps.carreras.urls')),
     path('institucional/', include('apps.institucional.urls')),
     path('geografico/', include('apps.geografico.urls')),

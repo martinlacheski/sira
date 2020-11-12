@@ -23,56 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/static/calendarios/js/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/static/calendarios/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/static/turnos/js/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/static/turnos/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/templates/calendarios/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/templates/calendarios/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/templates/calendarios/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/templates/turnos/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/templates/turnos/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/templates/turnos/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/views/calendarios/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/calendario_academico/views/turnos/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/migrations/0002_auto_20201026_1819.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/static/plataformas/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/static/salasvirtuales/js/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/static/salasvirtuales/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/templates/plataformas/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/templates/plataformas/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/templates/plataformas/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/templates/salasvirtuales/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/templates/salasvirtuales/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/templates/salasvirtuales/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/templates/salasvirtuales/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/views/plataformas/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/plataformas/views/salasvirtuales/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/ngrok/ngrok" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +202,11 @@
       <workItem from="1603118660629" duration="1775000" />
       <workItem from="1603137759453" duration="210000" />
       <workItem from="1603483484996" duration="1849000" />
-      <workItem from="1603733240426" duration="15228000" />
+      <workItem from="1603733240426" duration="16766000" />
+      <workItem from="1604092031951" duration="656000" />
+      <workItem from="1604949826386" duration="615000" />
+      <workItem from="1605042433129" duration="1066000" />
+      <workItem from="1605179004501" duration="1189000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -333,7 +299,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603137951424</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Commit con CRUD restantes realizados (Calendario Academico, Turnos de Examen, Plataformas y Salas Virtuales)">
+      <created>1603748684230</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1603748684231</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Commit con CRUD restantes realizados (Calendario Academico, Turnos de Examen, Plataformas y Salas Virtuales)">
+      <created>1603748951854</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603748951854</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +346,8 @@
     <MESSAGE value="Commit con Solicitudes de Reservas con controles, falta pulir algunos detalles pero funciona todo ok.&#10;Se agrego la Libreria tempus_dominus al entorno virtual, porque generaba conflictos con otra libreria de datepicker." />
     <MESSAGE value="Commit modificacion campos Solicitudes" />
     <MESSAGE value="commit con meetings_api al 19/10/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit con meetings_api al 19/10/2020" />
+    <MESSAGE value="Commit con CRUD restantes realizados (Calendario Academico, Turnos de Examen, Plataformas y Salas Virtuales)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit con CRUD restantes realizados (Calendario Academico, Turnos de Examen, Plataformas y Salas Virtuales)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600373082209">
@@ -378,25 +359,25 @@
     </state>
     <state x="452" y="145" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1603735082409" />
     <state x="452" y="147" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.29.1294.739@72.29.1294.739" timestamp="1600381311116" />
-    <state width="1248" height="129" key="GridCell.Tab.0.bottom" timestamp="1603748595036">
+    <state width="1248" height="129" key="GridCell.Tab.0.bottom" timestamp="1605180192936">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="129" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1603748595036" />
+    <state width="1248" height="129" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605180192936" />
     <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="129" key="GridCell.Tab.0.center" timestamp="1603748595035">
+    <state width="1248" height="129" key="GridCell.Tab.0.center" timestamp="1605180192936">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="129" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1603748595035" />
+    <state width="1248" height="129" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605180192936" />
     <state width="1248" height="172" key="GridCell.Tab.0.center/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="129" key="GridCell.Tab.0.left" timestamp="1603748595035">
+    <state width="1248" height="129" key="GridCell.Tab.0.left" timestamp="1605180192935">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="129" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1603748595035" />
+    <state width="1248" height="129" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605180192935" />
     <state width="1248" height="172" key="GridCell.Tab.0.left/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
-    <state width="1248" height="129" key="GridCell.Tab.0.right" timestamp="1603748595036">
+    <state width="1248" height="129" key="GridCell.Tab.0.right" timestamp="1605180192936">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="129" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1603748595036" />
+    <state width="1248" height="129" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605180192936" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.29.1294.739@72.29.1294.739" timestamp="1600786514570" />
     <state width="1248" height="260" key="GridCell.Tab.1.bottom" timestamp="1602026770220">
       <screen x="72" y="27" width="1294" height="741" />
@@ -418,10 +399,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="500" height="446" key="SwitcherDM/72.27.1294.741@72.27.1294.741" timestamp="1601680124856" />
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603137954942">
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603748953687">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1603137954942" />
+    <state x="314" y="132" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1294.741@72.27.1294.741" timestamp="1603748953687" />
     <state x="314" y="134" width="800" height="535" key="Vcs.Push.Dialog.v2/72.29.1294.739@72.29.1294.739" timestamp="1600387967018" />
     <state x="333" y="79" width="762" height="644" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602877999318">
       <screen x="72" y="27" width="1294" height="741" />
