@@ -1,6 +1,9 @@
 import json
 import requests
 
+from apps.solicitudes.verificacion_cuenta_API import *
+
+
 
 #necesario para que json no se enoje
 false = False
@@ -79,13 +82,11 @@ def jprint(obj):
 
 
 def crearReunion(form):
-	#Funciones que hacen el trabajo sucio
-	#nombre_reunion(form)
-	#inicio_reunion(form)
-	#fin_reunion(form)	
+
+	hola = "Reunión creada en Webex"
 	
 	url = "https://webexapis.com/v1/meetings"
-	token = "Bearer MTM5MDg2ZjktN2RlOC00MjA0LWFkOWYtOTA2M2M0NjYyNTI3MDViOTAxZDYtNDQ4_P0A1_bbbd8451-22ce-44ba-a050-4b19c5cf4ecb"
+	token = token_verificado(form)       #función que llama a la funcionalidad inteligente
 	
 	headers = {
 
@@ -97,25 +98,28 @@ def crearReunion(form):
 		"enabledAutoRecordMeeting": false,
 		"allowAnyUserToBeCoHost": true,
 		"title" : nombre_reunion(form),
-		"password" : "202020",
+		"password" : "202020", #TO-DO:: se necesita un campo para rellenar ésto
 		"start" : inicio_reunion(form),
 		"end" : fin_reunion(form),
 		"timezone": "America/Argentina/Cordoba",
 		"invitees" : [
 			{
-				"email": str(email_creador(form)),
-				"displayName": str(nombre_creador_reunion(form)),
-				"coHost": false
+				"email": str(email_creador(form)), #email del solicitante
+				"displayName": str(nombre_creador_reunion(form)), #nombre y apellido del solicitante
+				"coHost": false #no se utiliza porque los solicitantes no tienen cuenta webex
 			}
 		]
 	}
 	
 	#realiza la request
 	response = requests.post(url, headers=headers, json=datos_reunion)
-	
+
 	#imprime los datos de vuelta de la request (IMPORTANTE)
 	jprint(response.json())
 	
+	print("Exito. Se ha realizado la planificación adecuadamente")
+	
+	#assert False, (hola)
 	return(0)
 	
 	

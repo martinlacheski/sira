@@ -81,9 +81,9 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                     data.append(item)
             elif action == 'add':
                 form = SolicitudesForm(request.POST)
+                
                 #Crear REUNION en WEBEX
-
-                #crearReunion(form)
+                crearReunion(form)
                 #assert false, (form)
                 if form.is_valid():
                     form = self.get_form()

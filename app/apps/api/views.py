@@ -29,9 +29,9 @@ def hola(request):
 	#ESTOS DATOS SE VAN A ALMACENAR EN LA BD, en la tabla salas_virtuales
 	
 	#definiciones importantes (se obtuvieron en el registro de la integración)
-	client_ID = "Ced6a429a4bb07a24ad1d1d64b3363c155f2f0a92db67232b4f6d52f1891c47b8"
-	client_secret = "add6f18e0e1ab5644a00bc2a03ad7ae5e3ce3446f071255afa59a433be2a1995"
-	redirect_URI = "https://b104ed63dc7f.ngrok.io/api"     #esto va a cambiar cada vez que se cierre el acceso publico de ngrok
+	client_ID = "Ccf93aa6cab376ef56026405c048fb0b7297b5c44c38585af119ca30f4e24a307"
+	client_secret = "c6b002d77ac206b599215b5266d3115d6efb2f0c94e0466dad0c058d5f035151"
+	redirect_URI = "https://63ee00ceccdd.ngrok.io/api"     #esto va a cambiar cada vez que se cierre el acceso publico de ngrok
 	
 	#armado de solicitud
 	url = "https://api.ciscospark.com/v1/access_token"

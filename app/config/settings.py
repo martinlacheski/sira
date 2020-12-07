@@ -33,7 +33,7 @@ DEBUG = True
 #ALLOWED_HOSTS = []
 #Se agrega el host que me genera el servidor NGROK
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '97c719a142bd.ngrok.io']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '63ee00ceccdd.ngrok.io']
 
 # Application definition
 

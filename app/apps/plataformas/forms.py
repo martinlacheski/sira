@@ -41,7 +41,7 @@ class SalasVirtualesForm(ModelForm):
     class Meta:
         model = SalasVirtuales
         ordering = ['id']
-        fields = 'plataforma', 'sede', 'nombre', 'email', 'password'
+        fields = 'plataforma', 'sede', 'nombre', 'email', 'password', 'access_token', 'refresh_token'
         widgets = {
             'plataforma': Select(
                 attrs={

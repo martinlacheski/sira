@@ -5,6 +5,7 @@ from django.forms import model_to_dict
 
 from apps.carreras.models import Carreras, Materias, TiposComisiones
 from apps.institucional.models import Sedes
+from apps.plataformas.models import *
 
 #   Clase tipo_solicitud
 class TipoSolicitud(models.Model):
@@ -78,3 +79,21 @@ class Solicitudes(models.Model):
         verbose_name_plural = 'Solicitudes'
         db_table = 'solicitudes'
         ordering = ['id']
+
+
+class reservasVirtuales(models.Model):
+    id_solicitud = models.ForeignKey(Solicitudes, models.DO_NOTHING, verbose_name='id solicitud de reserva')
+    id_cuenta_virtual = models.ForeignKey(SalasVirtuales, models.DO_NOTHING, verbose_name='id solicitud cuenta virtual')
+    confirmacion_reserva = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name = 'reserva virtual'
+        verbose_name_plural = 'ResevervasVirtuales'
+        db_table = 'reservas_virtuales'
+        ordering = ['id']
+
+
+

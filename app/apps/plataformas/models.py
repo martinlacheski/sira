@@ -30,7 +30,9 @@ class SalasVirtuales(models.Model):
     email = models.EmailField(verbose_name='Correo Electrónico Sala Virtual', unique=True)
     password = models.TextField(verbose_name='Contraseña')
     estado = models.CharField(verbose_name='Estado', max_length=1, default='A')
-
+    access_token = models.CharField(verbose_name='Token de Acceso', max_length=200, null=True, blank=True)
+    refresh_token = models.CharField(verbose_name='Token de Refresco', max_length=200, null=True, blank=True)
+    
     def __str__(self):
         return self.nombre
 
@@ -43,5 +45,5 @@ class SalasVirtuales(models.Model):
     class Meta:
         verbose_name = 'Sala Virtual'
         verbose_name_plural = 'Salas Virtuales'
-        db_table = 'plataformas_salas_virtuales'
+        db_table = 'cuentas_salas_virtuales'
         ordering = ['id']
