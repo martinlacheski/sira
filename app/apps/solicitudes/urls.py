@@ -24,4 +24,8 @@ urlpatterns = [
     path('add/', SolicitudesCreateView.as_view(), name='solicitudes_create'),
     path('update/<int:pk>/', SolicitudesUpdateView.as_view(), name='solicitudes_update'),
     path('delete/<int:pk>/', SolicitudesDeleteView.as_view(), name='solicitudes_delete'),
+    path('generate/', SolicitudesGenerateView.as_view(), name='solicitudes_generate'),
+    path('confirm/<int:pk>/', SolicitudesConfirmView.as_view(), name='solicitudes_confirm'),
+    path('cancel/<int:pk>/', SolicitudesCancelView.as_view(), name='solicitudes_cancel'),
+
 ]

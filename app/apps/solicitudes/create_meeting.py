@@ -59,8 +59,6 @@ def fin_reunion(data):
 def email_creador(data):
 	if data.is_valid():
 		email = data.cleaned_data.get("email")
-		
-		
 	return(email)
 
 def nombre_creador_reunion(data):

@@ -155,3 +155,10 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/login/'
 
 LOGIN_URL = '/login/'
+
+# Para enviar Emails
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sira.fceqyn@gmail.com'
+EMAIL_HOST_PASSWORD = 'Sira.2021'

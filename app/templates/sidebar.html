@@ -21,6 +21,12 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+                            <a href="{% url 'solicitudes:solicitudes_create' %}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Generar Solicitudes</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{% url 'solicitudes:solicitudes_list' %}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Solicitudes de Reservas</p>
@@ -71,7 +77,7 @@
                         </li> -->
                     </ul>
                 </li>
-                <!-- esto va para mas ADELANTE !!!
+
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-book-open"></i>
@@ -101,8 +107,6 @@
                         </li>
                     </ul>
                 </li>
-                -->
-
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-pencil-alt"></i>
@@ -289,10 +293,18 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
+                                <!--
                                 <li class="nav-item">
                                     <a href="{% url 'usuarios:docentes_list' %}" class="nav-link">
                                         <i class="far fa-dot-circle nav-icon"></i>
                                         <p>Docentes</p>
+                                    </a>
+                                </li>
+                                -->
+                                <li class="nav-item">
+                                    <a href="{% url 'usuarios:tipo_usuario_list' %}" class="nav-link">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Tipos de Usuarios</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

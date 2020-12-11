@@ -7,6 +7,7 @@ $(function () {
         autoclose: true,
         todayHigligth: true
     });
+
     $('#fecha_reserva').datepicker({
         language: "es",
         todayBtn: "linked",
@@ -71,7 +72,7 @@ $(function () {
         console.log(value);
     });
 
-    //para buscar Docente segun DNI
+    //para buscar Usuario segun DNI
     $('input[name="dni"]').autocomplete({
         source: function (request, response) {
             $.ajax({
@@ -94,8 +95,10 @@ $(function () {
         minLength: 8,
         select: function (event, ui) {
             //Autocompletar campos del DOCENTE
-            var nombre = $(ui.item).attr('nombre');
-            var apellido = $(ui.item).attr('apellido');
+            //var nombre = $(ui.item).attr('nombre');
+            var nombre = $(ui.item).attr('first_name');
+            //var apellido = $(ui.item).attr('apellido');
+            var apellido = $(ui.item).attr('last_name');
             var email = $(ui.item).attr('email');
             $('input[name="nombres"]').val(nombre);
             $('input[name="apellido"]').val(apellido);

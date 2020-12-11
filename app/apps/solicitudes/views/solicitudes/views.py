@@ -7,10 +7,11 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
 from apps.solicitudes.create_meeting import *
-from apps.solicitudes.forms import SolicitudesForm, Materias
+from apps.solicitudes.forms import SolicitudesForm, Materias, GenerarSolicitudesForm
 from apps.solicitudes.models import Solicitudes
 from apps.mixins import ValidatePermissionRequiredMixin
-from apps.usuarios.models import Docentes
+from apps.solicitudes.send_email import send_email
+from apps.usuarios.models import Usuarios
 
 
 def solicitudes_list(request):
@@ -52,11 +53,11 @@ class SolicitudesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, L
         context['entity'] = 'Solicitudes'
         return context
 
-
 class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, CreateView):
     model = Solicitudes
     form_class = SolicitudesForm
     template_name = 'solicitudes/create.html'
+    #template_name = 'solicitudes.html'
     success_url = reverse_lazy('solicitudes:solicitudes_list')
     permission_required = 'solicitudes.add_solicitudes'
     url_redirect = success_url
@@ -75,13 +76,13 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                     data.append({'id': i.id, 'text': i.nombre})
             elif action == 'autocomplete':
                 data = []
-                for i in Docentes.objects.filter(dni=request.POST['term']):
+                for i in Usuarios.objects.filter(dni=request.POST['term']):
                     item = i.toJSON()
                     item['value'] = i.dni
                     data.append(item)
             elif action == 'add':
                 form = SolicitudesForm(request.POST)
-                
+
                 #Crear REUNION en WEBEX
                 crearReunion(form)
                 #assert false, (form)
@@ -102,7 +103,6 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
         context['action'] = 'add'
         return context
-
 
 class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
     model = Solicitudes
@@ -127,7 +127,7 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                     data.append({'id': i.id, 'text': i.nombre})
             elif action == 'autocomplete':
                 data = []
-                for i in Docentes.objects.filter(dni=request.POST['term']):
+                for i in Usuarios.objects.filter(dni=request.POST['term']):
                     item = i.toJSON()
                     item['value'] = i.dni
                     data.append(item)
@@ -147,7 +147,6 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
         context['action'] = 'edit'
         return context
-
 
 class SolicitudesDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, DeleteView):
     model = Solicitudes
@@ -174,3 +173,153 @@ class SolicitudesDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         context['entity'] = 'Solicitudes'
         context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
         return context
+
+class SolicitudesGenerateView(CreateView):
+    model = Solicitudes
+    form_class = GenerarSolicitudesForm
+    template_name = 'solicitudes.html'
+    success_url = reverse_lazy('solicitudes:solicitudes_generate')
+    url_redirect = success_url
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'search_materias_id':
+                data = [{'id': '', 'text': '---------'}]
+                for i in Materias.objects.filter(carrera_id=request.POST['id']):
+                    data.append({'id': i.id, 'text': i.nombre})
+            elif action == 'autocomplete':
+                data = []
+                for i in Usuarios.objects.filter(dni=request.POST['term']):
+                    item = i.toJSON()
+                    item['value'] = i.dni
+                    data.append(item)
+            elif action == 'add':
+                form = SolicitudesForm(request.POST)
+                # Enviar email de Solicitud de Reserva
+                send_email(form)
+                if form.is_valid():
+                    form = self.get_form()
+                    data = form.save()
+                return redirect('solicitudes:solicitudes_generate')
+            else:
+                data['error'] = 'Ha ocurrido un error'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data, safe=False)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Generar Solicitud'
+        context['entity'] = 'Solicitudes'
+        context['list_url'] = reverse_lazy('solicitudes:solicitudes_generate')
+        context['action'] = 'add'
+        return context
+
+class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
+    model = Solicitudes
+    form_class = SolicitudesForm
+    template_name = 'solicitudes/confirm.html'
+    success_url = reverse_lazy('solicitudes:solicitudes_list')
+    permission_required = 'solicitudes.change_solicitudes'
+    url_redirect = success_url
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'search_materias_id':
+                data = [{'id': '', 'text': '---------'}]
+                for i in Materias.objects.filter(carrera_id=request.POST['id']):
+                    data.append({'id': i.id, 'text': i.nombre})
+            elif action == 'autocomplete':
+                data = []
+                for i in Usuarios.objects.filter(dni=request.POST['term']):
+                    item = i.toJSON()
+                    item['value'] = i.dni
+                    data.append(item)
+            elif action == 'edit':
+                #AGREGAR PARA CONFIRMAR LA RESERVA
+
+
+                # PARA Crear REUNION en WEBEX
+                form = SolicitudesForm(request.POST)
+
+                #crearReunion(form)
+                # assert false, (form)
+                form = self.get_form()
+                data = form.save()
+            else:
+                data['error'] = 'No ha ingresado ninguna opción'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data, safe=False)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Confirmar Solicitud'
+        context['entity'] = 'solicitudes'
+        context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
+        context['action'] = 'edit'
+        return context
+
+class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
+    model = Solicitudes
+    form_class = SolicitudesForm
+    template_name = 'solicitudes/cancel.html'
+    success_url = reverse_lazy('solicitudes:solicitudes_list')
+    permission_required = 'solicitudes.change_solicitudes'
+    url_redirect = success_url
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'search_materias_id':
+                data = [{'id': '', 'text': '---------'}]
+                for i in Materias.objects.filter(carrera_id=request.POST['id']):
+                    data.append({'id': i.id, 'text': i.nombre})
+            elif action == 'autocomplete':
+                data = []
+                for i in Usuarios.objects.filter(dni=request.POST['term']):
+                    item = i.toJSON()
+                    item['value'] = i.dni
+                    data.append(item)
+            elif action == 'edit':
+                # AGREGAR PARA CANCELAR LA RESERVA
+                Solicitudes.estado = 'CANCELADA'
+                form = SolicitudesForm(request.POST)
+                # Crear REUNION en WEBEX
+                #crearReunion(form)
+                # assert false, (form)
+                form = self.get_form()
+                data = form.save()
+            else:
+                data['error'] = 'No ha ingresado ninguna opción'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data, safe=False)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Cancelar Solicitud'
+        context['entity'] = 'solicitudes'
+        context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
+        context['action'] = 'edit'
+        return context
+

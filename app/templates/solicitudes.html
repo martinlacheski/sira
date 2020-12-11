@@ -1,0 +1,191 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sistema de Reservas Académicas | FCEQyN - UNaM</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'lib/adminlte-3.0.5/plugins/fontawesome-free/css/all.min.css' %}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'lib/adminlte-3.0.5/css/adminlte.min.css' %}">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="{% static 'lib/adminlte-3.0.5/plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'lib/adminlte-3.0.5/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- My css -->
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <!-- AdminLTE -->
+    <script src="{% static 'lib/adminlte-3.0.5/js/adminlte.min.js' %}"></script>
+    <!-- SweetAlert2 -->
+    <script src="{% static 'lib/sweetalert2-10.0.2/sweetalert2.all.min.js' %}"></script>
+    <!-- Jquery Confirm 3.3.4 -->
+    <link rel="stylesheet" href="{% static 'lib/jquery-confirm-v3.3.4/jquery-confirm.min.css' %}">
+    <script src="{% static 'lib/jquery-confirm-v3.3.4/jquery-confirm.min.js' %}"></script>
+    <!-- Functions -->
+    <script src="{% static 'js/functions.js' %}"></script>
+    <!-- Block head -->
+    {% block head %}
+        {% block head_form %}
+            <!-- Para Select2 Carreras y Materias -->
+            <link href="{% static 'lib/select2-4.0.13/css/select2.min.css' %}" rel="stylesheet"/>
+            <link href="{% static 'lib/select2-4.0.13/css/select2-bootstrap4.min.css' %}" rel="stylesheet"/>
+            <script src="{% static 'lib/select2-4.0.13/js/select2.min.js' %}"></script>
+            <script src="{% static 'lib/select2-4.0.13/js/i18n/es.js' %}"></script>
+
+            <!-- Para manejo de autocomplete DNI -->
+            <link href="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.css' %}" rel="stylesheet"/>
+            <script src="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.js' %}"></script>
+
+            <!-- Para manejo de fechas -->
+            <link rel="stylesheet"
+                  href="{% static 'lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.css' %}">
+            <script src="{% static 'lib/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js' %}"></script>
+            <script src="{% static 'lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.es.min.js' %}"></script>
+
+            <!-- bloque form.js -->
+            <script src="{% static 'solicitudes/js/form.js' %}"></script>
+        {% endblock %}
+    {% endblock %}
+</head>
+
+{% block body %}
+    <body class="hold-transition layout-top-nav">
+    <div class="wrapper">
+        <!-- Content -->
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark"> <!--  --> <small> <!--  --></small>
+                            </h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container-fluid">
+                    {% block content %}
+                        <form method="post" action=".">
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        {% if action == 'add' %}
+                                            <i class="fas fa-plus"></i>
+                                        {% else %}
+                                            <i class="fas fa-edit"></i>
+                                        {% endif %}
+                                        {{ title }}
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="action" value="{{ action }}">
+                                    {% if form.errors %}
+                                        <div class="alert alert-danger alert-dismissible">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                            </button>
+                                            <h5><i class="icon fas fa-ban"></i> Ha ocurrido un error al intentar guardar
+                                                el registro</h5>
+                                            <ul>
+                                                {% for field in form %}
+                                                    {% for error in field.errors %}
+                                                        <li>{{ error }}</li>
+                                                    {% endfor %}
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    {% endif %}
+                                    {% for field in form.visible_fields %}
+                                        <div class="form-group">
+                                            <label for="email">{{ field.label }}:</label>
+                                            {{ field| add_class:'form-control'|attr:'autocomplete:off' }}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary btn-flat">
+                                        <i class="fas fa-save"></i> Generar Solicitud
+                                    </button>
+                                    <a href="{{ list_url }}" class="btn btn-danger btn-flat">
+                                        <i class="fas fa-times"></i> Cancelar
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                        <script>
+                            {% if form.errors %}
+                                var errors = '';
+                                {% for field in form %}
+                                    {% for error in field.errors %}
+                                        errors += '{{ error }}\n';
+                                    {% endfor %}
+                                {% endfor %}
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: errors,
+                                    icon: 'error'
+                                });
+                            {% endif %}
+
+                            $('form').on('submit', function (e) {
+                                if (($('input[name="inicio_hs"]').val()) > ($('input[name="fin_hs"]').val())) {
+                                    message_error("La hora de finalización es menor que la de inicio, por favor verifique");
+                                    return false;
+                                } else {
+                                    e.preventDefault();
+                                    var parameters = $(this).serializeArray();
+                                    console.log(parameters);
+                                    //para el select anidado hasta que encuentre como resolver eso
+                                    submit_without_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
+                                        Swal.fire({
+                                            title: 'La reserva ha sido generada exitosamente',
+                                            icon: 'info',
+                                            focusConfirm: false,
+                                            confirmButtonText: `OK`,
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+                                                location.href = '{{ solicitudes.html }}';
+                                            }
+                                        });
+                                    });
+                                }
+
+                            });
+
+                        </script>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        {% include 'footer.html' %}
+    </div>
+    <!-- Block javascript -->
+    {% block javascript %}
+
+    {% endblock %}
+    <script>
+        {% if messages %}
+            var html = '<p>';
+            {% for message in messages %}
+                html += '{{ message }}<br>';
+            {% endfor %}
+            html += '</p>';
+            Swal.fire({
+                title: 'Error!',
+                html: html,
+                icon: 'error'
+            });
+
+        {% endif %}
+    </script>
+    </body>
+{% endblock %}
+</html>

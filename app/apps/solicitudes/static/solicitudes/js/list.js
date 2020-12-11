@@ -16,7 +16,7 @@ $(function () {
         },
         columns: [
             {"data": "id"},
-            {"data": "nombre"},
+            {"data": "estado"},
             {"data": "apellido"},
             {"data": "nombres"},
             {"data": "carrera.nombre"},
@@ -31,8 +31,9 @@ $(function () {
                 class: 'text-center',
                 orderable: false,
                 render: function (data, type, row) {
-                    var buttons = '<a href="/solicitudes/update/' + row.id + '/" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
-                    buttons += '<a href="/solicitudes/delete/' + row.id + '/" type="button" class="btn btn-danger btn-xs btn-flat"><i class="fas fa-trash-alt"></i></a>';
+                    var buttons = '<a href="/solicitudes/update/' + row.id + '/" type="button" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
+                    buttons += '<a href="/solicitudes/confirm/' + row.id + '/" class="btn btn-success btn-xs btn-flat"><i class="fas fa-check"></i></a> ';
+                    buttons += '<a href="/solicitudes/cancel/' + row.id + '/" type="button" class="btn btn-danger btn-xs btn-flat"><i class="fas fa-times"></i></a>';
                     return buttons;
                 }
             },

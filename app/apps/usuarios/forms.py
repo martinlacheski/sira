@@ -10,8 +10,14 @@ class UsuariosForm(ModelForm):
     class Meta:
         model = Usuarios
         #fields = '__all__'
-        fields = 'first_name', 'last_name', 'username', 'password', 'dni', 'legajo', 'email', 'telefono', 'sede', 'groups'
+        fields = 'tipo', 'first_name', 'last_name', 'username', 'password', 'dni', 'legajo', 'email', 'telefono', 'sede', 'groups'
         widgets = {
+            'tipo': Select(
+                attrs={
+                    'class': 'form-control select2',
+                    'style': 'width: 100%'
+                }
+            ),
             'username': TextInput(
                 attrs={
                     'placeholder': 'Ingrese un nombre de Usuario',
@@ -141,6 +147,35 @@ class DocentesForm(ModelForm):
         form = super()
         try:
 
+            if form.is_valid():
+                form.save()
+            else:
+                data['error'] = form.errors
+        except Exception as e:
+            data['error'] = str(e)
+        return data
+
+
+class TiposUsuariosForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['nombre'].widget.attrs['autofocus'] = True
+
+    class Meta:
+        model = TiposUsuarios
+        fields = '__all__'
+        widgets = {
+            'nombre': TextInput(
+                attrs={
+                    'placeholder': 'Ingrese un nombre',
+                }
+            ),
+        }
+
+    def save(self, commit=True):
+        data = {}
+        form = super()
+        try:
             if form.is_valid():
                 form.save()
             else:

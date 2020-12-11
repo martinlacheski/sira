@@ -1,8 +1,4 @@
 from datetime import datetime
-
-from django.db import models
-from django.forms import model_to_dict
-
 from apps.carreras.models import Carreras, Materias, TiposComisiones
 from apps.institucional.models import Sedes
 from apps.plataformas.models import *
@@ -58,8 +54,7 @@ class Solicitudes(models.Model):
     fecha_reserva = models.DateField(verbose_name='Fecha de Reserva')
     inicio_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Inicio')
     fin_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Fin')
-    repeticion = models.BooleanField(default=False)
-    fin_repeticion = models.DateField(verbose_name='Fin de la Repetición', null=True, blank=True)
+    estado = models.TextField(verbose_name='Estado', default='PENDIENTE')
 
     def __str__(self):
         return self.nombre
@@ -87,11 +82,11 @@ class reservasVirtuales(models.Model):
     confirmacion_reserva = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.nombre
+        return self.confirmacion_reserva
 
     class Meta:
         verbose_name = 'reserva virtual'
-        verbose_name_plural = 'ResevervasVirtuales'
+        verbose_name_plural = 'ReservasVirtuales'
         db_table = 'reservas_virtuales'
         ordering = ['id']
 
