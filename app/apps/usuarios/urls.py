@@ -1,6 +1,5 @@
 from django.urls import path
 
-from apps.usuarios.views.docentes.views import *
 from apps.usuarios.views.tipos_usuarios.views import *
 from apps.usuarios.views.usuarios.views import *
 
@@ -19,9 +18,4 @@ urlpatterns = [
     path('tipo_usuario/update/<int:pk>/', TiposUsuariosUpdateView.as_view(), name='tipo_usuario_update'),
     path('tipo_usuario/delete/<int:pk>/', TiposUsuariosDeleteView.as_view(), name='tipo_usuario_delete'),
 
-    # Docentes
-    path('docentes/list/', DocentesListView.as_view(), name='docentes_list'),
-    path('docentes/add/', DocentesCreateView.as_view(), name='docentes_create'),
-    path('docentes/update/<int:pk>/', DocentesUpdateView.as_view(), name='docentes_update'),
-    path('docentes/delete/<int:pk>/', DocentesDeleteView.as_view(), name='docentes_delete'),
 ]

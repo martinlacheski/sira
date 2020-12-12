@@ -23,10 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/tipos/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/static/docentes/js/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/docentes/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/docentes/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/docentes/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/docentes/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +214,7 @@
       <workItem from="1607685087087" duration="8156000" />
       <workItem from="1607705376102" duration="24064000" />
       <workItem from="1607773148236" duration="18944000" />
-      <workItem from="1607795337938" duration="11442000" />
+      <workItem from="1607795337938" duration="11913000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -358,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607806173257</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Commit with solicitudes_reservas_virtuales_with_lib_pdf">
+      <created>1607808004602</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1607808004602</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

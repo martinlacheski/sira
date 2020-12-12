@@ -106,56 +106,6 @@ class UsuariosForm(ModelForm):
         return data
 
 
-class DocentesForm(ModelForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['dni'].widget.attrs['autofocus'] = True
-
-    class Meta:
-        model = Docentes
-        fields = '__all__'
-        widgets = {
-            'dni': TextInput(
-                attrs={
-                    'placeholder': 'Ingrese su DNI sin los puntos',
-                }
-            ),
-            'nombre': TextInput(
-                attrs={
-                    'placeholder': 'Ingrese su nombre',
-                }
-            ),
-            'apellido': TextInput(
-                attrs={
-                    'placeholder': 'Ingrese su apellido',
-                }
-            ),
-            'email': TextInput(
-                attrs={
-                    'placeholder': 'Ingrese un correo electrónico válido',
-                }
-            ),
-            'telefono': TextInput(
-                attrs={
-                    'placeholder': 'Ingrese su teléfono de contacto',
-                }
-            ),
-        }
-
-    def save(self, commit=True):
-        data = {}
-        form = super()
-        try:
-
-            if form.is_valid():
-                form.save()
-            else:
-                data['error'] = form.errors
-        except Exception as e:
-            data['error'] = str(e)
-        return data
-
-
 class TiposUsuariosForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
