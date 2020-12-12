@@ -68,7 +68,7 @@ class Solicitudes(models.Model):
     def toJSON(self):
         item = model_to_dict(self)
         #item['tipo'] = self.tipo.toJSON()
-        item['cuenta_asociada'] = self.cuenta_asociada.toJSON()
+        #item['cuenta_asociada'] = self.cuenta_asociada.toJSON()
         item['motivo'] = self.motivo.toJSON()
         item['sede'] = self.sede.toJSON()
         item['carrera'] = self.carrera.toJSON()
