@@ -7,7 +7,8 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
 from apps.solicitudes.create_meeting import *
-from apps.solicitudes.forms import SolicitudesForm, Materias, horarios_choices, ConfirmarSolicitudesForm
+from apps.solicitudes.forms import SolicitudesForm, Materias, horarios_choices, ConfirmarSolicitudesForm, \
+    GenerateSolicitudesForm
 from apps.solicitudes.models import Solicitudes
 from apps.mixins import ValidatePermissionRequiredMixin
 from apps.solicitudes.send_email import send_email
@@ -204,7 +205,7 @@ class SolicitudesDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
 
 class SolicitudesGenerateView(CreateView):
     model = Solicitudes
-    form_class = SolicitudesForm
+    form_class = GenerateSolicitudesForm
     template_name = 'solicitudes.html'
     success_url = reverse_lazy('solicitudes:solicitudes_generate')
     url_redirect = success_url

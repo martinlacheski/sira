@@ -1,17 +1,16 @@
 from django.urls import path
 
 from apps.solicitudes.views.motivos.views import *
-from apps.solicitudes.views.tipos.views import *
 from apps.solicitudes.views.solicitudes.views import *
 
 app_name = 'solicitudes'
 
 urlpatterns = [
     #Tipos de Reservas
-    path('tipo_solicitud/list/', TipoSolicitudListView.as_view(), name='tipo_solicitud_list'),
-    path('tipo_solicitud/add/', TipoSolicitudCreateView.as_view(), name='tipo_solicitud_create'),
-    path('tipo_solicitud/update/<int:pk>/', TipoSolicitudUpdateView.as_view(), name='tipo_solicitud_update'),
-    path('tipo_solicitud/delete/<int:pk>/', TipoSolicitudDeleteView.as_view(), name='tipo_solicitud_delete'),
+    #path('tipo_solicitud/list/', TipoSolicitudListView.as_view(), name='tipo_solicitud_list'),
+    #path('tipo_solicitud/add/', TipoSolicitudCreateView.as_view(), name='tipo_solicitud_create'),
+    #path('tipo_solicitud/update/<int:pk>/', TipoSolicitudUpdateView.as_view(), name='tipo_solicitud_update'),
+    #path('tipo_solicitud/delete/<int:pk>/', TipoSolicitudDeleteView.as_view(), name='tipo_solicitud_delete'),
 
     #Motivos de Reservas
     path('motivos/list/', MotivoSolicitudListView.as_view(), name='motivos_list'),
