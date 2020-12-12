@@ -23,15 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/tipos/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/static/docentes/js/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/docentes/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/docentes/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/templates/docentes/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuarios/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/usuarios/views/docentes/views.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_confirmacion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_solicitud.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/solicitudes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/send_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,14 +68,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
+      <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/apps/usuarios/static" />
       <recent name="$PROJECT_DIR$/apps/usuarios/templates" />
       <recent name="$PROJECT_DIR$/apps/usuarios/views" />
@@ -214,7 +212,7 @@
       <workItem from="1607685087087" duration="8156000" />
       <workItem from="1607705376102" duration="24064000" />
       <workItem from="1607773148236" duration="18944000" />
-      <workItem from="1607795337938" duration="11913000" />
+      <workItem from="1607795337938" duration="13083000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -370,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607808004602</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Commit with solicitudes_reservas_virtuales_with_lib_pdf">
+      <created>1607808305227</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1607808305227</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

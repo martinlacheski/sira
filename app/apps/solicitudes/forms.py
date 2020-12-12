@@ -270,9 +270,16 @@ class GenerateSolicitudesForm(ModelForm):
     class Meta:
         model = Solicitudes
         ordering = ['-id']
-        fields = 'dni', 'nombres', 'apellido', 'email', 'sede', 'motivo', 'observaciones', 'carrera', \
-                 'materia', 'comision', 'fecha_reserva', 'inicio_hs', 'fin_hs'
+        fields = 'fecha_solicitud', 'dni', 'nombres', 'apellido', 'email', 'sede', 'motivo', 'observaciones', 'carrera', \
+                 'materia', 'comision', 'fecha_reserva', 'inicio_hs', 'fin_hs', 'estado'
         widgets = {
+            'fecha_solicitud': DateTimeInput(
+                attrs={
+                    'readonly': True,
+                    'class': 'form-control',
+                    'style': 'width: 100%'
+                }
+            ),
             'dni': TextInput(
                 attrs={
                     'placeholder': 'Ingrese su DNI',

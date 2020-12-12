@@ -12,7 +12,7 @@ def solicitante_fecha(data):
     if data.is_valid():
         pass
     # obtener la fecha de la solicitud
-    fecha = data.cleaned_data.get("nombre")
+    fecha = data.cleaned_data.get("fecha_solicitud")
     fecha = str(fecha)
     fecha = fecha[:-6]
     fecha = datetime.strptime(fecha, "%Y-%m-%d %H:%M:%S").strftime("%d-%m-%Y %H:%M:%S")
@@ -201,7 +201,57 @@ def send_email(form):
         mensaje['From'] = settings.EMAIL_HOST_USER
         mensaje['To'] = email_to
         mensaje['Subject'] = "Sistema de Reservas Académicas - FCEQyN - UNaM"
-        content = render_to_string('send_email_solicitud.html', {'fecha': fecha, 'dni': dni,'nombres': nombres,
+        content = render_to_string('solicitudes/send_email_solicitud.html', {'fecha': fecha, 'dni': dni,'nombres': nombres,
+                                   'apellido': apellido,'email': email_to,'tipo': tipo,'motivo': motivo,
+                                   'observaciones': observaciones, 'sede': sede, 'carrera': carrera,
+                                   'materia': materia, 'comision': comision, 'fecha_reserva': fecha_reserva,
+                                   'inicio_hs': inicio_hs, 'fin_hs': fin_hs})
+        mensaje.attach(MIMEText(content, 'html'))
+
+        mailServer.sendmail(settings.EMAIL_HOST_USER,
+                            email_to,
+                            mensaje.as_string())
+
+        print('Correo enviado correctamente')
+    except Exception as e:
+        print(e)
+
+
+def send_email_confirmacion(form):
+    try:
+        mailServer = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
+        print(mailServer.ehlo())
+        mailServer.starttls()
+        print(mailServer.ehlo())
+        mailServer.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
+        print('Conectado..')
+
+        # informacion solicitud
+        fecha = solicitante_fecha(form)
+        dni = solicitante_dni(form)
+        nombres = solicitante_nombres(form)
+        apellido = solicitante_apellido(form)
+        email_to = solicitante_email(form)
+        tipo = solicitante_tipo(form)
+        motivo = solicitante_motivo(form)
+        observaciones = solicitante_observaciones(form)
+        sede = solicitante_sede(form)
+        carrera = solicitante_carrera(form)
+        materia = solicitante_materia(form)
+        comision = solicitante_comision(form)
+        fecha_reserva = solicitante_fecha_reserva(form)
+        inicio_hs = solicitante_inicio_hs(form)
+        fin_hs = solicitante_fin_hs(form)
+        inicio_hs = str(inicio_hs)
+        fin_hs = str(fin_hs)
+        print(fecha)
+
+        # Construimos el mensaje
+        mensaje = MIMEMultipart()
+        mensaje['From'] = settings.EMAIL_HOST_USER
+        mensaje['To'] = email_to
+        mensaje['Subject'] = "Sistema de Reservas Académicas - FCEQyN - UNaM"
+        content = render_to_string('solicitudes/send_email_confirmacion.html', {'fecha': fecha, 'dni': dni,'nombres': nombres,
                                    'apellido': apellido,'email': email_to,'tipo': tipo,'motivo': motivo,
                                    'observaciones': observaciones, 'sede': sede, 'carrera': carrera,
                                    'materia': materia, 'comision': comision, 'fecha_reserva': fecha_reserva,
