@@ -14,7 +14,8 @@
         <script src="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.js' %}"></script>
 
         <!-- Para manejo de fechas -->
-        <link rel="stylesheet" href="{% static 'lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.css' %}">
+        <link rel="stylesheet"
+              href="{% static 'lib/bootstrap-datepicker-1.9.0/css/bootstrap-datepicker.standalone.css' %}">
         <script src="{% static 'lib/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js' %}"></script>
         <script src="{% static 'lib/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.es.min.js' %}"></script>
 
@@ -70,7 +71,7 @@
                     <i class="fas fa-save"></i> Confirmar Solicitud
                 </button>
                 <a href="{{ list_url }}" class="btn btn-danger btn-flat">
-                    <i class="fas fa-times"></i> Cancelar
+                    <i class="fas fa-times"></i> Volver
                 </a>
             </div>
         </div>
@@ -91,14 +92,20 @@
         {% endif %}
 
         $('form').on('submit', function (e) {
-            e.preventDefault();
-            var parameters = $(this).serializeArray();
-            console.log(parameters);
-            //para el select anidado hasta que encuentre como resolver eso
-            submit_without_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
-                location.href = '{{ list_url }}';
-            });
-        });
+                if (($('input[name="inicio_hs"]').val()) > ($('input[name="fin_hs"]').val())) {
+                    message_error("La hora de finalización es menor que la de inicio, por favor verifique");
+                    return false;
+                } else {
+                    e.preventDefault();
+                    var parameters = $(this).serializeArray();
+                    console.log(parameters);
+                    //para el select anidado hasta que encuentre como resolver eso
+                    submit_without_ajax(window.location.pathname, 'Confirmación', '¿Estás seguro de realizar la siguiente acción?', parameters, function () {
+                        location.href = '{{ list_url }}';
+                    });
+                }
+            }
+        );
 
     </script>
 {% endblock %}

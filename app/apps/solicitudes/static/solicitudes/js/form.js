@@ -73,6 +73,10 @@ $(function () {
     });
 
     //para buscar Usuario segun DNI
+    //$('input[name="dni"]').focusout( function(request, response) {
+        //alert( $(this).val() );
+    //});
+
     $('input[name="dni"]').autocomplete({
         source: function (request, response) {
             $.ajax({
@@ -91,7 +95,7 @@ $(function () {
 
             });
         },
-        delay: 500,
+        //delay: 500,
         minLength: 8,
         select: function (event, ui) {
             //Autocompletar campos del DOCENTE
@@ -108,10 +112,47 @@ $(function () {
 
     });
 
+    //para buscar Horarios posteriores al de inicio
+    var select_horarios = $('select[name="fin_hs"]');
+    $('select[name="inicio_hs"]').on('change', function () {
+        var id = $(this).val();
+        console.log(id);
+        var options = '<option value=""></option>';
+        if (id === '') {
+            select_horarios.html(options);
+            return false;
+        }
+        $.ajax({
+            url: window.location.pathname,
+            type: 'POST',
+            data: {
+                'action': 'search_horarios_id',
+                'id': id
+            },
+            dataType: 'json',
+
+        }).done(function (data) {
+            if (!data.hasOwnProperty('error')) {
+                select_horarios.html('').select2({
+                    theme: "bootstrap4",
+                    language: 'es',
+                    data: data
+                });
+                return false;
+            }
+            message_error(data.error);
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            //alert(textStatus + ': ' + errorThrown);
+        }).always(function (data) {
+        });
+    });
+
     //para comparar horario de inicio y de fin
-    //$('input[name="fin_hs"]').on('blur', function () {
-    //     if (($('input[name="inicio_hs"]').val()) > ($('input[name="fin_hs"]').val())) {
-    //            message_error("La hora de finalización es menor que la de inicio, por favor verifique");
-    //        }
-    //});
+    $('select[name="fin_hs"]').on('change', function () {
+        var id = $(this).val();
+        console.log(id);
+        if (($('select[name="inicio_hs"]').val()) > ($('select[name="fin_hs"]').val())) {
+            message_error("La hora de finalización es menor que la de inicio, por favor verifique");
+        }
+    });
 });

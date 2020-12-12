@@ -135,10 +135,6 @@
                             {% endif %}
 
                             $('form').on('submit', function (e) {
-                                if (($('input[name="inicio_hs"]').val()) > ($('input[name="fin_hs"]').val())) {
-                                    message_error("La hora de finalización es menor que la de inicio, por favor verifique");
-                                    return false;
-                                } else {
                                     e.preventDefault();
                                     var parameters = $(this).serializeArray();
                                     console.log(parameters);
@@ -154,10 +150,20 @@
                                                 location.href = '{{ solicitudes.html }}';
                                             }
                                         });
-                                    });
-                                }
 
-                            });
+                                        //PARA CUANDO AGREGUE LA OPCION DE PDF
+                                        //alert_action('Notificación', 'La solicitud ha sido realizada ¿Desea imprimir la boleta de venta?', function () {
+                                        //    window.open('/erp/sale/invoice/pdf/' + response.id + '/', '_blank');
+                                        //    location.href = '/erp/sale/list/';
+                                        //}, function () {
+                                        //    location.href = '/erp/sale/list/';
+                                        //});
+
+                                    });
+
+
+                                }
+                            );
 
                         </script>
                     {% endblock %}

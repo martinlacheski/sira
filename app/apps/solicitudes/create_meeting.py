@@ -3,8 +3,6 @@ import requests
 
 from apps.solicitudes.verificacion_cuenta_API import *
 
-
-
 #necesario para que json no se enoje
 false = False
 true = True
@@ -39,8 +37,6 @@ def inicio_reunion(data):
 	#	2020-09-17T21:40:00Z"
 	
 	return(inicio_reunion_formateada)
-
-
 
 def fin_reunion(data):
 	if data.is_valid():
@@ -77,7 +73,6 @@ def nombre_creador_reunion(data):
 def jprint(obj):
 	text = json.dumps(obj, sort_keys=True, indent=2)
 	print(text)
-
 
 def crearReunion(form):
 

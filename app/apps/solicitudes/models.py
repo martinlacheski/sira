@@ -39,29 +39,36 @@ class Motivos(models.Model):
 
 #   Clase Solicitudes de Reservas
 class Solicitudes(models.Model):
-    nombre = models.DateField(default=datetime.now, verbose_name='Fecha de Solicitud')
+    #fecha de solicitud!
+    fecha_solicitud = models.DateTimeField(default=datetime.now, verbose_name='Fecha de Solicitud')
+    cuenta_asociada = models.ForeignKey(SalasVirtuales, models.DO_NOTHING, verbose_name='Cuenta Asociada', null=True, blank=True)
     dni = models.PositiveIntegerField(verbose_name='DNI')
     nombres = models.TextField(verbose_name='Nombres')
     apellido = models.TextField(verbose_name='Apellido')
     email = models.EmailField(verbose_name='Correo Electrónico')
     sede = models.ForeignKey(Sedes, models.DO_NOTHING, verbose_name='Sede')
-    tipo = models.ForeignKey(TipoSolicitud, models.DO_NOTHING, verbose_name='Tipo de Reserva')
+    #tipo = models.ForeignKey(TipoSolicitud, models.DO_NOTHING, verbose_name='Tipo de Reserva')
     motivo = models.ForeignKey(Motivos, models.DO_NOTHING, verbose_name='Motivo')
     observaciones = models.TextField(verbose_name='Observaciones', null=True, blank=True)
     carrera = models.ForeignKey(Carreras, models.DO_NOTHING, verbose_name='Carrera')
     materia = models.ForeignKey(Materias, models.DO_NOTHING, verbose_name='Materia')
     comision = models.ForeignKey(TiposComisiones, models.DO_NOTHING, verbose_name='Tipo de Comisión')
     fecha_reserva = models.DateField(verbose_name='Fecha de Reserva')
-    inicio_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Inicio')
-    fin_hs = models.TimeField(default=datetime.now, verbose_name='Horario de Fin')
+    inicio_hs = models.TimeField(verbose_name='Horario de Inicio')
+    fin_hs = models.TimeField(verbose_name='Horario de Fin')
     estado = models.TextField(verbose_name='Estado', default='PENDIENTE')
+    link_reunion = models.TextField(verbose_name='Link', null=True, blank=True)
+    nombre_reunion = models.TextField(verbose_name='Reunión', null=True, blank=True)
+    password_reunion = models.TextField(verbose_name='Contraseña', null=True, blank=True)
+
 
     def __str__(self):
-        return self.nombre
+        return self.nombres
 
     def toJSON(self):
         item = model_to_dict(self)
-        item['tipo'] = self.tipo.toJSON()
+        #item['tipo'] = self.tipo.toJSON()
+        item['cuenta_asociada'] = self.cuenta_asociada.toJSON()
         item['motivo'] = self.motivo.toJSON()
         item['sede'] = self.sede.toJSON()
         item['carrera'] = self.carrera.toJSON()
@@ -72,23 +79,5 @@ class Solicitudes(models.Model):
     class Meta:
         verbose_name = 'Solicitud'
         verbose_name_plural = 'Solicitudes'
-        db_table = 'solicitudes'
+        db_table = 'solicitudes_salas_virtuales'
         ordering = ['id']
-
-
-class reservasVirtuales(models.Model):
-    id_solicitud = models.ForeignKey(Solicitudes, models.DO_NOTHING, verbose_name='id solicitud de reserva')
-    id_cuenta_virtual = models.ForeignKey(SalasVirtuales, models.DO_NOTHING, verbose_name='id solicitud cuenta virtual')
-    confirmacion_reserva = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.confirmacion_reserva
-
-    class Meta:
-        verbose_name = 'reserva virtual'
-        verbose_name_plural = 'ReservasVirtuales'
-        db_table = 'reservas_virtuales'
-        ordering = ['id']
-
-
-

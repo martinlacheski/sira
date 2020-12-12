@@ -1,6 +1,82 @@
-from django.forms import ModelForm, TextInput, Select, DateInput, TimeInput, CheckboxInput
+from django.forms import ModelForm, TextInput, Select, DateInput, DateTimeInput
 
 from apps.solicitudes.models import *
+
+horarios_choices = [
+    ('06:00:00', '06:00'),
+    ('06:15:00', '06:15'),
+    ('06:30:00', '06:30'),
+    ('06:45:00', '06:45'),
+    ('07:00:00', '07:00'),
+    ('07:15:00', '07:15'),
+    ('07:30:00', '07:30'),
+    ('07:45:00', '07:45'),
+    ('08:00:00', '08:00'),
+    ('08:15:00', '08:15'),
+    ('08:30:00', '08:30'),
+    ('08:45:00', '08:45'),
+    ('09:00:00', '09:00'),
+    ('09:15:00', '09:15'),
+    ('09:30:00', '09:30'),
+    ('09:45:00', '09:45'),
+    ('10:00:00', '10:00'),
+    ('10:15:00', '10:15'),
+    ('10:30:00', '10:30'),
+    ('10:45:00', '10:45'),
+    ('11:00:00', '11:00'),
+    ('11:15:00', '11:15'),
+    ('11:30:00', '11:30'),
+    ('11:45:00', '11:45'),
+    ('12:00:00', '12:00'),
+    ('12:15:00', '12:15'),
+    ('12:30:00', '12:30'),
+    ('12:45:00', '12:45'),
+    ('13:00:00', '13:00'),
+    ('13:15:00', '13:15'),
+    ('13:30:00', '13:30'),
+    ('13:45:00', '13:45'),
+    ('14:00:00', '14:00'),
+    ('14:15:00', '14:15'),
+    ('14:30:00', '14:30'),
+    ('14:45:00', '14:45'),
+    ('15:00:00', '15:00'),
+    ('15:15:00', '15:15'),
+    ('15:30:00', '15:30'),
+    ('15:45:00', '15:45'),
+    ('16:00:00', '16:00'),
+    ('16:15:00', '16:15'),
+    ('16:30:00', '16:30'),
+    ('16:45:00', '16:45'),
+    ('17:00:00', '17:00'),
+    ('17:15:00', '17:15'),
+    ('17:30:00', '17:30'),
+    ('17:45:00', '17:45'),
+    ('18:00:00', '18:00'),
+    ('18:15:00', '18:15'),
+    ('18:30:00', '18:30'),
+    ('18:45:00', '18:45'),
+    ('19:00:00', '19:00'),
+    ('19:15:00', '19:15'),
+    ('19:30:00', '19:30'),
+    ('19:45:00', '19:45'),
+    ('20:00:00', '20:00'),
+    ('20:15:00', '20:15'),
+    ('20:30:00', '20:30'),
+    ('20:45:00', '20:45'),
+    ('21:00:00', '21:00'),
+    ('21:15:00', '21:15'),
+    ('21:30:00', '21:30'),
+    ('21:45:00', '21:45'),
+    ('22:00:00', '22:00'),
+    ('22:15:00', '22:15'),
+    ('22:30:00', '22:30'),
+    ('22:45:00', '22:45'),
+    ('23:00:00', '23:00'),
+    ('23:15:00', '23:15'),
+    ('23:30:00', '23:30'),
+    ('23:45:00', '23:45'),
+    ('23:59:00', '23:59')
+]
 
 
 class TipoSolicitudForm(ModelForm):
@@ -31,6 +107,7 @@ class TipoSolicitudForm(ModelForm):
             data['error'] = str(e)
         return data
 
+
 class MotivoSolicitudForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -59,6 +136,7 @@ class MotivoSolicitudForm(ModelForm):
             data['error'] = str(e)
         return data
 
+
 class SolicitudesForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
@@ -70,7 +148,7 @@ class SolicitudesForm(ModelForm):
         ordering = ['-id']
         fields = '__all__'
         widgets = {
-            'nombre': DateInput(
+            'nombre': DateTimeInput(
                 attrs={
                     'readonly': True,
                     'class': 'form-control',
@@ -132,12 +210,12 @@ class SolicitudesForm(ModelForm):
             'carrera': Select(attrs={
                 'class': 'form-control select2',
                 'style': 'width: 100%'
-                }
+            }
             ),
             'materia': Select(attrs={
                 'class': 'form-control select2',
                 'style': 'width: 100%'
-                }
+            }
             ),
             'comision': Select(
                 attrs={
@@ -148,51 +226,27 @@ class SolicitudesForm(ModelForm):
             'fecha_reserva': DateInput(
                 attrs={
                     'placeholder': 'Seleccione la fecha de reserva',
-                    #'autocomplete': 'off',
                     'class': 'form-control datepicker-input',
                     'id': 'fecha_reserva',
                     'data-target': '#fecha_reserva',
                     'data-toggle': 'datepicker'
                 }
             ),
-            'inicio_hs': TimeInput(
-                #format='%Y-%m-%d',
-                attrs={
-                    'autocomplete': 'off',
-                    'class': 'form-control',
-                    #'class': 'form-control datetimepicker-input',
-                    #'id': 'inicio_hs',
-                    #'data-target': '#inicio_hs',
-                    #'data-toggle': 'datetimepicker'
-                }
-            ),
-            'fin_hs': TimeInput(
-                attrs={
-                    'autocomplete': 'off',
-                    'class': 'form-control',
-                    #'class': 'form-control datetimepicker-input',
-                    #'id': 'fin_hs',
-                    #'data-target': '#fin_hs',
-                    #'data-toggle': 'datetimepicker'
-                }
-            ),
-            'repeticion': CheckboxInput(
-                attrs={
-                    'class': 'form-control',
-                    'style': 'width: 100%'
-                }
-            ),
-            'fin_repeticion': DateInput(
-                attrs={
-                    'placeholder': 'Seleccione la fecha de finalización',
-                    #'autocomplete': 'off',
-                    'class': 'form-control datepicker-input',
-                    'id': 'fin_repeticion',
-                    'data-target': '#fin_repeticion',
-                    'data-toggle': 'datepicker'
-                }
-            ),
-            'estado': DateInput(
+            'inicio_hs': Select(choices=horarios_choices,
+                                attrs={
+                                    'placeholder': 'Seleccione el horario de inicio',
+                                    'class': 'form-control select2',
+                                    'style': 'width: 100%'
+                                }
+                                ),
+            'fin_hs': Select(choices=horarios_choices,
+                             attrs={
+                                 'placeholder': 'Seleccione el horario de fin',
+                                 'class': 'form-control select2',
+                                 'style': 'width: 100%'
+                             }
+                             ),
+            'estado': TextInput(
                 attrs={
                     'readonly': True,
                     'class': 'form-control',
@@ -204,7 +258,6 @@ class SolicitudesForm(ModelForm):
         data = {}
         form = super()
         try:
-
             if form.is_valid():
                 form.save()
             else:
@@ -213,8 +266,8 @@ class SolicitudesForm(ModelForm):
             data['error'] = str(e)
         return data
 
-class GenerarSolicitudesForm(ModelForm):
 
+class ConfirmarSolicitudesForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['dni'].widget.attrs['autofocus'] = True
@@ -222,9 +275,9 @@ class GenerarSolicitudesForm(ModelForm):
     class Meta:
         model = Solicitudes
         ordering = ['-id']
-        fields = 'nombre', 'dni', 'nombres', 'apellido', 'email', 'tipo', 'motivo', 'observaciones', 'sede', 'carrera', 'materia', 'comision', 'fecha_reserva', 'inicio_hs', 'fin_hs'
+        fields = '__all__'
         widgets = {
-            'nombre': DateInput(
+            'nombre': DateTimeInput(
                 attrs={
                     'readonly': True,
                     'class': 'form-control',
@@ -286,12 +339,12 @@ class GenerarSolicitudesForm(ModelForm):
             'carrera': Select(attrs={
                 'class': 'form-control select2',
                 'style': 'width: 100%'
-                }
+            }
             ),
             'materia': Select(attrs={
                 'class': 'form-control select2',
                 'style': 'width: 100%'
-                }
+            }
             ),
             'comision': Select(
                 attrs={
@@ -302,48 +355,30 @@ class GenerarSolicitudesForm(ModelForm):
             'fecha_reserva': DateInput(
                 attrs={
                     'placeholder': 'Seleccione la fecha de reserva',
-                    #'autocomplete': 'off',
                     'class': 'form-control datepicker-input',
                     'id': 'fecha_reserva',
                     'data-target': '#fecha_reserva',
                     'data-toggle': 'datepicker'
                 }
             ),
-            'inicio_hs': TimeInput(
-                #format='%Y-%m-%d',
+            'inicio_hs': Select(choices=horarios_choices,
+                                attrs={
+                                    'class': 'form-control select2',
+                                    'style': 'width: 100%'
+                                }
+                                ),
+            'fin_hs': Select(choices=horarios_choices,
+                             attrs={
+                                 'class': 'form-control select2',
+                                 'style': 'width: 100%'
+                             }
+                             ),
+            'estado': TextInput(
                 attrs={
-                    'autocomplete': 'off',
+                    'label': False,
+                    'hidden': True,
+                    'readonly': True,
                     'class': 'form-control',
-                    #'class': 'form-control datetimepicker-input',
-                    #'id': 'inicio_hs',
-                    #'data-target': '#inicio_hs',
-                    #'data-toggle': 'datetimepicker'
-                }
-            ),
-            'fin_hs': TimeInput(
-                attrs={
-                    'autocomplete': 'off',
-                    'class': 'form-control',
-                    #'class': 'form-control datetimepicker-input',
-                    #'id': 'fin_hs',
-                    #'data-target': '#fin_hs',
-                    #'data-toggle': 'datetimepicker'
-                }
-            ),
-            'repeticion': CheckboxInput(
-                attrs={
-                    'class': 'form-control',
-                    'style': 'width: 100%'
-                }
-            ),
-            'fin_repeticion': DateInput(
-                attrs={
-                    'placeholder': 'Seleccione la fecha de finalización',
-                    #'autocomplete': 'off',
-                    'class': 'form-control datepicker-input',
-                    'id': 'fin_repeticion',
-                    'data-target': '#fin_repeticion',
-                    'data-toggle': 'datepicker'
                 }
             ),
         }
@@ -352,7 +387,6 @@ class GenerarSolicitudesForm(ModelForm):
         data = {}
         form = super()
         try:
-
             if form.is_valid():
                 form.save()
             else:
