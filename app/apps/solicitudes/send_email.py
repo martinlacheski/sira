@@ -170,9 +170,9 @@ def solicitante_fin_hs(data):
 def send_email(form):
     try:
         mailServer = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
-        print(mailServer.ehlo())
+        #print(mailServer.ehlo())
         mailServer.starttls()
-        print(mailServer.ehlo())
+        #print(mailServer.ehlo())
         mailServer.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
 
         print('Conectado al servidor de correo')

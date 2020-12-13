@@ -11,7 +11,7 @@ from apps.solicitudes.forms import SolicitudesForm, Materias, horarios_choices, 
     GenerateSolicitudesForm
 from apps.solicitudes.models import Solicitudes
 from apps.mixins import ValidatePermissionRequiredMixin
-from apps.solicitudes.send_email import send_email, send_email_confirmacion
+from apps.solicitudes.send_email import send_email
 from apps.usuarios.models import Usuarios
 
 hola = 'error'
@@ -22,7 +22,6 @@ def solicitudes_list(request):
         'solicitudes': Solicitudes.objects.all()
     }
     return render(request, 'solicitudes/list.html', data)
-
 
 class SolicitudesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
     model = Solicitudes
@@ -90,15 +89,9 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     model = Solicitudes
     form_class = SolicitudesForm
     template_name = 'solicitudes/create.html'
-    #template_name = 'solicitudes.html'
     success_url = reverse_lazy('solicitudes:solicitudes_list')
     permission_required = 'solicitudes.add_solicitudes'
     url_redirect = success_url
-
-    #def get_initial(self, *args, **kwargs):
-    #    initial = super(SolicitudesCreateView, self).get_initial(**kwargs)
-    #    initial['estado'] = 'CONFIRMADA'
-    #    return initial
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -140,14 +133,23 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
 
                 if form.is_valid():
                     form = self.get_form()
-                    data = form.save()
+                    print("Estoy en la vista, por entrar a crearReunión()")
+                    
+                    exito = crearReunion(form)
+                    
+                    if(exito["todo_correcto"] == 1):
 
-                    # Crear REUNION en WEBEX
-                    crearReunion(form)
+                        data = form.save()
+                        datos_faltantes = exito["datos_update"]
+                        cuenta_asociada = exito["cuenta_asociada"]
+                        camposRespuestaMeeting(datos_faltantes, cuenta_asociada)
+                        #print("todo ok")
+                    else:
+                        assert False, ("NO SE PUDO CREAR LA REUNION")
+                else:
+                    assert False, ("el formulario no es correcto")
 
-                    # Enviar email de Confirmacion de Reserva
-                    send_email_confirmacion(form)
-
+                #assert False, ("no va a refrescar pero funciona")
                 return redirect('solicitudes:solicitudes_list')
             else:
                 data['error'] = 'Ha ocurrido un error'
@@ -318,11 +320,6 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
     permission_required = 'solicitudes.change_solicitudes'
     url_redirect = success_url
 
-    #def get_initial(self, *args, **kwargs):
-    #    initial = super(SolicitudesConfirmView, self).get_initial(**kwargs)
-    #    initial['estado'] = 'CONFIRMADA'
-    #    return initial
-
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
@@ -356,19 +353,23 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
                     data.append(item)
             elif action == 'confirm':
                 form = SolicitudesForm(request.POST)
+                id_sol = self.get_object()
+                #print("el id de solicitud es:")
+                #print(id_sol.pk)
                 if form.is_valid():
-                    # Funcion de SUPERPOSICION DE MATERIAS FALTA AGREGAR
-                    ###################################################
-
                     form = self.get_form()
-                    data = form.save()
 
-                    # assert false, (form)
-                    # Crear REUNION en WEBEX
-                    crearReunion(form)
-
-                    # Enviar email de Confirmacion de Reserva
-                    send_email_confirmacion(form)
+                    exito = crearReunion(form)
+                    
+                    if(exito["todo_correcto"] == 1):
+                        data = form.save()
+                        datos_faltantes = exito["datos_update"]
+                        cuenta_asociada = exito["cuenta_asociada"]
+                        camposRespuestaMeetingID(id_sol.pk, datos_faltantes, cuenta_asociada)
+                    else:
+                        assert False, ("NO SE PUDO CREAR LA REUNION")
+                else:
+                    assert False, ("el formulario no es correcto")
                 return redirect('solicitudes:solicitudes_pendientes_list')
 
             else:
@@ -392,11 +393,6 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     success_url = reverse_lazy('solicitudes:solicitudes_list')
     permission_required = 'solicitudes.change_solicitudes'
     url_redirect = success_url
-
-    #def get_initial(self, *args, **kwargs):
-    #    initial = super(SolicitudesCancelView, self).get_initial(**kwargs)
-    #    initial['estado'] = 'CANCELADA'
-    #    return initial
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -432,8 +428,10 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
             elif action == 'cancel':
                 form = SolicitudesForm(request.POST)
                 if form.is_valid():
-                    form = self.get_form()
-                    data = form.save()
+                    #form = self.get_form()
+                    id_sol = self.get_object()
+                    id_sol.estado = "CANCELADO"
+                    data = id_sol.save()
                 return redirect('solicitudes:solicitudes_pendientes_list')
             else:
                 data['error'] = 'No ha ingresado ninguna opción'

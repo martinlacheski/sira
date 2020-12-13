@@ -23,18 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/migrations/0018_auto_20201213_1226.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/propuestas_horarios.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/usuarios/migrations/0012_delete_docentes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/BD/Backup13-12-2020.backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/BD/Backup13-12-2020.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/create_meeting.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/create_meeting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/send_email.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/verificacion_cuenta_API.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/verificacion_cuenta_API.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/BD/backup-09-10-2020.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/BD/backup-26-10-2020.backup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/BD/modelo de datos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/files/BD/modelo de datos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +215,8 @@
       <workItem from="1607773148236" duration="18944000" />
       <workItem from="1607795337938" duration="19072000" />
       <workItem from="1607818930115" duration="1166000" />
-      <workItem from="1607864832268" duration="7847000" />
+      <workItem from="1607864832268" duration="9883000" />
+      <workItem from="1607893813499" duration="9029000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -396,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607819465357</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="commit 13-12-2020">
+      <created>1607873525127</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1607873525127</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +439,9 @@
     <MESSAGE value="Commit with solicitudes_reservas_virtuales" />
     <MESSAGE value="Commit with solicitudes_reservas_virtuales_with_lib_pdf" />
     <MESSAGE value="Commit 12-12" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 12-12" />
+    <MESSAGE value="commit 13-12-2020" />
+    <MESSAGE value="Commit 13-12-2020 entrega p/TrabajoFinal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 13-12-2020 entrega p/TrabajoFinal" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app$tests.coverage" NAME="tests Coverage Results" MODIFIED="1599692603928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/geografico" />
