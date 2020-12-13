@@ -20,6 +20,7 @@ urlpatterns = [
 
     #Solicitudes de Reservas
     path('list/', SolicitudesListView.as_view(), name='solicitudes_list'),
+    path('pendientes/', SolicitudesPendientesListView.as_view(), name='solicitudes_pendientes_list'),
     path('add/', SolicitudesCreateView.as_view(), name='solicitudes_create'),
     path('update/<int:pk>/', SolicitudesUpdateView.as_view(), name='solicitudes_update'),
     path('delete/<int:pk>/', SolicitudesDeleteView.as_view(), name='solicitudes_delete'),

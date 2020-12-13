@@ -23,12 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_confirmacion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_solicitud.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/solicitudes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/send_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_confirmacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_confirmacion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_solicitud.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_solicitud.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +214,7 @@
       <workItem from="1607685087087" duration="8156000" />
       <workItem from="1607705376102" duration="24064000" />
       <workItem from="1607773148236" duration="18944000" />
-      <workItem from="1607795337938" duration="13083000" />
+      <workItem from="1607795337938" duration="19072000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -375,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607808305227</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Commit with solicitudes_reservas_virtuales_with_lib_pdf">
+      <created>1607809528237</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1607809528237</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

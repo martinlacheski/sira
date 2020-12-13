@@ -226,7 +226,7 @@ def send_email_confirmacion(form):
         mailServer.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         print('Conectado..')
 
-        # informacion solicitud
+        # informacion confirmacion
         fecha = solicitante_fecha(form)
         dni = solicitante_dni(form)
         nombres = solicitante_nombres(form)

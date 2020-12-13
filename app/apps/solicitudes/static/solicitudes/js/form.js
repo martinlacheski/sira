@@ -117,7 +117,7 @@ $(function () {
     $('select[name="inicio_hs"]').on('change', function () {
         var id = $(this).val();
         console.log(id);
-        var options = '<option value=""></option>';
+        var options = '<option value="">---------</option>';
         if (id === '') {
             select_horarios.html(options);
             return false;

@@ -7,11 +7,11 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
 from apps.solicitudes.create_meeting import *
-from apps.solicitudes.forms import SolicitudesForm, Materias, horarios_choices, ConfirmarSolicitudesForm, \
+from apps.solicitudes.forms import SolicitudesForm, Materias, horarios_choices, ConfirmSolicitudesForm, \
     GenerateSolicitudesForm
 from apps.solicitudes.models import Solicitudes
 from apps.mixins import ValidatePermissionRequiredMixin
-from apps.solicitudes.send_email import send_email
+from apps.solicitudes.send_email import send_email, send_email_confirmacion
 from apps.usuarios.models import Usuarios
 
 hola = 'error'
@@ -55,6 +55,37 @@ class SolicitudesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, L
         context['entity'] = 'Solicitudes'
         return context
 
+class SolicitudesPendientesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
+    model = Solicitudes
+    template_name = 'solicitudes/list.html'
+    permission_required = 'solicitudes.view_solicitudes'
+
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        data = {}
+        try:
+            action = request.POST['action']
+            if action == 'searchdata':
+                data = []
+                for i in Solicitudes.objects.filter(estado='PENDIENTE'):
+                    data.append(i.toJSON())
+            else:
+                data['error'] = 'Ha ocurrido un error'
+        except Exception as e:
+            data['error'] = str(e)
+        return JsonResponse(data, safe=False)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Listado de Solicitudes Pendientes'
+        context['create_url'] = reverse_lazy('solicitudes:solicitudes_create')
+        context['list_url'] = reverse_lazy('solicitudes:solicitudes_pendientes_list')
+        context['entity'] = 'Solicitudes'
+        return context
+
 class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin, CreateView):
     model = Solicitudes
     form_class = SolicitudesForm
@@ -63,6 +94,11 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     success_url = reverse_lazy('solicitudes:solicitudes_list')
     permission_required = 'solicitudes.add_solicitudes'
     url_redirect = success_url
+
+    def get_initial(self, *args, **kwargs):
+        initial = super(SolicitudesCreateView, self).get_initial(**kwargs)
+        initial['estado'] = 'CONFIRMADA'
+        return initial
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -101,6 +137,9 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
 
                 #Crear REUNION en WEBEX
                 #crearReunion(form)
+
+                # Enviar email de Confirmacion de Reserva
+                send_email_confirmacion(form)
 
                 if form.is_valid():
                     form = self.get_form()
@@ -219,10 +258,11 @@ class SolicitudesGenerateView(CreateView):
         try:
             action = request.POST['action']
             if action == 'search_materias_id':
+                #assert false, (hola)
                 data = [{'id': '', 'text': '---------'}]
                 for i in Materias.objects.filter(carrera_id=request.POST['id']):
                     data.append({'id': i.id, 'text': i.nombre})
-            if action == 'search_horarios_id':
+            elif action == 'search_horarios_id':
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
                 print(array_length)
@@ -249,7 +289,7 @@ class SolicitudesGenerateView(CreateView):
                     form = self.get_form()
                     data = form.save()
                     # Enviar email de Solicitud de Reserva
-                    # send_email(form)
+                    send_email(form)
                 return redirect('solicitudes:solicitudes_generate')
             else:
                 data['error'] = 'Ha ocurrido un error'
@@ -267,7 +307,7 @@ class SolicitudesGenerateView(CreateView):
 
 class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
     model = Solicitudes
-    form_class = ConfirmarSolicitudesForm
+    form_class = ConfirmSolicitudesForm
     template_name = 'solicitudes/confirm.html'
     success_url = reverse_lazy('solicitudes:solicitudes_list')
     permission_required = 'solicitudes.change_solicitudes'
@@ -320,6 +360,8 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
                 #form = SolicitudesForm(request.POST)
                 # crearReunion(form)
 
+                # Enviar email de Confirmacion de Reserva
+                send_email_confirmacion(form)
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
@@ -336,7 +378,7 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
 
 class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin, UpdateView):
     model = Solicitudes
-    form_class = ConfirmarSolicitudesForm
+    form_class = ConfirmSolicitudesForm
     template_name = 'solicitudes/cancel.html'
     success_url = reverse_lazy('solicitudes:solicitudes_list')
     permission_required = 'solicitudes.change_solicitudes'

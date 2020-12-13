@@ -393,7 +393,7 @@ class GenerateSolicitudesForm(ModelForm):
         return data
 
 
-class ConfirmarSolicitudesForm(ModelForm):
+class ConfirmSolicitudesForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['dni'].widget.attrs['autofocus'] = True
@@ -501,10 +501,32 @@ class ConfirmarSolicitudesForm(ModelForm):
                              ),
             'estado': TextInput(
                 attrs={
-                    'label': False,
-                    'hidden': True,
                     'readonly': True,
                     'class': 'form-control',
+                }
+            ),
+            'link_reunion': TextInput(
+                attrs={
+                    'placeholder': 'Cuando la reunion este confirmada se visualizará',
+                    'readonly': True,
+                    'class': 'form-control',
+                    'style': 'width: 100%'
+                }
+            ),
+            'nombre_reunion': TextInput(
+                attrs={
+                    'placeholder': 'Cuando la reunion este confirmada se visualizará',
+                    'readonly': True,
+                    'class': 'form-control',
+                    'style': 'width: 100%'
+                }
+            ),
+            'password_reunion': TextInput(
+                attrs={
+                    'placeholder': 'Cuando la reunion este confirmada se visualizará',
+                    'readonly': True,
+                    'class': 'form-control',
+                    'style': 'width: 100%'
                 }
             ),
         }
