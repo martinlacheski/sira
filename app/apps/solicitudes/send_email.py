@@ -174,7 +174,8 @@ def send_email(form):
         mailServer.starttls()
         print(mailServer.ehlo())
         mailServer.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
-        print('Conectado..')
+
+        print('Conectado al servidor de correo')
 
         # informacion solicitud
         fecha = solicitante_fecha(form)
@@ -194,7 +195,8 @@ def send_email(form):
         fin_hs = solicitante_fin_hs(form)
         inicio_hs = str(inicio_hs)
         fin_hs = str(fin_hs)
-        print(fecha)
+
+        print('Enviando Correo..')
 
         # Construimos el mensaje
         mensaje = MIMEMultipart()
@@ -220,11 +222,12 @@ def send_email(form):
 def send_email_confirmacion(form):
     try:
         mailServer = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
-        print(mailServer.ehlo())
+        #print(mailServer.ehlo())
         mailServer.starttls()
-        print(mailServer.ehlo())
+        #print(mailServer.ehlo())
         mailServer.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
-        print('Conectado..')
+
+        print('Conectado al servidor de correo')
 
         # informacion confirmacion
         fecha = solicitante_fecha(form)
@@ -244,7 +247,8 @@ def send_email_confirmacion(form):
         fin_hs = solicitante_fin_hs(form)
         inicio_hs = str(inicio_hs)
         fin_hs = str(fin_hs)
-        print(fecha)
+
+        print('Enviando Correo..')
 
         # Construimos el mensaje
         mensaje = MIMEMultipart()

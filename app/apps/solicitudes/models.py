@@ -79,5 +79,5 @@ class Solicitudes(models.Model):
     class Meta:
         verbose_name = 'Solicitud'
         verbose_name_plural = 'Solicitudes'
-        db_table = 'solicitudes_salas_virtuales'
+        db_table = 'reservas_salas_virtuales'
         ordering = ['id']

@@ -95,10 +95,10 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     permission_required = 'solicitudes.add_solicitudes'
     url_redirect = success_url
 
-    def get_initial(self, *args, **kwargs):
-        initial = super(SolicitudesCreateView, self).get_initial(**kwargs)
-        initial['estado'] = 'CONFIRMADA'
-        return initial
+    #def get_initial(self, *args, **kwargs):
+    #    initial = super(SolicitudesCreateView, self).get_initial(**kwargs)
+    #    initial['estado'] = 'CONFIRMADA'
+    #    return initial
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -109,21 +109,24 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         try:
             action = request.POST['action']
             if action == 'search_materias_id':
+                # assert false, (hola)
                 data = [{'id': '', 'text': '---------'}]
                 for i in Materias.objects.filter(carrera_id=request.POST['id']):
                     data.append({'id': i.id, 'text': i.nombre})
-            if action == 'search_horarios_id':
+            elif action == 'search_horarios_id':
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
-                print(array_length)
-                horario_inicio = datetime.datetime.strptime(request.POST['id'], '%H:%M:%S')
+                # print(array_length)
+                # horario_inicio = datetime.datetime.strptime(request.POST['id'], '%H:%M:%S')
+                horario_inicio = request.POST['id']
                 # print(horario_inicio)
                 for i in range(array_length):
-                    horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
+                    # horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
+                    horario = horarios_choices[i][0]
                     # print(horario)
                     if horario > horario_inicio:
                         data.append({'id': horarios_choices[i][0], 'text': horarios_choices[i][1]})
-                        print(horarios_choices[i][1])
+                        # print(horarios_choices[i][1])
             elif action == 'autocomplete':
                 data = []
                 for i in Usuarios.objects.filter(dni=request.POST['term']):
@@ -135,15 +138,15 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                 #Funcion de SUPERPOSICION DE MATERIAS FALTA AGREGAR
                 ###################################################
 
-                #Crear REUNION en WEBEX
-                #crearReunion(form)
-
-                # Enviar email de Confirmacion de Reserva
-                send_email_confirmacion(form)
-
                 if form.is_valid():
                     form = self.get_form()
                     data = form.save()
+
+                    # Crear REUNION en WEBEX
+                    crearReunion(form)
+
+                    # Enviar email de Confirmacion de Reserva
+                    send_email_confirmacion(form)
 
                 return redirect('solicitudes:solicitudes_list')
             else:
@@ -185,10 +188,10 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
                 print(array_length)
-                horario_inicio = datetime.datetime.strptime(request.POST['id'],'%H:%M:%S')
+                horario_inicio = request.POST['id']
                 #print(horario_inicio)
                 for i in range(array_length):
-                    horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
+                    horario = horarios_choices[i][0]
                     #print(horario)
                     if horario > horario_inicio:
                         data.append({'id': horarios_choices[i][0], 'text': horarios_choices[i][1]})
@@ -265,15 +268,17 @@ class SolicitudesGenerateView(CreateView):
             elif action == 'search_horarios_id':
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
-                print(array_length)
-                horario_inicio = datetime.datetime.strptime(request.POST['id'],'%H:%M:%S')
+                #print(array_length)
+                #horario_inicio = datetime.datetime.strptime(request.POST['id'], '%H:%M:%S')
+                horario_inicio = request.POST['id']
                 #print(horario_inicio)
                 for i in range(array_length):
-                    horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
+                    #horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
+                    horario = horarios_choices[i][0]
                     #print(horario)
                     if horario > horario_inicio:
                         data.append({'id': horarios_choices[i][0], 'text': horarios_choices[i][1]})
-                        print(horarios_choices[i][1])
+                        #print(horarios_choices[i][1])
             elif action == 'autocomplete':
                 data = []
                 print(request.POST['term'])
@@ -309,14 +314,14 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
     model = Solicitudes
     form_class = ConfirmSolicitudesForm
     template_name = 'solicitudes/confirm.html'
-    success_url = reverse_lazy('solicitudes:solicitudes_list')
+    success_url = reverse_lazy('solicitudes:solicitudes_pendientes_list')
     permission_required = 'solicitudes.change_solicitudes'
     url_redirect = success_url
 
-    def get_initial(self, *args, **kwargs):
-        initial = super(SolicitudesConfirmView, self).get_initial(**kwargs)
-        initial['estado'] = 'CONFIRMADA'
-        return initial
+    #def get_initial(self, *args, **kwargs):
+    #    initial = super(SolicitudesConfirmView, self).get_initial(**kwargs)
+    #    initial['estado'] = 'CONFIRMADA'
+    #    return initial
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -335,10 +340,10 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
                 print(array_length)
-                horario_inicio = datetime.datetime.strptime(request.POST['id'],'%H:%M:%S')
+                horario_inicio = request.POST['id']
                 #print(horario_inicio)
                 for i in range(array_length):
-                    horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
+                    horario = horarios_choices[i][0]
                     #print(horario)
                     if horario > horario_inicio:
                         data.append({'id': horarios_choices[i][0], 'text': horarios_choices[i][1]})
@@ -350,18 +355,22 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
                     item['value'] = i.dni
                     data.append(item)
             elif action == 'confirm':
-                form = self.get_form()
+                form = SolicitudesForm(request.POST)
+                if form.is_valid():
+                    # Funcion de SUPERPOSICION DE MATERIAS FALTA AGREGAR
+                    ###################################################
 
-                data = form.save()
+                    form = self.get_form()
+                    data = form.save()
 
-                #assert false, (form)
+                    # assert false, (form)
+                    # Crear REUNION en WEBEX
+                    crearReunion(form)
 
-                # Crear REUNION en WEBEX
-                #form = SolicitudesForm(request.POST)
-                # crearReunion(form)
+                    # Enviar email de Confirmacion de Reserva
+                    send_email_confirmacion(form)
+                return redirect('solicitudes:solicitudes_pendientes_list')
 
-                # Enviar email de Confirmacion de Reserva
-                send_email_confirmacion(form)
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
@@ -384,10 +393,10 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     permission_required = 'solicitudes.change_solicitudes'
     url_redirect = success_url
 
-    def get_initial(self, *args, **kwargs):
-        initial = super(SolicitudesCancelView, self).get_initial(**kwargs)
-        initial['estado'] = 'CANCELADA'
-        return initial
+    #def get_initial(self, *args, **kwargs):
+    #    initial = super(SolicitudesCancelView, self).get_initial(**kwargs)
+    #    initial['estado'] = 'CANCELADA'
+    #    return initial
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -406,11 +415,11 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
                 print(array_length)
-                horario_inicio = datetime.datetime.strptime(request.POST['id'],'%H:%M:%S')
-                #print(horario_inicio)
+                horario_inicio = request.POST['id']
+                print(horario_inicio)
                 for i in range(array_length):
-                    horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
-                    #print(horario)
+                    horario = horarios_choices[i][0]
+                    print(horario)
                     if horario > horario_inicio:
                         data.append({'id': horarios_choices[i][0], 'text': horarios_choices[i][1]})
                         print(horarios_choices[i][1])
@@ -421,8 +430,11 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                     item['value'] = i.dni
                     data.append(item)
             elif action == 'cancel':
-                form = self.get_form()
-                data = form.save()
+                form = SolicitudesForm(request.POST)
+                if form.is_valid():
+                    form = self.get_form()
+                    data = form.save()
+                return redirect('solicitudes:solicitudes_pendientes_list')
             else:
                 data['error'] = 'No ha ingresado ninguna opción'
         except Exception as e:
