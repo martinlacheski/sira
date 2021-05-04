@@ -23,14 +23,241 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5452f1-a664-4921-a469-2e0bac7ed6de" name="Default Changelist" comment="commit CRUD Universidad - Facultad - Sedes">
-      <change afterPath="$PROJECT_DIR$/files/BD/Backup13-12-2020.backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/BD/Backup13-12-2020.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/list_naturaltime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/grant_flow PASO A PASO.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/send_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sira.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/create_meeting.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/create_meeting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/send_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/solicitudes/verificacion_cuenta_API.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/verificacion_cuenta_API.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/static/solicitudes/js/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_confirmacion.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_confirmacion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_solicitud.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes/send_email_solicitud.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/solicitudes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/solicitudes/views/solicitudes/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/ngrok/ngrok" beforeDir="false" afterPath="$PROJECT_DIR$/files/ngrok/ngrok" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/css/adminlte.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/img/prod-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/datatables-autofill/js/dataTables.autoFill.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/datatables-autofill/js/dataTables.autoFill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/datatables-buttons/js/buttons.colVis.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/datatables-buttons/js/buttons.colVis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/datatables-colreorder/js/dataTables.colReorder.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/datatables-colreorder/js/dataTables.colReorder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/ActiveFilter.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/ActiveFilter.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/BrowserWindow.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/BrowserWindow.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/EventReceiver.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/EventReceiver.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/FilterContainer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/FilterContainer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/StyledFilterContainer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/StyledFilterContainer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/styles.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterContainer/styles.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterControls.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterControls.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/FilterItem.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/FilterItem.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/StyledFilterItem.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/StyledFilterItem.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/styles.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItem/styles.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems/FilterItems.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems/FilterItems.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems/StyledFilterItems.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems/StyledFilterItems.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterItems/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr/Filterizr.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr/Filterizr.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr/installAsJQueryPlugin.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Filterizr/installAsJQueryPlugin.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrElement.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrElement.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrOptions/FilterizrOptions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrOptions/FilterizrOptions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrOptions/defaultOptions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrOptions/defaultOptions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrOptions/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/FilterizrOptions/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/Spinner.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/Spinner.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/StyledSpinner.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/StyledSpinner.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/makeSpinner.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/Spinner/makeSpinner.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/StyledFilterizrElement.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/StyledFilterizrElement.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/StyledFilterizrElements.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/StyledFilterizrElements.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/animate.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/animate.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/cssEasingValuesRegexp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/cssEasingValuesRegexp.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/filterizrState.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/filterizrState.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/layout.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/config/layout.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/filterizr.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/filterizr.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/getLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/getLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/index.jquery.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/index.jquery.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/installAsJQueryPlugin.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/installAsJQueryPlugin.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/jquery.filterizr.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/jquery.filterizr.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/Packer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/Packer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getHorizontalLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getHorizontalLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getPackedLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getPackedLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getSameHeightLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getSameHeightLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getSameSizeLayoutPosition.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getSameSizeLayoutPosition.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getSameWidthLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getSameWidthLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getVerticalLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/layouts/getVerticalLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/Packer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/Packer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeHorizontalLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeHorizontalLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makePackedLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makePackedLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeSameHeightLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeSameHeightLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeSameSizeLayoutPosition.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeSameSizeLayoutPosition.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeSameWidthLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeSameWidthLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeVerticalLayoutPositions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/makeLayoutPositions/makeVerticalLayoutPositions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/BaseOptions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/BaseOptions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/ContainerLayout.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/ContainerLayout.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Destructible.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Destructible.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Dictionary.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Dictionary.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Dimensions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Dimensions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Options.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Options.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Position.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Position.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/RawOptions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/RawOptions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/RawOptionsCallbacks.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/RawOptionsCallbacks.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Resizable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Resizable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/SpinnerOptions.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/SpinnerOptions.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Styleable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/Styleable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/types/interfaces/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/allStringsOfArray1InArray2.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/allStringsOfArray1InArray2.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/checkOptionForErrors.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/checkOptionForErrors.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/debounce.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/debounce.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/filterItemArraysHaveSameSorting.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/filterItemArraysHaveSameSorting.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/getDataAttributesOfHTMLNode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/getDataAttributesOfHTMLNode.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/getHTMLElement.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/getHTMLElement.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/intersection.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/intersection.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/merge.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/merge.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/noop.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/noop.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/setStyles.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/setStyles.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/shuffle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/shuffle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/sortBy.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/utils/sortBy.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/vanilla.filterizr.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/filterizr/vanilla.filterizr.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/excanvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/excanvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/excanvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/excanvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.colorhelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.colorhelpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.colorhelpers.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.colorhelpers.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.canvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.canvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.categories.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.categories.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.crosshair.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.crosshair.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.crosshair.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.crosshair.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.errorbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.errorbars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.errorbars.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.errorbars.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.fillbetween.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.fillbetween.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.fillbetween.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.fillbetween.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.image.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.image.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.image.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.navigate.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.navigate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.navigate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.navigate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.pie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.pie.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.pie.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.resize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.resize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.resize.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.selection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.selection.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.selection.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.stack.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.stack.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.symbol.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.symbol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.symbol.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.symbol.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.threshold.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.threshold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.threshold.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.threshold.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.time.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.time.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.time.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/flot-old/jquery.flot.time.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/batch-delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/batch-delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-grid-field.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-grid-field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-load-indicator.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-load-indicator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-row-renderer.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-row-renderer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/custom-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/data-manipulation.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/data-manipulation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/external-pager.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/external-pager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/loading-by-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/loading-by-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/localization.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/localization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/odata-service.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/odata-service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/sorting.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/sorting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/static-data.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/static-data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/validation.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/adminlte-3.0.5/plugins/jsgrid/demos/validation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/send_email_solicitud.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/chardetect" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/chardetect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/django-admin" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/django-admin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/django-admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/django-admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/easy_install" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/easy_install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/easy_install-3.8" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/easy_install-3.8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/futurize" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/futurize" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/pasteurize" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/pasteurize" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/pip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/pip3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/pip3.8" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/pip3.8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/pisa" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/pisa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/pybidi" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/pybidi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/sqlformat" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/sqlformat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/wheel" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/wheel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/bin/xhtml2pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../env/bin/xhtml2pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imaging.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imaging.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingcms.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingcms.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingft.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingft.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingmath.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingmath.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingmorph.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingmorph.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingtk.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_imagingtk.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_webp.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PIL/_webp.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libXau-312dbc56.so.6.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libXau-312dbc56.so.6.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libXdmcp-e15573e7.so.6.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libXdmcp-e15573e7.so.6.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libfreetype-b35627f5.so.6.17.2" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libfreetype-b35627f5.so.6.17.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libjpeg-ba7bf5af.so.9.4.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libjpeg-ba7bf5af.so.9.4.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/liblcms2-db671c5b.so.2.0.10" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/liblcms2-db671c5b.so.2.0.10" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/liblzma-99449165.so.5.2.5" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/liblzma-99449165.so.5.2.5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libopenjp2-b3d7668a.so.2.3.1" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libopenjp2-b3d7668a.so.2.3.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libpng16-bedcb7ea.so.16.37.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libpng16-bedcb7ea.so.16.37.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libtiff-41910f6d.so.5.5.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libtiff-41910f6d.so.5.5.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libwebp-122bd20b.so.7.1.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libwebp-122bd20b.so.7.1.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libwebpdemux-2db559e5.so.2.0.6" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libwebpdemux-2db559e5.so.2.0.6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libwebpmux-ec1d5c76.so.3.0.5" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libwebpmux-ec1d5c76.so.3.0.5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libxcb-2dfad6c3.so.1.1.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libxcb-2dfad6c3.so.1.1.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libz-a147dcb0.so.1.2.3" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/Pillow.libs/libz-a147dcb0.so.1.2.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PyPDF2-1.26.0.dist-info/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PyPDF2-1.26.0.dist-info/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PyPDF2-1.26.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/PyPDF2-1.26.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/arabic_reshaper-2.1.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/arabic_reshaper-2.1.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/certifi-2020.6.20.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/chardet-3.0.4.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django/bin/django-admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django/bin/django-admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django/conf/project_template/manage.py-tpl" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/django/conf/project_template/manage.py-tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/dt-0.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/dt-0.2.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/future-0.18.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/future-0.18.2.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/html5lib-1.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/html5lib-1.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/idna-2.10.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/psycopg2/_psycopg.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/psycopg2/_psycopg.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/python_bidi-0.4.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/python_bidi-0.4.2.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab-3.5.56.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab-3.5.56.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab.libs/libfreetype-0d4a81a0.so.6.16.1" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab.libs/libfreetype-0d4a81a0.so.6.16.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab.libs/libpng16-b62f3f4f.so.16.32.0" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab.libs/libpng16-b62f3f4f.so.16.32.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab.libs/libz-eb09ad1d.so.1.2.3" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab.libs/libz-eb09ad1d.so.1.2.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/fonts/DarkGarden.sfd" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/fonts/DarkGarden.sfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/fonts/DarkGardenMK.afm" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/fonts/DarkGardenMK.afm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/graphics/_renderPM.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/graphics/_renderPM.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/lib/_rl_accel.cpython-38-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/reportlab/lib/_rl_accel.cpython-38-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/requests-2.24.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/urllib3-1.25.10.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/webencodings-0.5.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/webencodings-0.5.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/xhtml2pdf-0.2.5.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/../env/lib/python3.8/site-packages/xhtml2pdf-0.2.5.dist-info/RECORD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +296,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/apps/solicitudes/templates/solicitudes" />
       <recent name="$PROJECT_DIR$/apps/usuarios/static" />
       <recent name="$PROJECT_DIR$/apps/usuarios/templates" />
       <recent name="$PROJECT_DIR$/apps/usuarios/views" />
@@ -85,9 +313,31 @@
       <recent name="$PROJECT_DIR$/apps" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python">
+      <module name="sira" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <module name="app" />
+      <module name="sira" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -110,7 +360,7 @@
       <method v="2" />
     </configuration>
     <configuration name="app" type="Python.DjangoServer" factoryName="Django server">
-      <module name="app" />
+      <module name="sira" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -133,6 +383,10 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.app" />
+      <item itemvalue="Python.app" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -216,7 +470,24 @@
       <workItem from="1607795337938" duration="19072000" />
       <workItem from="1607818930115" duration="1166000" />
       <workItem from="1607864832268" duration="9883000" />
-      <workItem from="1607893813499" duration="9029000" />
+      <workItem from="1607893813499" duration="9198000" />
+      <workItem from="1607952232487" duration="4672000" />
+      <workItem from="1607963939171" duration="2726000" />
+      <workItem from="1618856008965" duration="1769000" />
+      <workItem from="1618858475447" duration="2296000" />
+      <workItem from="1618862510295" duration="7176000" />
+      <workItem from="1618919771174" duration="13771000" />
+      <workItem from="1619042903037" duration="1682000" />
+      <workItem from="1619133654293" duration="8000" />
+      <workItem from="1619135217820" duration="48000" />
+      <workItem from="1619302407086" duration="4442000" />
+      <workItem from="1619453058482" duration="2202000" />
+      <workItem from="1619565592260" duration="12000" />
+      <workItem from="1619566010196" duration="2000" />
+      <workItem from="1619566598488" duration="27000" />
+      <workItem from="1619570122667" duration="54000" />
+      <workItem from="1619609070145" duration="37000" />
+      <workItem from="1620129430523" duration="1853000" />
     </task>
     <task id="LOCAL-00003" summary="Commit mejoras en el template y login con Mixins">
       <created>1600901794423</created>
@@ -400,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607873525127</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Commit 13-12-2020 entrega p/TrabajoFinal">
+      <created>1607902855176</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1607902855176</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,8 +722,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit 13-12-2020 entrega p/TrabajoFinal" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/app$tests.coverage" NAME="tests Coverage Results" MODIFIED="1599692603928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/geografico" />
-    <SUITE FILE_PATH="coverage/app$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1600371477255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app$app.coverage" NAME="app Coverage Results" MODIFIED="1619570123870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/app$views.coverage" NAME="views Coverage Results" MODIFIED="1599517290797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/geografico/views/paises" />
+    <SUITE FILE_PATH="coverage/app$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1600371477255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/sira$app.coverage" NAME="app Coverage Results" MODIFIED="1620131247000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app$tests.coverage" NAME="tests Coverage Results" MODIFIED="1599692603928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/geografico" />
   </component>
 </project>

@@ -116,18 +116,23 @@ class SolicitudesForm(ModelForm):
     class Meta:
         model = Solicitudes
         ordering = ['-id']
-        fields = '__all__'
+        fields = 'fecha_solicitud', 'dni', 'nombres', 'apellido', 'email', 'sede', 'motivo', 'observaciones', 'carrera', \
+                 'materia', 'comision', 'fecha_reserva', 'inicio_hs', 'fin_hs', 'estado'
         widgets = {
             'fecha_solicitud': DateTimeInput(
                 attrs={
                     'readonly': True,
                     'class': 'form-control',
+                    'is_hidden': True
                 }
             ),
-            'cuenta_asociada': Select(
+            'cuenta_asociada': TextInput(
                 attrs={
-                    'class': 'form-control select2',
-                    'style': 'width: 100%'
+                    'readonly': True,
+                    'placeholder': 'Cuando la reunion este confirmada se visualizará',
+                    'class': 'form-control',
+                    'style': 'width: 100%',
+                    'is_hidden': True
                 }
             ),
             'dni': TextInput(
@@ -269,15 +274,13 @@ class GenerateSolicitudesForm(ModelForm):
 
     class Meta:
         model = Solicitudes
-        ordering = ['-id']
         fields = 'fecha_solicitud', 'dni', 'nombres', 'apellido', 'email', 'sede', 'motivo', 'observaciones', 'carrera', \
                  'materia', 'comision', 'fecha_reserva', 'inicio_hs', 'fin_hs', 'estado'
         widgets = {
             'fecha_solicitud': DateTimeInput(
                 attrs={
                     'readonly': True,
-                    'class': 'form-control',
-                    'style': 'width: 100%'
+                    'class': 'form-control'
                 }
             ),
             'dni': TextInput(
@@ -375,7 +378,7 @@ class GenerateSolicitudesForm(ModelForm):
             'estado': TextInput(
                 attrs={
                     'readonly': True,
-                    'class': 'form-control',
+                    'class': 'form-control'
                 }
             ),
         }
@@ -401,12 +404,14 @@ class ConfirmSolicitudesForm(ModelForm):
     class Meta:
         model = Solicitudes
         ordering = ['-id']
-        fields = '__all__'
+        fields = 'fecha_solicitud', 'dni', 'nombres', 'apellido', 'email', 'sede', 'motivo', 'observaciones', 'carrera', \
+                 'materia', 'comision', 'fecha_reserva', 'inicio_hs', 'fin_hs', 'estado'
         widgets = {
-            'nombre': DateTimeInput(
+            'fecha_solicitud': DateTimeInput(
                 attrs={
                     'readonly': True,
                     'class': 'form-control',
+                    'is_hidden': True
                 }
             ),
             'dni': TextInput(

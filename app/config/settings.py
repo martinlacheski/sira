@@ -38,12 +38,14 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '63ee00ceccdd.ngrok.io']
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # Libs
     'widget_tweaks',
     # APP usuarios
@@ -160,5 +162,6 @@ LOGIN_URL = '/login/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sira.fceqyn@gmail.com'
 EMAIL_HOST_PASSWORD = 'Sira.2021'

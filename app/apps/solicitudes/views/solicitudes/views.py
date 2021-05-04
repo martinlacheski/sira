@@ -2,8 +2,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.views import View
 from django.views.decorators.csrf import csrf_exempt
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, View
 from django.utils.decorators import method_decorator
 
 from apps.solicitudes.create_meeting import *
@@ -11,7 +12,7 @@ from apps.solicitudes.forms import SolicitudesForm, Materias, horarios_choices, 
     GenerateSolicitudesForm
 from apps.solicitudes.models import Solicitudes
 from apps.mixins import ValidatePermissionRequiredMixin
-from apps.solicitudes.send_email import send_email
+from apps.solicitudes.send_email import send_email, send_email_confirmacion
 from apps.usuarios.models import Usuarios
 
 hola = 'error'
@@ -56,7 +57,7 @@ class SolicitudesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, L
 
 class SolicitudesPendientesListView(LoginRequiredMixin, ValidatePermissionRequiredMixin, ListView):
     model = Solicitudes
-    template_name = 'solicitudes/list.html'
+    template_name = 'solicitudes/list_naturaltime.html'
     permission_required = 'solicitudes.view_solicitudes'
 
     @method_decorator(csrf_exempt)
@@ -133,23 +134,33 @@ class SolicitudesCreateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
 
                 if form.is_valid():
                     form = self.get_form()
-                    print("Estoy en la vista, por entrar a crearReunión()")
-                    
-                    exito = crearReunion(form)
-                    
-                    if(exito["todo_correcto"] == 1):
+                    #id_sol = self.get_object()
+                    # para grabar, comentar cuando se desee crear la reunion de Webex
 
-                        data = form.save()
-                        datos_faltantes = exito["datos_update"]
-                        cuenta_asociada = exito["cuenta_asociada"]
-                        camposRespuestaMeeting(datos_faltantes, cuenta_asociada)
-                        #print("todo ok")
-                    else:
-                        assert False, ("NO SE PUDO CREAR LA REUNION")
-                else:
-                    assert False, ("el formulario no es correcto")
+                    data = form.save()
 
-                #assert False, ("no va a refrescar pero funciona")
+                    #Busco la ultima reserva creada para actualizar el valor del campo "estado"
+                    ultima_adicion = Solicitudes.objects.order_by('-id')[0]
+                    Solicitudes.objects.filter(pk=ultima_adicion.id).update(estado="CONFIRMADO")
+
+                    #envio correo electronico de confirmacion
+                    #send_email_confirmacion(form)
+
+                    # Creando la Reunion en WEBEX --- DESCOMENTAR
+                    ###################################################
+                    #Estoy en la vista, por entrar a crearReunión()
+                    #exito = crearReunion(form)
+
+                    #if(exito["todo_correcto"] == 1):
+
+                    #    data = form.save()
+                    #    datos_faltantes = exito["datos_update"]
+                    #    cuenta_asociada = exito["cuenta_asociada"]
+                    #    camposRespuestaMeeting(datos_faltantes, cuenta_asociada)
+
+                    #else:
+                    #    assert False, ("NO SE PUDO CREAR LA REUNION")
+
                 return redirect('solicitudes:solicitudes_list')
             else:
                 data['error'] = 'Ha ocurrido un error'
@@ -189,7 +200,7 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
             elif action == 'search_horarios_id':
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
-                print(array_length)
+                #print(array_length)
                 horario_inicio = request.POST['id']
                 #print(horario_inicio)
                 for i in range(array_length):
@@ -197,7 +208,7 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                     #print(horario)
                     if horario > horario_inicio:
                         data.append({'id': horarios_choices[i][0], 'text': horarios_choices[i][1]})
-                        print(horarios_choices[i][1])
+                        #print(horarios_choices[i][1])
             elif action == 'autocomplete':
                 data = []
                 for i in Usuarios.objects.filter(dni=request.POST['term']):
@@ -219,32 +230,6 @@ class SolicitudesUpdateView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         context['entity'] = 'solicitudes'
         context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
         context['action'] = 'edit'
-        return context
-
-class SolicitudesDeleteView(LoginRequiredMixin, ValidatePermissionRequiredMixin, DeleteView):
-    model = Solicitudes
-    template_name = 'solicitudes/delete.html'
-    success_url = reverse_lazy('solicitudes:solicitudes_list')
-    permission_required = 'solicitudes.delete_solicitudes'
-    url_redirect = success_url
-
-    def dispatch(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        return super().dispatch(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        data = {}
-        try:
-            self.object.delete()
-        except Exception as e:
-            data['error'] = str(e)
-        return JsonResponse(data)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Eliminar Solicitud'
-        context['entity'] = 'Solicitudes'
-        context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
         return context
 
 class SolicitudesGenerateView(CreateView):
@@ -271,11 +256,9 @@ class SolicitudesGenerateView(CreateView):
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
                 #print(array_length)
-                #horario_inicio = datetime.datetime.strptime(request.POST['id'], '%H:%M:%S')
                 horario_inicio = request.POST['id']
                 #print(horario_inicio)
                 for i in range(array_length):
-                    #horario = datetime.datetime.strptime(horarios_choices[i][0], '%H:%M:%S')
                     horario = horarios_choices[i][0]
                     #print(horario)
                     if horario > horario_inicio:
@@ -283,7 +266,8 @@ class SolicitudesGenerateView(CreateView):
                         #print(horarios_choices[i][1])
             elif action == 'autocomplete':
                 data = []
-                print(request.POST['term'])
+                # Imprimir DNI Solicitante
+                #print(request.POST['term'])
                 for i in Usuarios.objects.filter(dni=request.POST['term']):
                     item = i.toJSON()
                     item['value'] = i.dni
@@ -296,7 +280,10 @@ class SolicitudesGenerateView(CreateView):
                     form = self.get_form()
                     data = form.save()
                     # Enviar email de Solicitud de Reserva
-                    send_email(form)
+                    #assert false, (hola)
+                    #send_email(form)
+                else:
+                    data['error'] = 'Error en el Formulario'
                 return redirect('solicitudes:solicitudes_generate')
             else:
                 data['error'] = 'Ha ocurrido un error'
@@ -336,7 +323,7 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
             if action == 'search_horarios_id':
                 data = [{'id': '', 'text': 'Seleccione el horario de FIN'}]
                 array_length = len(horarios_choices)
-                print(array_length)
+                #print(array_length)
                 horario_inicio = request.POST['id']
                 #print(horario_inicio)
                 for i in range(array_length):
@@ -351,25 +338,36 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
                     item = i.toJSON()
                     item['value'] = i.dni
                     data.append(item)
+
             elif action == 'confirm':
                 form = SolicitudesForm(request.POST)
                 id_sol = self.get_object()
+
                 #print("el id de solicitud es:")
                 #print(id_sol.pk)
                 if form.is_valid():
                     form = self.get_form()
+                    id_sol = self.get_object()
+                    # para grabar, comentar cuando se desee crear la reunion de Webex
+                    id_sol.estado = "CONFIRMADO"
+                    data = id_sol.save()
 
-                    exito = crearReunion(form)
+                    # envio correo electronico de confirmacion
+                    # send_email_confirmacion(form)
+
+
+                    # Creando la Reunion en WEBEX --- DESCOMENTAR
+                    ###################################################
+                    #exito = crearReunion(form)
                     
-                    if(exito["todo_correcto"] == 1):
-                        data = form.save()
-                        datos_faltantes = exito["datos_update"]
-                        cuenta_asociada = exito["cuenta_asociada"]
-                        camposRespuestaMeetingID(id_sol.pk, datos_faltantes, cuenta_asociada)
-                    else:
-                        assert False, ("NO SE PUDO CREAR LA REUNION")
-                else:
-                    assert False, ("el formulario no es correcto")
+                    #if(exito["todo_correcto"] == 1):
+                    #    data = form.save()
+                    #    datos_faltantes = exito["datos_update"]
+                    #    cuenta_asociada = exito["cuenta_asociada"]
+                    #    camposRespuestaMeetingID(id_sol.pk, datos_faltantes, cuenta_asociada)
+                    #else:
+                    #    assert False, ("NO SE PUDO CREAR LA REUNION")
+
                 return redirect('solicitudes:solicitudes_pendientes_list')
 
             else:
@@ -382,7 +380,7 @@ class SolicitudesConfirmView(LoginRequiredMixin, ValidatePermissionRequiredMixin
         context = super().get_context_data(**kwargs)
         context['title'] = 'Confirmar Solicitud'
         context['entity'] = 'Solicitudes'
-        context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
+        context['list_url'] = reverse_lazy('solicitudes:solicitudes_pendientes_list')
         context['action'] = 'confirm'
         return context
 
@@ -390,7 +388,7 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
     model = Solicitudes
     form_class = ConfirmSolicitudesForm
     template_name = 'solicitudes/cancel.html'
-    success_url = reverse_lazy('solicitudes:solicitudes_list')
+    success_url = reverse_lazy('solicitudes:solicitudes_pendientes_list')
     permission_required = 'solicitudes.change_solicitudes'
     url_redirect = success_url
 
@@ -415,10 +413,10 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
                 print(horario_inicio)
                 for i in range(array_length):
                     horario = horarios_choices[i][0]
-                    print(horario)
+                    #print(horario)
                     if horario > horario_inicio:
                         data.append({'id': horarios_choices[i][0], 'text': horarios_choices[i][1]})
-                        print(horarios_choices[i][1])
+                        #print(horarios_choices[i][1])
             elif action == 'autocomplete':
                 data = []
                 for i in Usuarios.objects.filter(dni=request.POST['term']):
@@ -443,7 +441,7 @@ class SolicitudesCancelView(LoginRequiredMixin, ValidatePermissionRequiredMixin,
         context = super().get_context_data(**kwargs)
         context['title'] = 'Cancelar Solicitud'
         context['entity'] = 'Solicitudes'
-        context['list_url'] = reverse_lazy('solicitudes:solicitudes_list')
+        context['list_url'] = reverse_lazy('solicitudes:solicitudes_pendientes_list')
         context['action'] = 'cancel'
         return context
 
