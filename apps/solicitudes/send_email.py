@@ -13,6 +13,7 @@ def solicitante_fecha(data):
         pass
     # obtener la fecha de la solicitud
     fecha = data.cleaned_data.get("fecha_solicitud")
+    #print(fecha)
     fecha = str(fecha)
     fecha = fecha[:-6]
     fecha = datetime.strptime(fecha, "%Y-%m-%d %H:%M:%S").strftime("%d-%m-%Y %H:%M:%S")
@@ -88,7 +89,7 @@ def solicitante_observaciones(data):
     observaciones = data.cleaned_data.get("observaciones")
     # conversión a string
     observaciones = str(observaciones)
-    if observaciones is '':
+    if observaciones == '':
         observaciones = '----------'
     return (observaciones)
 
@@ -168,6 +169,7 @@ def solicitante_fin_hs(data):
 
 
 def send_email(form):
+
     try:
         mailServer = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
         #print(mailServer.ehlo())
@@ -215,6 +217,7 @@ def send_email(form):
                             mensaje.as_string())
 
         print('Correo enviado correctamente')
+
     except Exception as e:
         print(e)
 

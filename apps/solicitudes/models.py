@@ -80,4 +80,4 @@ class Solicitudes(models.Model):
         verbose_name = 'Solicitud'
         verbose_name_plural = 'Solicitudes'
         db_table = 'reservas_salas_virtuales'
-        ordering = ['id']
+        ordering = ['-fecha_solicitud']

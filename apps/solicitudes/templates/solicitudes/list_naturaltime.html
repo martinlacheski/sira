@@ -1,0 +1,76 @@
+{% extends 'list.html' %}
+{% load static %}
+{% load humanize %}
+{% block head_list %}
+
+{% endblock %}
+
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 15%;">Fecha</th>
+        <th scope="col" style="width: 5%;">ID</th>
+        <th scope="col" style="width: 5%;">Estado</th>
+        <th scope="col" style="width: 10%;">Apellido</th>
+        <th scope="col" style="width: 15%;">Nombres</th>
+        <th scope="col" style="width: 15%;">Carrera</th>
+        <th scope="col" style="width: 20%;">Materia</th>
+        <th scope="col" style="width: 15%;">Opciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    {% for c in object_list %}
+            <tr>
+                <td>{{ c.fecha_solicitud|naturaltime }}</td>
+                <td>{{ c.id }}</td>
+                <td>{{ c.estado }}</td>
+                <td>{{ c.apellido }}</td>
+                <td>{{ c.nombres }}</td>
+                <td>{{ c.carrera }}</td>
+                <td>{{ c.materia }}</td>
+                <td>
+                    <a href="{% url 'solicitudes:solicitudes_update' c.id %}" type="button" class="btn btn-warning btn-xs btn-flat">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="{% url 'solicitudes:solicitudes_confirm' c.id %}" type="button" class="btn btn-success btn-xs btn-flat">
+                        <i class="fas fa-check"></i>
+                    </a>
+                    <a href="{% url 'solicitudes:solicitudes_cancel' c.id %}" type="button" class="btn btn-danger btn-xs btn-flat">
+                        <i class="fas fa-times"></i>
+                    </a>
+
+                </td>
+            </tr>
+    {% endfor %}
+{% endblock %}
+
+{% block javascript %}
+    <script type="application/javascript">
+        $(function () {
+            $('#data').DataTable({
+                "search": {
+                    "search": "PENDIENTE"
+                },
+                order: [1,'desc'],
+                responsive: true,
+                autoWidth: false,
+            });
+
+            $('.btnTest').on('click', function () {
+                $.ajax({
+                    url: window.location.pathname,
+                    type: 'POST',
+                    data: {id: 1},
+                    dataType: 'json'
+                }).done(function (data) {
+                    console.log(data);
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    alert(textStatus + ': ' + errorThrown);
+                }).always(function (data) {
+
+                });
+            });
+        });
+    </script>
+{% endblock %}
+

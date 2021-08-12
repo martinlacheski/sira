@@ -39,6 +39,22 @@ def nombre_reunion(data):
     return (nombre_final)
 
 
+# Compara el inicio de la reunion con el ACTUAL
+def comparar_inicio(data):
+    if data.is_valid():
+        fecha_reserva = data.cleaned_data.get("fecha_reserva")
+        hora_inicio = data.cleaned_data.get("inicio_hs")
+        # conversión a string
+        fecha_reserva = str(fecha_reserva)
+        hora_inicio = str(hora_inicio)
+        # Se formatea segun lo solicitado
+        inicio_reunion_formateada = fecha_reserva + " " + hora_inicio
+        # convierto a datetime
+        inicio = datetime.strptime(inicio_reunion_formateada, "%Y-%m-%d %H:%M:%S")
+        if datetime.now() > inicio:
+            assert False, ("La fecha de inicio es menor a la ACTUAL, no se puede realizar la reserva")
+    return (inicio_reunion_formateada)
+
 # Formatea el inicio de la reunion a ISO-8690
 def inicio_reunion(data):
     if data.is_valid():
@@ -99,6 +115,8 @@ def jprint(obj):
 
 
 def crearReunion(form):
+    # lo primero que hago es comparar el horario si no es menor que el actual
+    comparar_inicio(form)
     url = "https://webexapis.com/v1/meetings"
     # función que llama a la funcionalidad inteligente
     dict_respuesta = token_verificado(form)
